@@ -148,20 +148,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="123" column="16" selection-start-line="123" selection-start-column="16" selection-end-line="123" selection-end-column="16" />
+            <state relative-caret-position="133">
+              <caret line="246" column="53" selection-start-line="246" selection-start-column="36" selection-end-line="246" selection-end-column="59" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dubbo-dependencies-bom/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="128" column="36" selection-start-line="128" selection-start-column="36" selection-end-line="128" selection-end-column="36" />
+            <state relative-caret-position="265">
+              <caret line="133" column="38" lean-forward="true" selection-start-line="133" selection-start-column="38" selection-end-line="133" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -173,8 +173,10 @@
       <find>org.apache.zookeeper</find>
       <find>jett</find>
       <find>jetty_version</find>
-      <find>tomcat_embed_version</find>
       <find>checkstyle</find>
+      <find>tomcat-embed-core</find>
+      <find>tomcat_embed_version</find>
+      <find>maven_checkstyle_version</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -456,17 +458,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/dubbo-dependencies-bom/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="123" column="16" selection-start-line="123" selection-start-column="16" selection-end-line="123" selection-end-column="16" />
+        <state relative-caret-position="265">
+          <caret line="133" column="38" lean-forward="true" selection-start-line="133" selection-start-column="38" selection-end-line="133" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-dependencies-bom/pom.xml">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="128" column="36" selection-start-line="128" selection-start-column="36" selection-end-line="128" selection-end-column="36" />
+        <state relative-caret-position="133">
+          <caret line="246" column="53" selection-start-line="246" selection-start-column="36" selection-end-line="246" selection-end-column="59" />
         </state>
       </provider>
     </entry>
