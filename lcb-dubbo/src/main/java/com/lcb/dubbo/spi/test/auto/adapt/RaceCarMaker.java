@@ -1,9 +1,11 @@
 package com.lcb.dubbo.spi.test.auto.adapt;
 
 
+import org.apache.dubbo.common.URL;
+
 public class RaceCarMaker implements CarMaker {
 
-    WheelMaker wheelMaker;
+    private WheelMaker wheelMaker;
 
     /**
      *  当CarMake扩展点被加载时，会自动装配WheelMaker
@@ -15,7 +17,7 @@ public class RaceCarMaker implements CarMaker {
     }
 
     @Override
-    public void makeCar() {
-        wheelMaker.makeWheel();
+    public void makeCar(URL url) {
+        wheelMaker.makeWheel(url);
     }
 }

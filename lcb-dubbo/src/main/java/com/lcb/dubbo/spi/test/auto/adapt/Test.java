@@ -1,6 +1,10 @@
 package com.lcb.dubbo.spi.test.auto.adapt;
 
+import org.apache.dubbo.common.URL;
 import org.apache.dubbo.common.extension.ExtensionLoader;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author changbao.li
@@ -12,7 +16,11 @@ public class Test {
         ExtensionLoader<CarMaker> extensionLoader =
                 ExtensionLoader.getExtensionLoader(CarMaker.class);
 
-        CarMaker carMaker = extensionLoader.getExtension("raceCarMaker");
-        carMaker.makeCar();
+        Map<String, String> map = new HashMap();
+        map.put("raceCarMakerLoader","wheelMakeImplFirst");
+        URL url = new URL("", "", 1, map);
+
+        CarMaker carMaker = extensionLoader.getExtension("raceCarMakerLoader");
+        carMaker.makeCar(url);
     }
 }

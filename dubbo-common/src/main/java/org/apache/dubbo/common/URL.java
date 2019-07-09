@@ -124,7 +124,7 @@ class URL implements Serializable {
 
     private volatile transient String string;
 
-    protected URL() {
+    protected URL(String protocol, String host, String s) {
         this.protocol = null;
         this.username = null;
         this.password = null;

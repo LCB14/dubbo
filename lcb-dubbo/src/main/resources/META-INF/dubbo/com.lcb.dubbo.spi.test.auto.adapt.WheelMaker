@@ -1,0 +1,2 @@
+wheelMakeImplFirst = com.lcb.dubbo.spi.test.auto.adapt.WheelMakeImplFirst
+wheelMakeImplSecond = com.lcb.dubbo.spi.test.auto.adapt.WheelMakeImplSecond
