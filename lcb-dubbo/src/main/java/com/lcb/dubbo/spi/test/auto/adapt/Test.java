@@ -17,6 +17,7 @@ public class Test {
                 ExtensionLoader.getExtensionLoader(CarMaker.class);
 
         Map<String, String> map = new HashMap();
+        //raceCarMakerLoader依赖wheelMakeImplFirst
         map.put("raceCarMakerLoader","wheelMakeImplFirst");
 //        map.put("raceCarMakerLoader","wheelMakeImplSecond");
         URL url = new URL("", "", 1, map);
