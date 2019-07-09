@@ -1,4 +1,4 @@
 protocol = com.lcb.dubbo.spi.test.auto.packet.HelloProtocol
 
-# 包装类不需要指定名字
+# 包装类不需要指定名字，指定名字获取时也获取不到。
 com.lcb.dubbo.spi.test.auto.packet.WrapperProtocol
