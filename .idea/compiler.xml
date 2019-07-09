@@ -27,6 +27,7 @@
       <module name="dubbo-demo-xml-provider" options="-proc:none" />
       <module name="dubbo-filter-cache" options="-proc:none" />
       <module name="dubbo-filter-validation" options="-proc:none" />
+      <module name="dubbo-lcb" options="-proc:none" />
       <module name="dubbo-metadata-definition" options="-proc:none" />
       <module name="dubbo-metadata-definition-protobuf" options="-proc:none" />
       <module name="dubbo-metadata-report-api" options="-proc:none" />

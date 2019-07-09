@@ -103,5 +103,6 @@
     <file url="file://$PROJECT_DIR$/dubbo-serialization/dubbo-serialization-protobuf-json" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dubbo-serialization/dubbo-serialization-protostuff" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dubbo-serialization/dubbo-serialization-test" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lcb-dubbo" charset="UTF-8" />
   </component>
 </project>
