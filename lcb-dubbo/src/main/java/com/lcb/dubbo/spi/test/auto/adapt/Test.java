@@ -18,6 +18,7 @@ public class Test {
 
         Map<String, String> map = new HashMap();
         map.put("raceCarMakerLoader","wheelMakeImplFirst");
+//        map.put("raceCarMakerLoader","wheelMakeImplSecond");
         URL url = new URL("", "", 1, map);
 
         CarMaker carMaker = extensionLoader.getExtension("raceCarMakerLoader");
