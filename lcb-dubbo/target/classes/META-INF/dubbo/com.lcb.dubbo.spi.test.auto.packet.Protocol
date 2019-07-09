@@ -1,0 +1,4 @@
+protocol = com.lcb.dubbo.spi.test.auto.packet.HelloProtocol
+
+# 包装类不需要指定名字
+com.lcb.dubbo.spi.test.auto.packet.WrapperProtocol
