@@ -11,6 +11,7 @@ public class RaceCarMaker implements CarMaker {
      *  当CarMake扩展点被加载时，会自动装配WheelMaker
      *
      *  思考：当WheelMaker有多个实现时，dubbo是通过什么机制选择来选择相关的实例呢？
+     *  dubbo通过URL+adaptive方法来指定相关实例和实例中的方法
      */
     public void setWheelMaker(WheelMaker wheelMaker) {
         this.wheelMaker = wheelMaker;
