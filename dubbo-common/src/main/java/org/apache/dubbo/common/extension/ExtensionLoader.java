@@ -100,14 +100,16 @@ public class ExtensionLoader<T> {
     private String cachedDefaultName;
     private volatile Throwable createAdaptiveInstanceError;
 
-    // 在加载拓展接口实例时进行初始化，缓存的是拓展接口的包装实现类
+    /**
+     *   在加载拓展接口实例时进行初始化，缓存的是拓展接口的包装实现类
+     */
     private Set<Class<?>> cachedWrapperClasses;
 
     private Map<String, IllegalStateException> exceptions = new ConcurrentHashMap<>();
 
     private ExtensionLoader(Class<?> type) {
         this.type = type;
-        // todo 2019年07月10日09:45:35
+        // objectFactory <-> AdaptiveExtensionFactory，因为AdaptiveExtensionFactory添加了@Adaptive
         objectFactory = (type == ExtensionFactory.class ? null : ExtensionLoader.getExtensionLoader(ExtensionFactory.class).getAdaptiveExtension());
     }
 
@@ -483,6 +485,10 @@ public class ExtensionLoader<T> {
 
     @SuppressWarnings("unchecked")
     public T getAdaptiveExtension() {
+        /**
+         * cachedAdaptiveInstance初始化的地方
+         * @see ExtensionLoader#injectExtension(java.lang.Object)
+         */
         Object instance = cachedAdaptiveInstance.get();
         if (instance == null) {
             if (createAdaptiveInstanceError == null) {
@@ -490,6 +496,7 @@ public class ExtensionLoader<T> {
                     instance = cachedAdaptiveInstance.get();
                     if (instance == null) {
                         try {
+                            // 创建自适应拓展接口代理类
                             instance = createAdaptiveExtension();
                             cachedAdaptiveInstance.set(instance);
                         } catch (Throwable t) {
@@ -550,6 +557,7 @@ public class ExtensionLoader<T> {
             Set<Class<?>> wrapperClasses = cachedWrapperClasses;
             if (CollectionUtils.isNotEmpty(wrapperClasses)) {
                 for (Class<?> wrapperClass : wrapperClasses) {
+                    // 执行扩展点自动包装类逻辑
                     instance = injectExtension((T) wrapperClass.getConstructor(type).newInstance(instance));
                 }
             }
@@ -744,8 +752,10 @@ public class ExtensionLoader<T> {
                     + clazz.getName() + " is not subtype of interface.");
         }
         if (clazz.isAnnotationPresent(Adaptive.class)) {
+            // 缓存自适应的拓展接口实现类
             cacheAdaptiveClass(clazz);
         } else if (isWrapperClass(clazz)) {
+            // 把扩展点自动包装类加入缓存
             cacheWrapperClass(clazz);
         } else {
             clazz.getConstructor();
@@ -860,7 +870,7 @@ public class ExtensionLoader<T> {
     }
 
     @SuppressWarnings("unchecked")
-    private T createAdaptiveExtension() {
+    private T  createAdaptiveExtension() {
         try {
             return injectExtension((T) getAdaptiveExtensionClass().newInstance());
         } catch (Exception e) {
@@ -869,14 +879,20 @@ public class ExtensionLoader<T> {
     }
 
     private Class<?> getAdaptiveExtensionClass() {
+        // 获取拓展接口在配置文件中的所有实现类
         getExtensionClasses();
         if (cachedAdaptiveClass != null) {
+            /**
+             * @see ExtensionLoader#loadClass(java.util.Map, java.net.URL, java.lang.Class, java.lang.String)
+             * 初始化cachedAdaptiveClass
+             */
             return cachedAdaptiveClass;
         }
         return cachedAdaptiveClass = createAdaptiveExtensionClass();
     }
 
     private Class<?> createAdaptiveExtensionClass() {
+        // 按规则生成代理类代码
         String code = new AdaptiveClassCodeGenerator(type, cachedDefaultName).generate();
         ClassLoader classLoader = findClassLoader();
         org.apache.dubbo.common.compiler.Compiler compiler = ExtensionLoader.getExtensionLoader(org.apache.dubbo.common.compiler.Compiler.class).getAdaptiveExtension();
