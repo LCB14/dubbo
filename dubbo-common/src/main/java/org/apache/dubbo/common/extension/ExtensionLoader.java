@@ -351,7 +351,7 @@ public class ExtensionLoader<T> {
             // 这个名称所对应的实例类，就是默认拓展接口实现类
             return getDefaultExtension();
         }
-        // TODO 2019年07月10日09:36:31
+        // 对拓展接口的所有实现类Map进行包装存储
         final Holder<Object> holder = getOrCreateHolder(name);
         Object instance = holder.get();
         if (instance == null) {
@@ -541,9 +541,11 @@ public class ExtensionLoader<T> {
         try {
             T instance = (T) EXTENSION_INSTANCES.get(clazz);
             if (instance == null) {
+                // 创建拓展接口实现类的实例化对象，并初始化给instance
                 EXTENSION_INSTANCES.putIfAbsent(clazz, clazz.newInstance());
                 instance = (T) EXTENSION_INSTANCES.get(clazz);
             }
+            // 注入拓展类中依赖的拓展类
             injectExtension(instance);
             Set<Class<?>> wrapperClasses = cachedWrapperClasses;
             if (CollectionUtils.isNotEmpty(wrapperClasses)) {
