@@ -559,7 +559,7 @@ public class ExtensionLoader<T> {
                 instance = (T) EXTENSION_INSTANCES.get(clazz);
             }
 
-            // 注入拓展接口中依赖的拓展类
+            // 注入拓展接口中依赖的拓展类（本质是拓展接口的代理类)
             injectExtension(instance);
 
             Set<Class<?>> wrapperClasses = cachedWrapperClasses;
