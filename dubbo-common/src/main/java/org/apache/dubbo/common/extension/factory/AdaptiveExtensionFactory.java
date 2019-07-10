@@ -44,7 +44,6 @@ public class AdaptiveExtensionFactory implements ExtensionFactory {
     @Override
     public <T> T getExtension(Class<T> type, String name) {
         for (ExtensionFactory factory : factories) {
-            // 这里不会出现循环调用吗？
             T extension = factory.getExtension(type, name);
             if (extension != null) {
                 return extension;
