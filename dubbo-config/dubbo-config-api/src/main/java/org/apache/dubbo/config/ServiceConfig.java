@@ -297,7 +297,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
         checkDefault();
         checkProtocol();
         checkApplication();
-        // if protocol is not injvm checkRegistry
+        // if protocol is not in jvm checkRegistry
         if (!isOnlyInJvm()) {
             checkRegistry();
         }
@@ -366,6 +366,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
     }
 
     public synchronized void export() {
+        // 之所以更新，应为dubbo的配置可能在不同地方（xml,配置中心等)
         checkAndUpdateSubConfigs();
 
         if (!shouldExport()) {
