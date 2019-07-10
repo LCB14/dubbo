@@ -7,6 +7,9 @@ import org.apache.dubbo.common.extension.SPI;
 @SPI
 public interface WheelMaker {
 
+    /**
+     *  注解中的值作为key
+     */
     @Adaptive("raceCarMakerLoader")
     void makeWheel(URL url);
 }
