@@ -17,6 +17,7 @@
 package org.apache.dubbo.common.extension;
 
 import org.apache.dubbo.common.URL;
+import org.apache.dubbo.common.extension.factory.AdaptiveExtensionFactory;
 import org.apache.dubbo.common.extension.support.ActivateComparator;
 import org.apache.dubbo.common.logger.Logger;
 import org.apache.dubbo.common.logger.LoggerFactory;
@@ -109,7 +110,11 @@ public class ExtensionLoader<T> {
 
     private ExtensionLoader(Class<?> type) {
         this.type = type;
-        // objectFactory <-> AdaptiveExtensionFactory，因为AdaptiveExtensionFactory添加了@Adaptive
+        /**
+         * objectFactory <-> AdaptiveExtensionFactory，因为AdaptiveExtensionFactory添加了@Adaptive
+         *
+         * @see AdaptiveExtensionFactory
+         */
         objectFactory = (type == ExtensionFactory.class ? null : ExtensionLoader.getExtensionLoader(ExtensionFactory.class).getAdaptiveExtension());
     }
 
@@ -486,7 +491,8 @@ public class ExtensionLoader<T> {
     @SuppressWarnings("unchecked")
     public T getAdaptiveExtension() {
         /**
-         * cachedAdaptiveInstance初始化的地方
+         * cachedAdaptiveInstance初始化的位置
+         *
          * @see ExtensionLoader#injectExtension(java.lang.Object)
          */
         Object instance = cachedAdaptiveInstance.get();
@@ -552,8 +558,10 @@ public class ExtensionLoader<T> {
                 EXTENSION_INSTANCES.putIfAbsent(clazz, clazz.newInstance());
                 instance = (T) EXTENSION_INSTANCES.get(clazz);
             }
-            // 注入拓展类中依赖的拓展类
+
+            // 注入拓展接口中依赖的拓展类
             injectExtension(instance);
+
             Set<Class<?>> wrapperClasses = cachedWrapperClasses;
             if (CollectionUtils.isNotEmpty(wrapperClasses)) {
                 for (Class<?> wrapperClass : wrapperClasses) {
@@ -888,6 +896,8 @@ public class ExtensionLoader<T> {
              */
             return cachedAdaptiveClass;
         }
+        // @Adaptive注解如果加在类上，则被修饰的类则会作为拓展接口的代理类返回。
+        // 否者dubbo会利用createAdaptiveExtensionClass()方法--动态代理生成拓展接口的代理类
         return cachedAdaptiveClass = createAdaptiveExtensionClass();
     }
 
