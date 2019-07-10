@@ -87,22 +87,27 @@ public class ExtensionLoader<T> {
     private final ExtensionFactory objectFactory;
 
     private final ConcurrentMap<Class<?>, String> cachedNames = new ConcurrentHashMap<>();
-
+    // 缓存拓展接口的所有实现实现类（Class)
     private final Holder<Map<String, Class<?>>> cachedClasses = new Holder<>();
 
     private final Map<String, Object> cachedActivates = new ConcurrentHashMap<>();
+    // todo 2019年07月10日09:35:46
     private final ConcurrentMap<String, Holder<Object>> cachedInstances = new ConcurrentHashMap<>();
+    // TODO 2019年07月10日09:35:55
     private final Holder<Object> cachedAdaptiveInstance = new Holder<>();
+
     private volatile Class<?> cachedAdaptiveClass = null;
     private String cachedDefaultName;
     private volatile Throwable createAdaptiveInstanceError;
 
+    // 在加载拓展接口实例时进行初始化，缓存的是拓展接口的包装实现类
     private Set<Class<?>> cachedWrapperClasses;
 
     private Map<String, IllegalStateException> exceptions = new ConcurrentHashMap<>();
 
     private ExtensionLoader(Class<?> type) {
         this.type = type;
+        // todo 2019年07月10日09:45:35
         objectFactory = (type == ExtensionFactory.class ? null : ExtensionLoader.getExtensionLoader(ExtensionFactory.class).getAdaptiveExtension());
     }
 
@@ -125,6 +130,8 @@ public class ExtensionLoader<T> {
 
         ExtensionLoader<T> loader = (ExtensionLoader<T>) EXTENSION_LOADERS.get(type);
         if (loader == null) {
+            // putIfAbsent 如果传入key对应的value已经存在，就返回存在的value，不进行替换。
+            // 如果不存在，就添加key和value，返回nul
             EXTENSION_LOADERS.putIfAbsent(type, new ExtensionLoader<T>(type));
             loader = (ExtensionLoader<T>) EXTENSION_LOADERS.get(type);
         }
@@ -340,14 +347,18 @@ public class ExtensionLoader<T> {
             throw new IllegalArgumentException("Extension name == null");
         }
         if ("true".equals(name)) {
+            // 可以在拓展接口的SPI注解中指定一个拓展接口实现类类在配置文件中的名称
+            // 这个名称所对应的实例类，就是默认拓展接口实现类
             return getDefaultExtension();
         }
+        // TODO 2019年07月10日09:36:31
         final Holder<Object> holder = getOrCreateHolder(name);
         Object instance = holder.get();
         if (instance == null) {
             synchronized (holder) {
                 instance = holder.get();
                 if (instance == null) {
+                    // 创建扩展点实现类实例
                     instance = createExtension(name);
                     holder.set(instance);
                 }
@@ -522,6 +533,7 @@ public class ExtensionLoader<T> {
 
     @SuppressWarnings("unchecked")
     private T createExtension(String name) {
+        // 获取与传入name对应的拓展接口实现类
         Class<?> clazz = getExtensionClasses().get(name);
         if (clazz == null) {
             throw findException(name);
@@ -620,6 +632,7 @@ public class ExtensionLoader<T> {
             synchronized (cachedClasses) {
                 classes = cachedClasses.get();
                 if (classes == null) {
+                    // 加载META-INF/dubbo路径下文件中配置拓展接口的所有实现类
                     classes = loadExtensionClasses();
                     cachedClasses.set(classes);
                 }
@@ -630,6 +643,7 @@ public class ExtensionLoader<T> {
 
     // synchronized in getExtensionClasses
     private Map<String, Class<?>> loadExtensionClasses() {
+        // 缓存拓展接口默认的实现类（只能指定一个默认的实现类)
         cacheDefaultExtensionName();
 
         Map<String, Class<?>> extensionClasses = new HashMap<>();
@@ -648,6 +662,7 @@ public class ExtensionLoader<T> {
     private void cacheDefaultExtensionName() {
         final SPI defaultAnnotation = type.getAnnotation(SPI.class);
         if (defaultAnnotation != null) {
+            // 获取@SPI中指定的值
             String value = defaultAnnotation.value();
             if ((value = value.trim()).length() > 0) {
                 String[] names = NAME_SEPARATOR.split(value);
@@ -675,6 +690,7 @@ public class ExtensionLoader<T> {
             if (urls != null) {
                 while (urls.hasMoreElements()) {
                     java.net.URL resourceURL = urls.nextElement();
+                    // resourceURL表示以拓展接口命名的文件的路径
                     loadResource(extensionClasses, classLoader, resourceURL);
                 }
             }
@@ -719,6 +735,7 @@ public class ExtensionLoader<T> {
     }
 
     private void loadClass(Map<String, Class<?>> extensionClasses, java.net.URL resourceURL, Class<?> clazz, String name) throws NoSuchMethodException {
+        // 判断配置文件中指定的拓展类是不是真正的拓展接口实现类
         if (!type.isAssignableFrom(clazz)) {
             throw new IllegalStateException("Error occurred when loading extension class (interface: " +
                     type + ", class line: " + clazz.getName() + "), class "
@@ -742,6 +759,7 @@ public class ExtensionLoader<T> {
                 cacheActivateClass(clazz, names[0]);
                 for (String n : names) {
                     cacheName(clazz, n);
+                    // 缓存拓展接口的所有实现类
                     saveInExtensionClass(extensionClasses, clazz, n);
                 }
             }
