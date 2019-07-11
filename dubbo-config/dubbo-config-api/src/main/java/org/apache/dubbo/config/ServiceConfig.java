@@ -340,6 +340,11 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
                 throw new IllegalStateException("The local implementation class " + localClass.getName() + " not implement interface " + interfaceName);
             }
         }
+        /**
+         *  dubbo本地存根
+         *
+         *  参考 link https://www.cnblogs.com/hzhuxin/p/8250602.html
+         */
         if (stub != null) {
             if ("true".equals(stub)) {
                 stub = interfaceName + "Stub";
@@ -368,9 +373,13 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
     }
 
     public synchronized void export() {
-        // 检查和更新配置信息
-        // 之所以更新，因为dubbo的配置并不局限于xml（例如：xml,系统配置，dubbo配置中心，dubbo.properties等)
-        // 思考：dubbo是如何协调这些配置的优先级的？
+        /**
+         *  检查和更新配置信息
+         *  之所以更新，因为dubbo的配置方式并不限于xml
+         *  （例如：xml,系统配置，dubbo配置中心，dubbo.properties等)
+         *
+         *  思考：dubbo是如何协调这些配置的优先级的？
+         */
         checkAndUpdateSubConfigs();
 
         if (!shouldExport()) {

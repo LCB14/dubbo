@@ -126,14 +126,35 @@ public class ServiceBean<T> extends ServiceConfig<T> implements InitializingBean
         }
     }
 
+    /**
+     * afterPropertiesSet检查ServiceBean的某个属性是否为空，如果为空，
+     * 从applicationContext获取相应类型的bean，如果获取到了，则进行相应的设置。常见的6个属性如下（还有其它的)：
+     *
+     * 1、ProviderConfig provider：其实就是看有没有配置<dubbo:provider>
+     *
+     * 2、ApplicationConfig application：其实就是看有没有配置<dubbo:application>
+     *
+     * 3、ModuleConfig module：其实就是看有没有配置<dubbo:module>
+     *
+     * 4、List<RegistryConfig> registries：其实就是看有没有配置<dubbo:registry>
+     *
+     * 5、MonitorConfig monitor：其实就是看有没有配置<dubbo:monitor>
+     *
+     * 6、List<ProtocolConfig> protocols：其实就是看有没有配置<dubbo:protocol>
+     *
+     * String path：服务名称
+     *
+     * @throws Exception
+     */
     @Override
     @SuppressWarnings({"unchecked", "deprecation"})
     public void afterPropertiesSet() throws Exception {
-        // 把service与对应的provider进行关联
+        // 初始化provider
         if (getProvider() == null) {
-            // 尝试从spring容器中去拿
+            // 读取 spring applicationContext 的 ProviderConfig
             Map<String, ProviderConfig> providerConfigMap = applicationContext == null ? null : BeanFactoryUtils.beansOfTypeIncludingAncestors(applicationContext, ProviderConfig.class, false, false);
             if (providerConfigMap != null && providerConfigMap.size() > 0) {
+                // 读取 spring applicationContext 的 ProtocolConfig
                 Map<String, ProtocolConfig> protocolConfigMap = applicationContext == null ? null : BeanFactoryUtils.beansOfTypeIncludingAncestors(applicationContext, ProtocolConfig.class, false, false);
                 if (CollectionUtils.isEmptyMap(protocolConfigMap)
                         && providerConfigMap.size() > 1) { // backward compatibility
@@ -162,8 +183,10 @@ public class ServiceBean<T> extends ServiceConfig<T> implements InitializingBean
                 }
             }
         }
+        // 初始化 application
         if (getApplication() == null
                 && (getProvider() == null || getProvider().getApplication() == null)) {
+            // 读取 spring applicationContext 的 ApplicationConfig
             Map<String, ApplicationConfig> applicationConfigMap = applicationContext == null ? null : BeanFactoryUtils.beansOfTypeIncludingAncestors(applicationContext, ApplicationConfig.class, false, false);
             if (applicationConfigMap != null && applicationConfigMap.size() > 0) {
                 ApplicationConfig applicationConfig = null;
