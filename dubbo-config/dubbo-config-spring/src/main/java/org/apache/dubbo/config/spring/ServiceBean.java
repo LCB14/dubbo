@@ -61,7 +61,6 @@ public class ServiceBean<T> extends ServiceConfig<T> implements InitializingBean
         ApplicationContextAware, ApplicationListener<ContextRefreshedEvent>, BeanNameAware,
         ApplicationEventPublisherAware {
 
-
     private static final long serialVersionUID = 213195494150089726L;
 
     private final transient Service service;
@@ -122,7 +121,7 @@ public class ServiceBean<T> extends ServiceConfig<T> implements InitializingBean
             if (logger.isInfoEnabled()) {
                 logger.info("The service ready on spring started. service: " + getInterface());
             }
-            // 执行导出服务
+            // 导出服务
             export();
         }
     }
@@ -130,7 +129,9 @@ public class ServiceBean<T> extends ServiceConfig<T> implements InitializingBean
     @Override
     @SuppressWarnings({"unchecked", "deprecation"})
     public void afterPropertiesSet() throws Exception {
+        // 把service与对应的provider进行关联
         if (getProvider() == null) {
+            // 尝试从spring容器中去拿
             Map<String, ProviderConfig> providerConfigMap = applicationContext == null ? null : BeanFactoryUtils.beansOfTypeIncludingAncestors(applicationContext, ProviderConfig.class, false, false);
             if (providerConfigMap != null && providerConfigMap.size() > 0) {
                 Map<String, ProtocolConfig> protocolConfigMap = applicationContext == null ? null : BeanFactoryUtils.beansOfTypeIncludingAncestors(applicationContext, ProtocolConfig.class, false, false);

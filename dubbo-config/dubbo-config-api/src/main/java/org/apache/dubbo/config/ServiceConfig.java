@@ -294,6 +294,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
         completeCompoundConfigs();
         // Config Center should always being started first.
         startConfigCenter();
+
         checkDefault();
         checkProtocol();
         checkApplication();
@@ -301,6 +302,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
         if (!isOnlyInJvm()) {
             checkRegistry();
         }
+        // 读取dubbo配置，并按配置优先级进行初始化。
         this.refresh();
         checkMetadataReport();
 
@@ -366,7 +368,9 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
     }
 
     public synchronized void export() {
-        // 之所以更新，应为dubbo的配置可能在不同地方（xml,配置中心等)
+        // 检查和更新配置信息
+        // 之所以更新，因为dubbo的配置并不局限于xml（例如：xml,系统配置，dubbo配置中心，dubbo.properties等)
+        // 思考：dubbo是如何协调这些配置的优先级的？
         checkAndUpdateSubConfigs();
 
         if (!shouldExport()) {
