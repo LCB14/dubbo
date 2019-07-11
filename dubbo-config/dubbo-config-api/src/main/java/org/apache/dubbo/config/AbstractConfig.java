@@ -547,9 +547,11 @@ public abstract class AbstractConfig implements Serializable {
      */
     public void refresh() {
         try {
+            // 缓存dubbo不同形式的配置信息
             CompositeConfiguration compositeConfiguration = Environment
                     .getInstance()
                     .getConfiguration(getPrefix(), getId());
+
             InmemoryConfiguration config = new InmemoryConfiguration(getPrefix(), getId());
             config.addProperties(getMetaData());
             if (Environment.getInstance().isConfigCenterFirst()) {

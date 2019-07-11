@@ -55,6 +55,7 @@ public class Environment {
     }
 
     public SystemConfiguration getSystemConfig(String prefix, String id) {
+        // java8新技能 computeIfAbsent（），若key对应的value为空，会将第二个参数的返回值存入并返回。
         return systemConfigs.computeIfAbsent(toKey(prefix, id), k -> new SystemConfiguration(prefix, id));
     }
 
@@ -114,10 +115,14 @@ public class Environment {
     public CompositeConfiguration getConfiguration(String prefix, String id) {
         CompositeConfiguration compositeConfiguration = new CompositeConfiguration();
         // Config center has the highest priority
+        // system配置
         compositeConfiguration.addConfiguration(this.getSystemConfig(prefix, id));
         compositeConfiguration.addConfiguration(this.getEnvironmentConfig(prefix, id));
+        // 配置中心APP
         compositeConfiguration.addConfiguration(this.getAppExternalConfig(prefix, id));
+        // 配置中心全局
         compositeConfiguration.addConfiguration(this.getExternalConfig(prefix, id));
+        // dubbo.properties配置
         compositeConfiguration.addConfiguration(this.getPropertiesConfig(prefix, id));
         return compositeConfiguration;
     }
