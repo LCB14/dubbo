@@ -412,6 +412,7 @@ public class RegistryProtocol implements Protocol {
 
         //构建路由链，为进行后续的过滤做准备
         directory.buildRouterChain(subscribeUrl);
+        // 对指定的目录进行订阅
         directory.subscribe(subscribeUrl.addParameter(CATEGORY_KEY,
                 PROVIDERS_CATEGORY + "," + CONFIGURATORS_CATEGORY + "," + ROUTERS_CATEGORY));
 
