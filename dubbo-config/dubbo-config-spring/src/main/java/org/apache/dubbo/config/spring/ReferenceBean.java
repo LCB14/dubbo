@@ -68,6 +68,9 @@ public class ReferenceBean<T> extends ReferenceConfig<T> implements FactoryBean,
         SpringExtensionFactory.addApplicationContext(applicationContext);
     }
 
+    /**
+     * dubbo服务引入
+     */
     @Override
     public Object getObject() {
         return get();
