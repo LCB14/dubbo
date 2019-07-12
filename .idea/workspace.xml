@@ -117,11 +117,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/main/java/org/apache/dubbo/config/spring/ServiceBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="109" column="45" selection-start-line="109" selection-start-column="45" selection-end-line="109" selection-end-column="45" />
+            <state relative-caret-position="392">
+              <caret line="114" column="36" lean-forward="true" selection-start-line="114" selection-start-column="36" selection-end-line="114" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -214,17 +214,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dubbo-demo/dubbo-demo-xml/dubbo-demo-xml-provider/src/main/resources/spring/dubbo-provider.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="614">
-              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="394">
+              <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/main/java/org/apache/dubbo/config/spring/schema/DubboNamespaceHandler.java">
+        <entry file="file://$PROJECT_DIR$/dubbo-demo/dubbo-demo-xml/dubbo-demo-xml-provider/src/main/java/org/apache/dubbo/demo/provider/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="47" column="24" lean-forward="true" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+            <state relative-caret-position="352">
+              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dubbo-demo/dubbo-demo-xml/dubbo-demo-xml-consumer/src/main/java/org/apache/dubbo/demo/consumer/Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="32" column="47" lean-forward="true" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dubbo-demo/dubbo-demo-xml/dubbo-demo-xml-consumer/src/main/resources/spring/dubbo-consumer.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="25" column="55" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -300,6 +318,8 @@
         <option value="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/src/main/java/org/apache/dubbo/rpc/proxy/javassist/JavassistProxyFactory.java" />
         <option value="$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/bytecode/Wrapper.java" />
         <option value="$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ServiceConfig.java" />
+        <option value="$PROJECT_DIR$/dubbo-demo/dubbo-demo-xml/dubbo-demo-xml-consumer/src/main/resources/spring/dubbo-consumer.xml" />
+        <option value="$PROJECT_DIR$/dubbo-demo/dubbo-demo-xml/dubbo-demo-xml-provider/src/main/resources/spring/dubbo-provider.xml" />
       </list>
     </option>
   </component>
@@ -439,6 +459,27 @@
               <item name="dubbo-demo-xml-consumer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
+              <item name="dubbo-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="dubbo-demo-xml" type="462c0819:PsiDirectoryNode" />
+              <item name="dubbo-demo-xml-consumer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="consumer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
+              <item name="dubbo-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="dubbo-demo-xml" type="462c0819:PsiDirectoryNode" />
+              <item name="dubbo-demo-xml-consumer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -475,6 +516,27 @@
               <item name="dubbo-demo-xml-provider" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
+              <item name="dubbo-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="dubbo-demo-xml" type="462c0819:PsiDirectoryNode" />
+              <item name="dubbo-demo-xml-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
+              <item name="dubbo-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="dubbo-demo-xml" type="462c0819:PsiDirectoryNode" />
+              <item name="dubbo-demo-xml-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="provider" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
@@ -606,7 +668,33 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ServiceBean">
+  <component name="RunManager" selected="Application.Application (1)">
+    <configuration name="Application (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.apache.dubbo.demo.consumer.Application" />
+      <module name="dubbo-demo-xml-consumer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.apache.dubbo.demo.consumer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.apache.dubbo.demo.provider.Application" />
+      <module name="dubbo-demo-xml-provider" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.apache.dubbo.demo.provider.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ServiceBean" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.apache.dubbo.config.spring.ServiceBean" />
       <module name="dubbo-config-spring" />
@@ -646,42 +734,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.lcb.dubbo.spi.test.auto.packet.Test" />
-      <module name="dubbo-lcb" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.lcb.dubbo.spi.test.auto.packet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DubboSPITest.sayHello" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="dubbo-lcb" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.lcb.dubbo.spi.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.lcb.dubbo.spi.test" />
-      <option name="MAIN_CLASS_NAME" value="com.lcb.dubbo.spi.test.DubboSPITest" />
-      <option name="METHOD_NAME" value="sayHello" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Application (1)" />
+        <item itemvalue="Application.Application" />
         <item itemvalue="Application.ServiceBean" />
         <item itemvalue="Application.Test (2)" />
         <item itemvalue="Application.Test (1)" />
-        <item itemvalue="Application.Test" />
-        <item itemvalue="JUnit.DubboSPITest.sayHello" />
       </list>
     </recent_temporary>
   </component>
@@ -741,7 +800,7 @@
       <window_info id="Capture Tool" order="4" />
       <window_info id="Learn" order="5" />
       <window_info id="Structure" order="6" sideWeight="0.7682776" side_tool="true" weight="0.3018598" />
-      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.23172243" weight="0.2918455" />
+      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.23172243" visible="true" weight="0.2918455" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Run with VisualVM" order="1" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.32961586" />
@@ -750,7 +809,7 @@
       <window_info anchor="bottom" id="Terminal" order="5" weight="0.30111524" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32961586" />
-      <window_info anchor="bottom" id="Run" order="8" weight="0.37546468" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.37546468" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.39900866" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -969,20 +1028,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/Adaptive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-21">
-          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/packet/WrapperProtocol.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/packet/HelloProtocol.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -1213,13 +1258,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-demo/dubbo-demo-xml/dubbo-demo-xml-consumer/src/main/resources/spring/dubbo-consumer.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.16.RELEASE/spring-beans-4.3.16.RELEASE-sources.jar!/org/springframework/beans/factory/xml/BeanDefinitionParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
@@ -1356,17 +1394,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-demo/dubbo-demo-xml/dubbo-demo-xml-provider/src/main/resources/spring/dubbo-provider.xml">
+    <entry file="file://$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/main/java/org/apache/dubbo/config/spring/ServiceBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="392">
+          <caret line="114" column="36" lean-forward="true" selection-start-line="114" selection-start-column="36" selection-end-line="114" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/main/java/org/apache/dubbo/config/spring/ServiceBean.java">
+    <entry file="file://$PROJECT_DIR$/dubbo-demo/dubbo-demo-xml/dubbo-demo-xml-consumer/src/main/resources/spring/dubbo-consumer.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="109" column="45" selection-start-line="109" selection-start-column="45" selection-end-line="109" selection-end-column="45" />
+        <state relative-caret-position="550">
+          <caret line="25" column="55" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dubbo-demo/dubbo-demo-xml/dubbo-demo-xml-provider/src/main/resources/spring/dubbo-provider.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dubbo-demo/dubbo-demo-xml/dubbo-demo-xml-provider/src/main/java/org/apache/dubbo/demo/provider/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dubbo-demo/dubbo-demo-xml/dubbo-demo-xml-consumer/src/main/java/org/apache/dubbo/demo/consumer/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="32" column="47" lean-forward="true" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
         </state>
       </provider>
     </entry>

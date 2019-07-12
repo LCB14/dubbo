@@ -488,7 +488,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
     }
 
     /**
-     * 参考 link https://www.jianshu.com/p/df113a144a74
+     * 参考 link http://dubbo.apache.org/zh-cn/docs/source_code_guide/export-service.html
      */
     private void doExportUrlsFor1Protocol(ProtocolConfig protocolConfig, List<URL> registryURLs) {
         String name = protocolConfig.getName();
