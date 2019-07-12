@@ -47,6 +47,7 @@ public class RouterChain<T> {
     }
 
     private RouterChain(URL url) {
+        // 获取添加了@Activate注解的RouterFactory
         List<RouterFactory> extensionFactories = ExtensionLoader.getExtensionLoader(RouterFactory.class)
                 .getActivateExtension(url, (String[]) null);
 

@@ -49,9 +49,13 @@ public abstract class ListenableRouter extends AbstractRouter implements Configu
     private ConditionRouterRule routerRule;
     private List<ConditionRouter> conditionRouters = Collections.emptyList();
 
+    /**
+     *   configuration对配置中心进行监听
+     */
     public ListenableRouter(DynamicConfiguration configuration, URL url, String ruleKey) {
         super(configuration, url);
         this.force = false;
+        // ruleKey存放应用名或服务名
         this.init(ruleKey);
     }
 
@@ -62,11 +66,13 @@ public abstract class ListenableRouter extends AbstractRouter implements Configu
                     ", raw rule is:\n " + event.getValue());
         }
 
+        // 判断事件类型
         if (event.getChangeType().equals(ConfigChangeType.DELETED)) {
             routerRule = null;
             conditionRouters = Collections.emptyList();
         } else {
             try {
+                // 将配置中心节点中存储的配置信息转换成类对象
                 routerRule = ConditionRuleParser.parse(event.getValue());
                 generateConditions(routerRule);
             } catch (Exception e) {
@@ -117,8 +123,11 @@ public abstract class ListenableRouter extends AbstractRouter implements Configu
         if (StringUtils.isEmpty(ruleKey)) {
             return;
         }
+        // 组建监听目录
         String routerKey = ruleKey + RULE_SUFFIX;
+        // 添加监听器
         configuration.addListener(routerKey, this);
+        // 取出监听目录下的数据
         String rule = configuration.getRule(routerKey, DynamicConfiguration.DEFAULT_GROUP);
         if (StringUtils.isNotEmpty(rule)) {
             this.process(new ConfigChangeEvent(routerKey, rule));

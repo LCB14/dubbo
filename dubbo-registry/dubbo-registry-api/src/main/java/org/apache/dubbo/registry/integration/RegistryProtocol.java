@@ -401,6 +401,7 @@ public class RegistryProtocol implements Protocol {
         RegistryDirectory<T> directory = new RegistryDirectory<T>(type, url);
         directory.setRegistry(registry);
         directory.setProtocol(protocol);
+
         // all attributes of REFER_KEY
         Map<String, String> parameters = new HashMap<String, String>(directory.getUrl().getParameters());
         URL subscribeUrl = new URL(CONSUMER_PROTOCOL, parameters.remove(REGISTER_IP_KEY), 0, type.getName(), parameters);
@@ -408,7 +409,8 @@ public class RegistryProtocol implements Protocol {
             directory.setRegisteredConsumerUrl(getRegisteredConsumerUrl(subscribeUrl, url));
             registry.register(directory.getRegisteredConsumerUrl());
         }
-        //构建路由链
+
+        //构建路由链，为进行后续的过滤做准备
         directory.buildRouterChain(subscribeUrl);
         directory.subscribe(subscribeUrl.addParameter(CATEGORY_KEY,
                 PROVIDERS_CATEGORY + "," + CONFIGURATORS_CATEGORY + "," + ROUTERS_CATEGORY));

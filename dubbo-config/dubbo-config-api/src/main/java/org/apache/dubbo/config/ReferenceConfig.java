@@ -271,6 +271,7 @@ public class ReferenceConfig<T> extends AbstractReferenceConfig {
     }
 
     private void init() {
+        // 避免重复初始化
         if (initialized) {
             return;
         }
