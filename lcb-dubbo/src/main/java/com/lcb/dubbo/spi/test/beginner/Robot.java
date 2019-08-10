@@ -1,4 +1,4 @@
-package com.lcb.dubbo.spi.test;
+package com.lcb.dubbo.spi.test.beginner;
 
 import org.apache.dubbo.common.extension.SPI;
 

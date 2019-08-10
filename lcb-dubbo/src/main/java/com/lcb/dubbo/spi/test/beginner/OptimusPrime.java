@@ -1,4 +1,4 @@
-package com.lcb.dubbo.spi.test;
+package com.lcb.dubbo.spi.test.beginner;
 
 public class OptimusPrime implements Robot {
     

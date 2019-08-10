@@ -84,6 +84,7 @@
       <module name="dubbo-serialization-protobuf-json" options="-proc:none" />
       <module name="dubbo-serialization-protostuff" options="-proc:none" />
       <module name="dubbo-serialization-test" options="-proc:none" />
+      <module name="lcb-dubbo" options="-proc:none" />
     </option>
   </component>
 </project>

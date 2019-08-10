@@ -2,231 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="768deaee-b44c-4776-9944-0fd361d07562" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryProtocol.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryProtocol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-cluster/target/classes/org/apache/dubbo/rpc/cluster/RouterChain.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-cluster/target/classes/org/apache/dubbo/rpc/cluster/RouterChain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-cluster/target/classes/org/apache/dubbo/rpc/cluster/router/condition/config/ListenableRouter.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-cluster/target/classes/org/apache/dubbo/rpc/cluster/router/condition/config/ListenableRouter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/classes/org/apache/dubbo/config/ReferenceConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/classes/org/apache/dubbo/config/ReferenceConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/classes/org/apache/dubbo/registry/integration/RegistryProtocol$DestroyableExporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/classes/org/apache/dubbo/registry/integration/RegistryProtocol$DestroyableExporter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/classes/org/apache/dubbo/registry/integration/RegistryProtocol$ExporterChangeableWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/classes/org/apache/dubbo/registry/integration/RegistryProtocol$ExporterChangeableWrapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/classes/org/apache/dubbo/registry/integration/RegistryProtocol$InvokerDelegate.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/classes/org/apache/dubbo/registry/integration/RegistryProtocol$InvokerDelegate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/classes/org/apache/dubbo/registry/integration/RegistryProtocol$OverrideListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/classes/org/apache/dubbo/registry/integration/RegistryProtocol$OverrideListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/classes/org/apache/dubbo/registry/integration/RegistryProtocol$ProviderConfigurationListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/classes/org/apache/dubbo/registry/integration/RegistryProtocol$ProviderConfigurationListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/classes/org/apache/dubbo/registry/integration/RegistryProtocol$ServiceConfigurationListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/classes/org/apache/dubbo/registry/integration/RegistryProtocol$ServiceConfigurationListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/classes/org/apache/dubbo/registry/integration/RegistryProtocol.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/classes/org/apache/dubbo/registry/integration/RegistryProtocol.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/target/classes/org/apache/dubbo/rpc/proxy/javassist/JavassistProxyFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/target/classes/org/apache/dubbo/rpc/proxy/javassist/JavassistProxyFactory$1.class" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/dubbo-dependencies/dubbo-dependencies-zookeeper/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-demo/dubbo-demo-annotation/dubbo-demo-annotation-provider/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-serialization/dubbo-serialization-native-hession/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-demo/dubbo-demo-api/dubbo-demo-api-consumer/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-configcenter/dubbo-configcenter-etcd/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-p2p/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-all/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-demo/dubbo-demo-interface/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-demo/dubbo-demo-xml/dubbo-demo-xml-provider/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-registry/dubbo-registry-zookeeper/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-demo/dubbo-demo-api/dubbo-demo-api-provider/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-configcenter/dubbo-configcenter-consul/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-dependencies/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-container/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-registry/dubbo-registry-default/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-container/dubbo-container-api/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-container/dubbo-container-spring/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-etcd3/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-memcached/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-api/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-config/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-container/dubbo-container-log4j/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-demo/dubbo-demo-annotation/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-bom/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-configcenter/dubbo-configcenter-api/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-compatible/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-demo/dubbo-demo-api/target/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-serialization/dubbo-serialization-api/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-metadata-report/dubbo-metadata-report-redis/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-filter/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-registry/dubbo-registry-etcd3/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-registry/dubbo-registry-nacos/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-metadata-report/dubbo-metadata-report-nacos/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-configcenter/dubbo-configcenter-apollo/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-cluster/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-monitor/dubbo-monitor-api/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-metadata-report/dubbo-metadata-definition-protobuf/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-serialization/dubbo-serialization-gson/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-serialization/dubbo-serialization-fst/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-metadata-report/dubbo-metadata-report-etcd/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-filter/dubbo-filter-validation/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-serialization/dubbo-serialization-avro/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-monitor/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-remoting/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-thrift/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-metadata-report/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-monitor/dubbo-monitor-default/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-demo/dubbo-demo-annotation/dubbo-demo-annotation-consumer/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-serialization/dubbo-serialization-test/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-serialization/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-common/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-demo/dubbo-demo-xml/dubbo-demo-xml-consumer/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-metadata-report/dubbo-metadata-report-consul/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-registry/dubbo-registry-redis/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-filter/dubbo-filter-cache/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-container/dubbo-container-logback/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-native-thrift/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-rest/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-redis/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-config/dubbo-config-spring/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-plugin/dubbo-qos/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-http/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-serialization/dubbo-serialization-fastjson/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-metadata-report/dubbo-metadata-report-api/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-distribution/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-registry/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-netty4/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-serialization/dubbo-serialization-protobuf-json/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-plugin/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-jsonrpc/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-grizzly/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-registry/dubbo-registry-multicast/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-dependencies-bom/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-rmi/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-metadata-report/dubbo-metadata-report-zookeeper/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-hessian/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-configcenter/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-rpc/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-xml/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-registry/dubbo-registry-multiple/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-serialization/dubbo-serialization-kryo/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-registry/dubbo-registry-sofa/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-demo/dubbo-demo-xml/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-http/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-demo/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-mina/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-metadata-report/dubbo-metadata-definition/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-netty/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-serialization/dubbo-serialization-jdk/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-zookeeper/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-configcenter/dubbo-configcenter-zookeeper/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-injvm/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-serialization/dubbo-serialization-protostuff/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-serialization/dubbo-serialization-hessian2/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-configcenter/dubbo-configcenter-nacos/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-webservice/target/" />
-    <ignored path="$PROJECT_DIR$/dubbo-registry/dubbo-registry-consul/target/" />
-    <ignored path="$PROJECT_DIR$/lcb-dubbo/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryProtocol.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="415" column="24" lean-forward="true" selection-start-line="415" selection-start-column="24" selection-end-line="415" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryDirectory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="171" column="20" selection-start-line="171" selection-start-column="20" selection-end-line="171" selection-end-column="20" />
-              <folding>
-                <element signature="e#28550#28551#0" expanded="true" />
-                <element signature="e#28614#28615#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/RegistryService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="70" column="9" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/support/FailbackRegistry.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="410" column="25" selection-start-line="410" selection-start-column="25" selection-end-line="410" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-zookeeper/src/main/java/org/apache/dubbo/registry/zookeeper/ZookeeperRegistry.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="171" column="48" selection-start-line="171" selection-start-column="48" selection-end-line="171" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/AbstractConfiguratorListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dubbo-cluster/src/main/java/org/apache/dubbo/rpc/cluster/RouterChain.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="50" selection-start-line="50" selection-end-line="50" />
-              <folding>
-                <element signature="e#1815#1816#0" expanded="true" />
-                <element signature="e#1860#1861#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dubbo-cluster/src/main/java/org/apache/dubbo/rpc/cluster/router/condition/config/ListenableRouter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="51" column="7" lean-forward="true" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
-              <folding>
-                <element signature="e#4079#4080#0" expanded="true" />
-                <element signature="e#4118#4119#0" expanded="true" />
-                <element signature="e#4164#4165#0" expanded="true" />
-                <element signature="e#4231#4232#0" expanded="true" />
-                <element signature="e#4270#4271#0" expanded="true" />
-                <element signature="e#4361#4362#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dubbo-configcenter/dubbo-configcenter-api/src/main/java/org/apache/dubbo/configcenter/DynamicConfiguration.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dubbo-demo/dubbo-demo-xml/dubbo-demo-xml-consumer/src/main/resources/spring/dubbo-consumer.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -254,381 +55,23 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/dubbo-dependencies-bom/pom.xml" />
-        <option value="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/interface/Robot.java" />
-        <option value="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/OptimusPrime.java" />
-        <option value="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/Bumblebee.java" />
-        <option value="$PROJECT_DIR$/lcb-dubbo/pom.xml" />
-        <option value="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/Robot.java" />
-        <option value="$PROJECT_DIR$/lcb-dubbo/src/main/resources/META-INF/dubbo/com.lcb.dubbo.spi.test.Robot" />
-        <option value="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/DubboSPITest.java" />
-        <option value="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/packet/Protocol.java" />
-        <option value="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/packet/HelloProtocol.java" />
-        <option value="$PROJECT_DIR$/lcb-dubbo/src/main/resources/META-INF/dubbo/com.lcb.dubbo.spi.test.auto.packet.Protocol" />
-        <option value="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/packet/Test.java" />
-        <option value="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/packet/WrapperProtocol.java" />
-        <option value="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/loader/WheelMaker.java" />
-        <option value="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/loader/CarMaker.java" />
-        <option value="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/loader/WheelMakeImpl.java" />
-        <option value="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/loader/RaceCarMaker.java" />
-        <option value="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/loader/Test.java" />
-        <option value="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/adapt/WheelMakeImpl.java" />
-        <option value="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/adapt/WheelMakeImplSecond.java" />
-        <option value="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/adapt/WheelMakeImplFirst.java" />
-        <option value="$PROJECT_DIR$/lcb-dubbo/src/main/resources/META-INF/dubbo/com.lcb.dubbo.spi.test.auto.loader.WheelMaker" />
-        <option value="$PROJECT_DIR$/lcb-dubbo/src/main/resources/META-INF/dubbo/com.lcb.dubbo.spi.test.auto.adapt.WheelMaker" />
-        <option value="$PROJECT_DIR$/lcb-dubbo/src/main/resources/META-INF/dubbo/com.lcb.dubbo.spi.test.auto.loader.CarMaker" />
-        <option value="$PROJECT_DIR$/lcb-dubbo/src/main/resources/META-INF/dubbo/com.lcb.dubbo.spi.test.auto.adapt.CarMaker" />
-        <option value="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/adapt/CarMaker.java" />
-        <option value="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/adapt/Test.java" />
-        <option value="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/adapt/RaceCarMaker.java" />
-        <option value="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/adapt/WheelMaker.java" />
-        <option value="$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/factory/AdaptiveExtensionFactory.java" />
-        <option value="$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/factory/SpiExtensionFactory.java" />
-        <option value="$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java" />
-        <option value="$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/AbstractConfig.java" />
-        <option value="$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/config/Environment.java" />
-        <option value="$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/main/java/org/apache/dubbo/config/spring/ServiceBean.java" />
-        <option value="$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/AbstractInterfaceConfig.java" />
-        <option value="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/src/main/java/org/apache/dubbo/rpc/proxy/javassist/JavassistProxyFactory.java" />
-        <option value="$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/bytecode/Wrapper.java" />
-        <option value="$PROJECT_DIR$/dubbo-demo/dubbo-demo-xml/dubbo-demo-xml-consumer/src/main/resources/spring/dubbo-consumer.xml" />
-        <option value="$PROJECT_DIR$/dubbo-demo/dubbo-demo-xml/dubbo-demo-xml-provider/src/main/resources/spring/dubbo-provider.xml" />
-        <option value="$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ServiceConfig.java" />
-        <option value="$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/main/java/org/apache/dubbo/config/spring/ReferenceBean.java" />
-        <option value="$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ReferenceConfig.java" />
-        <option value="$PROJECT_DIR$/dubbo-cluster/src/main/java/org/apache/dubbo/rpc/cluster/RouterChain.java" />
-        <option value="$PROJECT_DIR$/dubbo-cluster/src/main/java/org/apache/dubbo/rpc/cluster/router/condition/config/ListenableRouter.java" />
-        <option value="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryProtocol.java" />
-        <option value="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryDirectory.java" />
-        <option value="$PROJECT_DIR$/dubbo-registry/dubbo-registry-zookeeper/src/main/java/org/apache/dubbo/registry/zookeeper/ZookeeperRegistry.java" />
-      </list>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-config" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-config-spring" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-config" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-config-spring" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-config" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-config-spring" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-config" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-config-spring" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-config" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-config-spring" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-config" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-config-spring" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-              <item name="extension" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-config" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-config-spring" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-              <item name="schema" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-config" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-config-spring" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo-xml" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo-xml" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo-xml-consumer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo-xml" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo-xml-consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo-xml" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo-xml-consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo-xml" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo-xml-consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo-xml" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo-xml-consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo-xml" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo-xml-consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo-xml" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo-xml-consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo-xml" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo-xml-provider" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo-xml" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo-xml-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo-xml" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo-xml-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo-xml" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo-xml-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo-xml" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo-xml-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="provider" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo-xml" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo-xml-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo-xml" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo-demo-xml-provider" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="lcb-dubbo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="lcb-dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="lcb-dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="lcb-dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="lcb-dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="lcb-dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="auto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="lcb-dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="auto" type="462c0819:PsiDirectoryNode" />
-              <item name="packet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="lcb-dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dubbo-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="lcb-dubbo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="dubbo" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
-  </component>
+  <component name="ProjectId" id="1OSwR42D0sAh6LtvKshmFzt3kNk" />
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/adapt" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -654,7 +97,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Application (1)">
+  <component name="RunManager" selected="Application.Application">
     <configuration name="Application (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.apache.dubbo.demo.consumer.Application" />
       <module name="dubbo-demo-xml-consumer" />
@@ -722,8 +165,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Application (1)" />
         <item itemvalue="Application.Application" />
+        <item itemvalue="Application.Application (1)" />
         <item itemvalue="Application.ServiceBean" />
         <item itemvalue="Application.Test (2)" />
         <item itemvalue="Application.Test (1)" />
@@ -740,6 +183,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1562665994129</updated>
+      <workItem from="1565336015452" duration="5173000" />
     </task>
     <servers />
   </component>
@@ -775,77 +219,25 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info id="Image Layers" order="1" />
-      <window_info id="Designer" order="2" />
-      <window_info id="UI Designer" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="Learn" order="5" weight="0.3297568" />
-      <window_info id="Structure" order="6" sideWeight="0.7682776" side_tool="true" weight="0.3018598" />
-      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.23172243" weight="0.26967096" />
-      <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
-      <window_info anchor="bottom" id="Run with VisualVM" order="1" />
-      <window_info anchor="bottom" id="Version Control" order="2" weight="0.32961586" />
-      <window_info anchor="bottom" id="Messages" order="3" weight="0.32961586" />
-      <window_info anchor="bottom" id="Debug with VisualVM" order="4" />
-      <window_info anchor="bottom" id="Terminal" order="5" weight="0.30111524" />
-      <window_info anchor="bottom" id="Message" order="6" />
-      <window_info anchor="bottom" id="Find" order="7" weight="0.32961586" />
-      <window_info anchor="bottom" id="Run" order="8" weight="0.37546468" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.39900866" />
-      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="12" weight="0.32961586" />
-      <window_info anchor="right" id="PlantUML" order="0" />
-      <window_info anchor="right" id="Palette" order="1" />
-      <window_info anchor="right" id="Capture Analysis" order="2" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Maven" order="5" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info id="Image Layers" order="1" />
-      <window_info id="Designer" order="2" />
-      <window_info id="UI Designer" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="Learn" order="5" weight="0.3297568" />
-      <window_info id="Structure" order="6" sideWeight="0.7682776" side_tool="true" weight="0.3018598" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" sideWeight="0.23172243" visible="true" weight="0.26967096" />
-      <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
-      <window_info anchor="bottom" id="Run with VisualVM" order="1" />
-      <window_info anchor="bottom" id="Version Control" order="2" weight="0.32961586" />
-      <window_info anchor="bottom" id="Messages" order="3" weight="0.32961586" />
-      <window_info anchor="bottom" id="Debug with VisualVM" order="4" />
-      <window_info anchor="bottom" id="Terminal" order="5" weight="0.30111524" />
-      <window_info anchor="bottom" id="Message" order="6" />
-      <window_info anchor="bottom" id="Find" order="7" weight="0.32961586" />
-      <window_info anchor="bottom" id="Run" order="8" weight="0.37546468" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.39900866" />
-      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="12" weight="0.32961586" />
-      <window_info anchor="right" id="PlantUML" order="0" />
-      <window_info anchor="right" id="Palette" order="1" />
-      <window_info anchor="right" id="Capture Analysis" order="2" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Maven" order="5" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
-    </layout-to-restore>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="spring.schemas" />
     <option featureType="com.intellij.fileTypeFactory" implementationName="spring.handlers" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -853,163 +245,136 @@
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
           <line>901</line>
-          <properties />
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
           <line>549</line>
-          <properties />
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/adapt/Test.java</url>
           <line>15</line>
-          <properties />
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
           <line>580</line>
-          <properties />
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
           <line>518</line>
-          <properties />
           <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
           <line>883</line>
-          <properties />
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
           <line>506</line>
-          <properties />
           <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/adapt/Test.java</url>
           <line>24</line>
-          <properties />
           <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
           <line>368</line>
-          <properties />
           <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
           <line>712</line>
-          <properties />
           <option name="timeStamp" value="56" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
           <line>740</line>
-          <properties />
           <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
           <line>783</line>
-          <properties />
           <option name="timeStamp" value="58" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
           <line>562</line>
-          <properties />
           <option name="timeStamp" value="59" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
           <line>654</line>
-          <properties />
           <option name="timeStamp" value="65" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
           <line>674</line>
-          <properties />
           <option name="timeStamp" value="66" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
           <line>897</line>
-          <properties />
           <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
           <line>670</line>
-          <properties />
           <option name="timeStamp" value="72" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
           <line>111</line>
-          <properties />
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
           <line>505</line>
-          <properties />
           <option name="timeStamp" value="79" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/main/java/org/apache/dubbo/config/spring/ServiceBean.java</url>
           <line>126</line>
-          <properties />
           <option name="timeStamp" value="84" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ServiceConfig.java</url>
           <line>485</line>
-          <properties />
           <option name="timeStamp" value="85" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ReferenceConfig.java</url>
           <line>331</line>
-          <properties />
           <option name="timeStamp" value="86" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ReferenceConfig.java</url>
           <line>402</line>
-          <properties />
           <option name="timeStamp" value="87" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryProtocol.java</url>
           <line>374</line>
-          <properties />
           <option name="timeStamp" value="88" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryProtocol.java</url>
           <line>391</line>
-          <properties />
           <option name="timeStamp" value="89" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryProtocol.java</url>
           <line>413</line>
-          <properties />
           <option name="timeStamp" value="90" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryDirectory.java</url>
           <line>636</line>
-          <properties />
           <option name="timeStamp" value="92" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -1023,43 +388,36 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-cluster/src/main/java/org/apache/dubbo/rpc/cluster/router/tag/TagRouterFactory.java</url>
           <line>34</line>
-          <properties />
           <option name="timeStamp" value="94" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-cluster/src/main/java/org/apache/dubbo/rpc/cluster/router/condition/config/ListenableRouter.java</url>
           <line>58</line>
-          <properties />
           <option name="timeStamp" value="95" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-cluster/src/main/java/org/apache/dubbo/rpc/cluster/RouterChain.java</url>
           <line>57</line>
-          <properties />
           <option name="timeStamp" value="96" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-cluster/src/main/java/org/apache/dubbo/rpc/cluster/RouterChain.java</url>
           <line>51</line>
-          <properties />
           <option name="timeStamp" value="97" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryDirectory.java</url>
           <line>171</line>
-          <properties />
           <option name="timeStamp" value="98" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/support/FailbackRegistry.java</url>
           <line>294</line>
-          <properties />
           <option name="timeStamp" value="99" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-zookeeper/src/main/java/org/apache/dubbo/registry/zookeeper/ZookeeperRegistry.java</url>
           <line>182</line>
-          <properties />
           <option name="timeStamp" value="100" />
         </line-breakpoint>
       </breakpoints>
@@ -1098,431 +456,6 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dubbo-demo/dubbo-demo-annotation/dubbo-demo-annotation-provider/src/main/java/org/apache/dubbo/demo/provider/DemoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-demo/dubbo-demo-api/dubbo-demo-api-provider/src/main/java/org/apache/dubbo/demo/provider/DemoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="33" column="1" lean-forward="true" selection-start-line="24" selection-start-column="3" selection-end-line="33" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-demo/dubbo-demo-api/dubbo-demo-api-provider/src/main/java/org/apache/dubbo/demo/provider/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-demo/dubbo-demo-api/dubbo-demo-api-consumer/src/main/java/org/apache/dubbo/demo/consumer/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="38" column="5" lean-forward="true" selection-start-line="31" selection-start-column="6" selection-end-line="38" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/main/resources/META-INF/dubbo/internal/org.apache.dubbo.common.status.StatusChecker">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/main/java/org/apache/dubbo/config/spring/extension/SpringExtensionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="36" column="3" lean-forward="true" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/main/resources/META-INF/dubbo/internal/org.apache.dubbo.common.extension.ExtensionFactory">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="70" selection-start-column="48" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/main/resources/META-INF/dubbo.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22866">
-          <caret line="149" column="36" lean-forward="true" selection-start-line="149" selection-start-column="36" selection-end-line="149" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/test/java/org/apache/dubbo/config/spring/schema/DubboNamespaceHandlerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/main/resources/META-INF/spring.handlers">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="101" selection-start-line="1" selection-start-column="80" selection-end-line="1" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/main/resources/META-INF/spring.schemas">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="52" lean-forward="true" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.16.RELEASE/spring-beans-4.3.16.RELEASE-sources.jar!/org/springframework/beans/factory/xml/BeanDefinitionParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="37" selection-start-line="37" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/main/resources/META-INF/compat/dubbo.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-169" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/main/java/org/apache/dubbo/config/spring/schema/DubboBeanDefinitionParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3337">
-          <caret line="212" column="96" lean-forward="true" selection-start-line="212" selection-start-column="96" selection-end-line="212" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="950" column="14" selection-start-line="950" selection-start-column="14" selection-end-line="950" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/AbstractConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="560" column="32" selection-start-line="560" selection-start-column="32" selection-end-line="560" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/config/Environment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="117" column="19" selection-start-line="117" selection-start-column="19" selection-end-line="117" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/config/SystemConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/config/CompositeConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/main/java/org/apache/dubbo/config/spring/schema/DubboNamespaceHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="47" column="24" lean-forward="true" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/src/main/java/org/apache/dubbo/rpc/ProxyFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
-          <caret line="58" column="19" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/bytecode/Wrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="647">
-          <caret line="131" column="32" lean-forward="true" selection-start-line="131" selection-start-column="32" selection-end-line="131" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/src/main/java/org/apache/dubbo/rpc/proxy/javassist/JavassistProxyFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="45" column="44" lean-forward="true" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ServiceConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="329" column="39" lean-forward="true" selection-start-line="329" selection-start-column="39" selection-end-line="329" selection-end-column="39" />
-          <folding>
-            <element signature="e#27913#27914#0" expanded="true" />
-            <element signature="e#27950#27951#0" expanded="true" />
-            <element signature="e#35889#35890#0" expanded="true" />
-            <element signature="e#35929#35930#0" expanded="true" />
-            <element signature="e#39692#39693#0" expanded="true" />
-            <element signature="e#39736#39737#0" expanded="true" />
-            <element signature="e#39772#39773#0" expanded="true" />
-            <element signature="e#39808#39809#0" expanded="true" />
-            <element signature="e#40399#40400#0" expanded="true" />
-            <element signature="e#40425#40426#0" expanded="true" />
-            <element signature="e#40458#40459#0" expanded="true" />
-            <element signature="e#40488#40489#0" expanded="true" />
-            <element signature="e#40551#40552#0" expanded="true" />
-            <element signature="e#40578#40579#0" expanded="true" />
-            <element signature="e#40735#40736#0" expanded="true" />
-            <element signature="e#40765#40766#0" expanded="true" />
-            <element signature="e#40905#40906#0" expanded="true" />
-            <element signature="e#40964#40965#0" expanded="true" />
-            <element signature="e#41007#41008#0" expanded="true" />
-            <element signature="e#41038#41039#0" expanded="true" />
-            <element signature="e#41263#41264#0" expanded="true" />
-            <element signature="e#41297#41298#0" expanded="true" />
-            <element signature="e#41351#41352#0" expanded="true" />
-            <element signature="e#41397#41398#0" expanded="true" />
-            <element signature="e#41431#41432#0" expanded="true" />
-            <element signature="e#41461#41462#0" expanded="true" />
-            <element signature="e#41840#41841#0" expanded="true" />
-            <element signature="e#41931#41932#0" expanded="true" />
-            <element signature="e#41985#41986#0" expanded="true" />
-            <element signature="e#42076#42077#0" expanded="true" />
-            <element signature="e#42118#42119#0" expanded="true" />
-            <element signature="e#42145#42146#0" expanded="true" />
-            <element signature="e#42272#42273#0" expanded="true" />
-            <element signature="e#42331#42332#0" expanded="true" />
-            <element signature="e#42472#42473#0" expanded="true" />
-            <element signature="e#42541#42542#0" expanded="true" />
-            <element signature="e#42620#42621#0" expanded="true" />
-            <element signature="e#42678#42679#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/main/java/org/apache/dubbo/config/spring/ServiceBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="114" column="36" lean-forward="true" selection-start-line="114" selection-start-column="36" selection-end-line="114" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-demo/dubbo-demo-xml/dubbo-demo-xml-provider/src/main/resources/spring/dubbo-provider.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/main/java/org/apache/dubbo/config/spring/ReferenceBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="75" column="17" lean-forward="true" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
-          <folding>
-            <element signature="e#2838#2839#0" expanded="true" />
-            <element signature="e#2866#2867#0" expanded="true" />
-            <element signature="e#2919#2920#0" expanded="true" />
-            <element signature="e#2961#2962#0" expanded="true" />
-            <element signature="e#3043#3044#0" expanded="true" />
-            <element signature="e#3070#3071#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-demo/dubbo-demo-xml/dubbo-demo-xml-provider/src/main/java/org/apache/dubbo/demo/provider/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-demo/dubbo-demo-xml/dubbo-demo-xml-consumer/src/main/java/org/apache/dubbo/demo/consumer/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-cluster/src/main/java/org/apache/dubbo/rpc/cluster/directory/AbstractDirectory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="96" column="16" selection-start-line="96" selection-start-column="16" selection-end-line="96" selection-end-column="16" />
-          <folding>
-            <element signature="e#3295#3296#0" expanded="true" />
-            <element signature="e#3341#3342#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-redis/src/main/java/org/apache/dubbo/rpc/protocol/redis/RedisProtocol.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/AbstractInterfaceConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="543" column="9" selection-start-line="543" selection-start-column="9" selection-end-line="543" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/src/main/java/org/apache/dubbo/rpc/Protocol.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="67" column="19" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-cluster/src/main/java/org/apache/dubbo/rpc/cluster/RouterFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="31" column="80" lean-forward="true" selection-start-line="31" selection-start-column="80" selection-end-line="31" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ReferenceConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="402" column="42" lean-forward="true" selection-start-line="402" selection-start-column="42" selection-end-line="402" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-demo/dubbo-demo-xml/dubbo-demo-xml-consumer/src/main/resources/spring/dubbo-consumer.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-cluster/src/main/java/org/apache/dubbo/rpc/cluster/router/tag/TagRouterFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="25" column="21" lean-forward="true" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-cluster/src/main/java/org/apache/dubbo/rpc/cluster/router/condition/config/AppRouterFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="27" column="7" lean-forward="true" selection-start-line="27" selection-end-line="27" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="221" column="19" selection-start-line="221" selection-start-column="19" selection-end-line="221" selection-end-column="19" />
-          <folding>
-            <element signature="e#7797#7798#0" expanded="true" />
-            <element signature="e#7859#7860#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-cluster/src/main/java/org/apache/dubbo/rpc/cluster/CacheableRouterFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-cluster/src/main/java/org/apache/dubbo/rpc/cluster/router/condition/config/ServiceRouterFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-cluster/src/main/java/org/apache/dubbo/rpc/cluster/router/condition/config/ServiceRouter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-configcenter/dubbo-configcenter-api/src/main/java/org/apache/dubbo/configcenter/DynamicConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-cluster/src/main/java/org/apache/dubbo/rpc/cluster/router/condition/config/ListenableRouter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="51" column="7" lean-forward="true" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
-          <folding>
-            <element signature="e#4079#4080#0" expanded="true" />
-            <element signature="e#4118#4119#0" expanded="true" />
-            <element signature="e#4164#4165#0" expanded="true" />
-            <element signature="e#4231#4232#0" expanded="true" />
-            <element signature="e#4270#4271#0" expanded="true" />
-            <element signature="e#4361#4362#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-cluster/src/main/java/org/apache/dubbo/rpc/cluster/RouterChain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-          <folding>
-            <element signature="e#1815#1816#0" expanded="true" />
-            <element signature="e#1860#1861#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryProtocol.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="415" column="24" lean-forward="true" selection-start-line="415" selection-start-column="24" selection-end-line="415" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/AbstractConfiguratorListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryDirectory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="171" column="20" selection-start-line="171" selection-start-column="20" selection-end-line="171" selection-end-column="20" />
-          <folding>
-            <element signature="e#28550#28551#0" expanded="true" />
-            <element signature="e#28614#28615#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/RegistryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="70" column="9" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/support/FailbackRegistry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="410" column="25" selection-start-line="410" selection-start-column="25" selection-end-line="410" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-zookeeper/src/main/java/org/apache/dubbo/registry/zookeeper/ZookeeperRegistry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="171" column="48" selection-start-line="171" selection-start-column="48" selection-end-line="171" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>

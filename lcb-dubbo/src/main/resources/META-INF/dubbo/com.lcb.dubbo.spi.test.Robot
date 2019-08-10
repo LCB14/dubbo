@@ -1,2 +1,2 @@
-optimusPrime = com.lcb.dubbo.spi.test.OptimusPrime
-bumblebee = com.lcb.dubbo.spi.test.Bumblebee
+optimusPrime = com.lcb.dubbo.spi.test.beginner.OptimusPrime
+bumblebee = com.lcb.dubbo.spi.test.beginner.Bumblebee
