@@ -137,8 +137,8 @@ public class ExtensionLoader<T> {
 
         ExtensionLoader<T> loader = (ExtensionLoader<T>) EXTENSION_LOADERS.get(type);
         if (loader == null) {
-            // putIfAbsent 如果传入key对应的value已经存在，就返回存在的value，不进行替换。
-            // 如果不存在，就添加key和value，返回nul
+            // putIfAbsent 如果传入key对应的value已经存在，就返回已存在的value，不进行替换。
+            // 否则就添加key和value，返回null
             EXTENSION_LOADERS.putIfAbsent(type, new ExtensionLoader<T>(type));
             loader = (ExtensionLoader<T>) EXTENSION_LOADERS.get(type);
         }

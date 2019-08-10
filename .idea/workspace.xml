@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="768deaee-b44c-4776-9944-0fd361d07562" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/javaSPI/Bumblebee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/javaSPI/JavaSPITest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/javaSPI/OptimusPrime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/javaSPI/Robot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/resources/META-INF/dubbo/services/com.lcb.dubbo.spi.test.javaSPI.Robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lcb-dubbo/src/main/resources/META-INF/dubbo/com.lcb.dubbo.spi.test.Robot" beforeDir="false" afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/resources/META-INF/dubbo/com.lcb.dubbo.spi.test.beginner.Robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lcb-dubbo/target/classes/META-INF/dubbo/com.lcb.dubbo.spi.test.Robot" beforeDir="false" afterPath="$PROJECT_DIR$/lcb-dubbo/target/classes/META-INF/dubbo/com.lcb.dubbo.spi.test.Robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lcb-dubbo/target/classes/META-INF/dubbo/com.lcb.dubbo.spi.test.auto.adapt.CarMaker" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lcb-dubbo/target/classes/META-INF/dubbo/com.lcb.dubbo.spi.test.auto.adapt.WheelMaker" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lcb-dubbo/target/classes/META-INF/dubbo/com.lcb.dubbo.spi.test.auto.loader.CarMaker" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lcb-dubbo/target/classes/META-INF/dubbo/com.lcb.dubbo.spi.test.auto.loader.WheelMaker" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lcb-dubbo/target/classes/META-INF/dubbo/com.lcb.dubbo.spi.test.auto.packet.Protocol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lcb-dubbo/target/classes/META-INF/dubbo/com.lcb.dubbo.spi.test.beginner.Robot" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,6 +24,23 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="251" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
@@ -66,6 +93,11 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lcb-dubbo/src/main/resources/META-INF/dubbo" />
+      <recent name="$PROJECT_DIR$/lcb-dubbo/src/main/resources/META-INF/dubbo/dubbo" />
+      <recent name="$PROJECT_DIR$/lcb-dubbo/src/main/resources/META-INF/dubbo/services" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.lcb.dubbo.spi.test.auto.adapt" />
     </key>
@@ -86,7 +118,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DubboSPITest.sayHello">
+  <component name="RunManager" selected="JUnit.JavaSPITest.sayHello">
     <configuration name="Application (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.apache.dubbo.demo.consumer.Application" />
       <module name="dubbo-demo-xml-consumer" />
@@ -126,19 +158,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.lcb.dubbo.spi.test.auto.adapt.Test" />
-      <module name="dubbo-lcb" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.lcb.dubbo.spi.test.auto.adapt.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DubboSPITest.sayHello" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lcb-dubbo" />
       <extension name="coverage">
@@ -155,13 +174,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JavaSPITest.sayHello" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lcb-dubbo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lcb.dubbo.spi.test.javaSPI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lcb.dubbo.spi.test.javaSPI" />
+      <option name="MAIN_CLASS_NAME" value="com.lcb.dubbo.spi.test.javaSPI.JavaSPITest" />
+      <option name="METHOD_NAME" value="sayHello" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JavaSPITest.sayHello" />
         <item itemvalue="JUnit.DubboSPITest.sayHello" />
         <item itemvalue="Application.Application (1)" />
         <item itemvalue="Application.Application" />
         <item itemvalue="Application.ServiceBean" />
-        <item itemvalue="Application.Test (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -175,32 +210,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1562665994129</updated>
-      <workItem from="1565336015452" duration="5729000" />
+      <workItem from="1565336015452" duration="10650000" />
     </task>
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="DubboSPITest_sayHello - 2019.07.09 at 21h 13m 10s.xml">
-      <configuration name="DubboSPITest.sayHello" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DubboSPITest_sayHello - 2019.07.09 at 21h 19m 25s.xml">
-      <configuration name="DubboSPITest.sayHello" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DubboSPITest_sayHello - 2019.07.09 at 21h 20m 46s.xml">
-      <configuration name="DubboSPITest.sayHello" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DubboSPITest_sayHello - 2019.07.09 at 21h 22m 55s.xml">
-      <configuration name="DubboSPITest.sayHello" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DubboSPITest_sayHello - 2019.07.09 at 21h 23m 43s.xml">
-      <configuration name="DubboSPITest.sayHello" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DubboSPITest_sayHello - 2019.07.09 at 21h 24m 39s.xml">
-      <configuration name="DubboSPITest.sayHello" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DubboSPITest_sayHello - 2019.07.09 at 21h 29m 48s.xml">
-      <configuration name="DubboSPITest.sayHello" configurationId="JUnit" />
-    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -240,11 +252,6 @@
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
-          <line>549</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/adapt/Test.java</url>
           <line>15</line>
           <option name="timeStamp" value="33" />
@@ -276,11 +283,6 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
-          <line>368</line>
-          <option name="timeStamp" value="55" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
           <line>712</line>
           <option name="timeStamp" value="56" />
         </line-breakpoint>
@@ -301,11 +303,6 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
-          <line>654</line>
-          <option name="timeStamp" value="65" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
           <line>674</line>
           <option name="timeStamp" value="66" />
         </line-breakpoint>
@@ -321,55 +318,50 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
-          <line>111</line>
-          <option name="timeStamp" value="77" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
           <line>505</line>
           <option name="timeStamp" value="79" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/main/java/org/apache/dubbo/config/spring/ServiceBean.java</url>
           <line>126</line>
           <option name="timeStamp" value="84" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ServiceConfig.java</url>
           <line>485</line>
           <option name="timeStamp" value="85" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ReferenceConfig.java</url>
           <line>331</line>
           <option name="timeStamp" value="86" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ReferenceConfig.java</url>
           <line>402</line>
           <option name="timeStamp" value="87" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryProtocol.java</url>
           <line>374</line>
           <option name="timeStamp" value="88" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryProtocol.java</url>
           <line>391</line>
           <option name="timeStamp" value="89" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryProtocol.java</url>
           <line>413</line>
           <option name="timeStamp" value="90" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryDirectory.java</url>
           <line>636</line>
           <option name="timeStamp" value="92" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-cluster/src/main/java/org/apache/dubbo/rpc/cluster/CacheableRouterFactory.java</url>
           <line>32</line>
           <properties>
@@ -377,40 +369,55 @@
           </properties>
           <option name="timeStamp" value="93" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-cluster/src/main/java/org/apache/dubbo/rpc/cluster/router/tag/TagRouterFactory.java</url>
           <line>34</line>
           <option name="timeStamp" value="94" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-cluster/src/main/java/org/apache/dubbo/rpc/cluster/router/condition/config/ListenableRouter.java</url>
           <line>58</line>
           <option name="timeStamp" value="95" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-cluster/src/main/java/org/apache/dubbo/rpc/cluster/RouterChain.java</url>
           <line>57</line>
           <option name="timeStamp" value="96" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-cluster/src/main/java/org/apache/dubbo/rpc/cluster/RouterChain.java</url>
           <line>51</line>
           <option name="timeStamp" value="97" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryDirectory.java</url>
           <line>171</line>
           <option name="timeStamp" value="98" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/support/FailbackRegistry.java</url>
           <line>294</line>
           <option name="timeStamp" value="99" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-zookeeper/src/main/java/org/apache/dubbo/registry/zookeeper/ZookeeperRegistry.java</url>
           <line>182</line>
           <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/beginner/DubboSPITest.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="132" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
+          <line>368</line>
+          <option name="timeStamp" value="133" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
+          <line>654</line>
+          <option name="timeStamp" value="136" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -419,40 +426,6 @@
     <SUITE FILE_PATH="coverage/dubbo_parent$DubboSPITest_sayHello.ic" NAME="DubboSPITest.sayHello Coverage Results" MODIFIED="1565450817653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.lcb.dubbo.spi.test.beginner.*</FILTER>
     </SUITE>
-  </component>
-  <component name="debuggerHistoryManager">
-    <expressions id="evaluateExpression">
-      <expression>
-        <expression-string>(T) getAdaptiveExtensionClass().newInstance()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>instance.getClass().getMethods()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>loader.getSupportedExtensions()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>objectFactory</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>ExtensionLoader.getExtensionLoader(ExtensionFactory.class).getAdaptiveExtension()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>ExtensionLoader.getExtensionLoader(ExtensionFactory.class)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
   </component>
   <component name="masterDetails">
     <states>
