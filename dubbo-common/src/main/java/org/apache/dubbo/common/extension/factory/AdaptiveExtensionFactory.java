@@ -32,6 +32,12 @@ public class AdaptiveExtensionFactory implements ExtensionFactory {
 
     private final List<ExtensionFactory> factories;
 
+    /**
+     * Dubbo 目前提供了两种 ExtensionFactory，分别是 SpiExtensionFactory 和 SpringExtensionFactory。
+     *
+     * SpiExtensionFactory -> 用于创建自适应的拓展
+     * SpringExtensionFactory -> 用于从 Spring 的 IOC 容器中获取所需的拓展
+     */
     public AdaptiveExtensionFactory() {
         ExtensionLoader<ExtensionFactory> loader = ExtensionLoader.getExtensionLoader(ExtensionFactory.class);
         List<ExtensionFactory> list = new ArrayList<ExtensionFactory>();
