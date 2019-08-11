@@ -132,7 +132,8 @@ public class ExtensionLoader<T> {
         /**
          * 这里会存在递归调用,ExtensionFactory的objectFactory为null,其他的均为AdaptiveExtensionFactory
          * AdaptiveExtensionFactory的factories中有SpiExtensionFactory,SpringExtensionFactory
-         * getAdaptiveExtension()这个是获取一个拓展装饰类对象.
+         *
+         * getAdaptiveExtension()方法获取一个拓展装饰类对象.
          *
          * objectFactory <-> AdaptiveExtensionFactory，因为AdaptiveExtensionFactory添加了@Adaptive
          *
