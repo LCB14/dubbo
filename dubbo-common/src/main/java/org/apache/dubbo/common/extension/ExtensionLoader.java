@@ -88,18 +88,23 @@ public class ExtensionLoader<T> {
     private final ExtensionFactory objectFactory;
 
     private final ConcurrentMap<Class<?>, String> cachedNames = new ConcurrentHashMap<>();
+
     // 缓存拓展接口的所有实现实现类（Class)
     private final Holder<Map<String, Class<?>>> cachedClasses = new Holder<>();
 
     private final Map<String, Object> cachedActivates = new ConcurrentHashMap<>();
+
     // todo 2019年07月10日09:35:46
     private final ConcurrentMap<String, Holder<Object>> cachedInstances = new ConcurrentHashMap<>();
+
     // TODO 2019年07月10日09:35:55
     private final Holder<Object> cachedAdaptiveInstance = new Holder<>();
 
     private volatile Class<?> cachedAdaptiveClass = null;
+
     // 缓存SPI注解中指定的拓展接口实现类在配置文件中的名称
     private String cachedDefaultName;
+
     private volatile Throwable createAdaptiveInstanceError;
 
     /**
