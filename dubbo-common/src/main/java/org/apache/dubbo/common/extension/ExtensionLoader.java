@@ -111,6 +111,10 @@ public class ExtensionLoader<T> {
     private ExtensionLoader(Class<?> type) {
         this.type = type;
         /**
+         * 这里会存在递归调用,ExtensionFactory的objectFactory为null,其他的均为AdaptiveExtensionFactory
+         * AdaptiveExtensionFactory的factories中有SpiExtensionFactory,SpringExtensionFactory
+         * getAdaptiveExtension()这个是获取一个拓展装饰类对象.
+         *
          * objectFactory <-> AdaptiveExtensionFactory，因为AdaptiveExtensionFactory添加了@Adaptive
          *
          * @see AdaptiveExtensionFactory
@@ -124,17 +128,22 @@ public class ExtensionLoader<T> {
 
     @SuppressWarnings("unchecked")
     public static <T> ExtensionLoader<T> getExtensionLoader(Class<T> type) {
+        // 拓展点类型非空判断
         if (type == null) {
             throw new IllegalArgumentException("Extension type == null");
         }
+        // 拓展点类型只能是接口
         if (!type.isInterface()) {
             throw new IllegalArgumentException("Extension type (" + type + ") is not an interface!");
         }
+        // 需要添加spi注解,否则抛异常
         if (!withExtensionAnnotation(type)) {
             throw new IllegalArgumentException("Extension type (" + type +
                     ") is not an extension, because it is NOT annotated with @" + SPI.class.getSimpleName() + "!");
         }
 
+        // 从缓存EXTENSION_LOADERS中获取,如果不存在则新建后加入缓存
+        // 对于每一个拓展,都会有且只有一个ExtensionLoader与其对应
         ExtensionLoader<T> loader = (ExtensionLoader<T>) EXTENSION_LOADERS.get(type);
         if (loader == null) {
             // putIfAbsent 如果传入key对应的value已经存在，就返回已存在的value，不进行替换。
