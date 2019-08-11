@@ -100,9 +100,22 @@ public class ExtensionLoader<T> {
     // TODO 2019年07月10日09:35:55
     private final Holder<Object> cachedAdaptiveInstance = new Holder<>();
 
+    /**
+     * 什么时间被初始化的？
+     * @see org.apache.dubbo.common.extension.ExtensionLoader#getAdaptiveExtension
+     * @see org.apache.dubbo.common.extension.ExtensionLoader#createAdaptiveExtension
+     * @see org.apache.dubbo.common.extension.ExtensionLoader#getAdaptiveExtensionClass
+     * @see org.apache.dubbo.common.extension.ExtensionLoader#getExtensionClasses
+     * @see org.apache.dubbo.common.extension.ExtensionLoader#loadExtensionClasses
+     * @see org.apache.dubbo.common.extension.ExtensionLoader#loadDirectory
+     * @see ExtensionLoader#loadClass(java.util.Map, java.net.URL, java.lang.Class, java.lang.String)
+     */
     private volatile Class<?> cachedAdaptiveClass = null;
 
-    // 缓存SPI注解中指定的拓展接口实现类在配置文件中的名称
+    /**
+     * 缓存SPI注解中指定的拓展接口实现类在配置文件中的名称
+     * @see ExtensionLoader#cacheDefaultExtensionName()
+     */
     private String cachedDefaultName;
 
     private volatile Throwable createAdaptiveInstanceError;
@@ -805,13 +818,16 @@ public class ExtensionLoader<T> {
                     type + ", class line: " + clazz.getName() + "), class "
                     + clazz.getName() + " is not subtype of interface.");
         }
-        if (clazz.isAnnotationPresent(Adaptive.class)) { // 检测目标类上是否有 Adaptive 注解
+        // 检测目标类上是否有 Adaptive 注解
+        if (clazz.isAnnotationPresent(Adaptive.class)) {
             // 缓存自适应的拓展接口实现类
             cacheAdaptiveClass(clazz);
-        } else if (isWrapperClass(clazz)) {// 检测 clazz 是否是 Wrapper 类型
+        // 检测目标类上是否有 Adaptive 注解
+        } else if (isWrapperClass(clazz)) {
             // 把扩展点自动包装类加入缓存
             cacheWrapperClass(clazz);
-        } else {// 程序进入此分支，表明 clazz 是一个普通的拓展类
+        // 程序进入此分支，表明 clazz 是一个普通的拓展类
+        } else {
             // 检测 clazz 是否有默认的构造方法，如果没有，则抛出异常
             clazz.getConstructor();
             if (StringUtils.isEmpty(name)) {
@@ -938,6 +954,7 @@ public class ExtensionLoader<T> {
     private Class<?> getAdaptiveExtensionClass() {
         // 获取拓展接口在配置文件中的所有实现类
         getExtensionClasses();
+
         if (cachedAdaptiveClass != null) {
             /**
              * @see ExtensionLoader#loadClass(java.util.Map, java.net.URL, java.lang.Class, java.lang.String)
