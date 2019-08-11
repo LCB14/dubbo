@@ -134,6 +134,7 @@ public class ExtensionLoader<T> {
          * AdaptiveExtensionFactory的factories中有SpiExtensionFactory,SpringExtensionFactory
          *
          * getAdaptiveExtension()方法获取一个拓展装饰类对象.
+         * ExtensionLoader.getExtensionLoader(ExtensionFactory.class)返回的是type=ExtensionFactory的ExtensionLoader实例
          *
          * objectFactory <-> AdaptiveExtensionFactory，因为AdaptiveExtensionFactory添加了@Adaptive
          *
