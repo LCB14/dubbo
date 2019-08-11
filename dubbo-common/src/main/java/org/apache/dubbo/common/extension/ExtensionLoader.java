@@ -98,6 +98,7 @@ public class ExtensionLoader<T> {
     private final Holder<Object> cachedAdaptiveInstance = new Holder<>();
 
     private volatile Class<?> cachedAdaptiveClass = null;
+    // 缓存SPI注解中指定的拓展接口实现类在配置文件中的名称
     private String cachedDefaultName;
     private volatile Throwable createAdaptiveInstanceError;
 
@@ -690,7 +691,7 @@ public class ExtensionLoader<T> {
      *  二是调用 loadDirectory 方法加载指定文件夹配置文件
      */
     private Map<String, Class<?>> loadExtensionClasses() {
-        // 缓存拓展接口默认的实现类（只能指定一个默认的实现类)
+        // 解析SPI注解，缓存拓展接口默认的实现类的名称 （只能指定一个默认的实现类)
         cacheDefaultExtensionName();
 
         Map<String, Class<?>> extensionClasses = new HashMap<>();
