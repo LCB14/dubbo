@@ -744,7 +744,7 @@ public class ExtensionLoader<T> {
             if (urls != null) {
                 while (urls.hasMoreElements()) {
                     java.net.URL resourceURL = urls.nextElement();
-                    // // 加载资源 - resourceURL表示以拓展接口命名的文件的路径
+                    // 加载资源 - resourceURL表示以拓展接口命名的文件的路径
                     loadResource(extensionClasses, classLoader, resourceURL);
                 }
             }
