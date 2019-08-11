@@ -504,7 +504,6 @@ public class ExtensionLoader<T> {
     public T getAdaptiveExtension() {
         /**
          * cachedAdaptiveInstance初始化的位置
-         *
          * @see ExtensionLoader#injectExtension(java.lang.Object)
          */
         Object instance = cachedAdaptiveInstance.get();
