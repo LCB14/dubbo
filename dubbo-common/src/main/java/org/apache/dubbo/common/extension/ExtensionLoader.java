@@ -672,7 +672,7 @@ public class ExtensionLoader<T> {
             synchronized (cachedClasses) {
                 classes = cachedClasses.get();
                 if (classes == null) {
-                    // 加载META-INF/dubbo路径下文件中配置拓展接口的所有实现类
+                    // 加载META-INF/dubbo路径下配置文件中拓展接口的所有实现类
                     classes = loadExtensionClasses();
                     cachedClasses.set(classes);
                 }
