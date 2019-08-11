@@ -822,7 +822,7 @@ public class ExtensionLoader<T> {
         if (clazz.isAnnotationPresent(Adaptive.class)) {
             // 缓存自适应的拓展接口实现类
             cacheAdaptiveClass(clazz);
-        // 检测目标类上是否有 Adaptive 注解
+        // 检测 clazz 是否是 Wrapper 类型
         } else if (isWrapperClass(clazz)) {
             // 把扩展点自动包装类加入缓存
             cacheWrapperClass(clazz);
