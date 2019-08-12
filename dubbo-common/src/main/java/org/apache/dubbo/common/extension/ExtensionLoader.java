@@ -393,7 +393,7 @@ public class ExtensionLoader<T> {
             return getDefaultExtension();
         }
 
-        // 对拓展接口的所有实现类Map进行包装存储
+        // Holder，顾名思义，用于持有目标对象
         final Holder<Object> holder = getOrCreateHolder(name);
         Object instance = holder.get();
         if (instance == null) {

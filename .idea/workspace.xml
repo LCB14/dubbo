@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="768deaee-b44c-4776-9944-0fd361d07562" name="Default Changelist" comment="" />
+    <list default="true" id="768deaee-b44c-4776-9944-0fd361d07562" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/extension/ExtensionLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/extension/ExtensionLoader.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +185,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1562665994129</updated>
-      <workItem from="1565336015452" duration="37116000" />
+      <workItem from="1565336015452" duration="39322000" />
     </task>
     <servers />
   </component>
@@ -230,13 +233,8 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
-          <line>849</line>
+          <line>851</line>
           <option name="timeStamp" value="58" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
-          <line>964</line>
-          <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/main/java/org/apache/dubbo/config/spring/ServiceBean.java</url>
@@ -323,7 +321,7 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
-          <line>401</line>
+          <line>403</line>
           <option name="timeStamp" value="133" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
@@ -333,28 +331,53 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
-          <line>720</line>
+          <line>722</line>
           <option name="timeStamp" value="149" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
-          <line>800</line>
+          <line>802</line>
           <option name="timeStamp" value="171" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/beginner/DubboSPITest.java</url>
-          <line>9</line>
-          <option name="timeStamp" value="189" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
-          <line>949</line>
-          <option name="timeStamp" value="204" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
-          <line>753</line>
-          <option name="timeStamp" value="205" />
+          <line>396</line>
+          <option name="timeStamp" value="217" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
+          <line>144</line>
+          <option name="timeStamp" value="220" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
+          <line>951</line>
+          <option name="timeStamp" value="226" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
+          <line>539</line>
+          <option name="timeStamp" value="227" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
+          <line>615</line>
+          <option name="timeStamp" value="230" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
+          <line>703</line>
+          <option name="timeStamp" value="231" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
+          <line>959</line>
+          <option name="timeStamp" value="235" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/factory/AdaptiveExtensionFactory.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="236" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
