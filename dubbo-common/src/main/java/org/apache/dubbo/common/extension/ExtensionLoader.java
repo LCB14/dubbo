@@ -400,8 +400,9 @@ public class ExtensionLoader<T> {
             synchronized (holder) {
                 instance = holder.get();
                 if (instance == null) {
-                    // 创建扩展点实现类实例
+                    // 创建拓展实例
                     instance = createExtension(name);
+                    // 设置实例到 holder 中
                     holder.set(instance);
                 }
             }
@@ -593,14 +594,22 @@ public class ExtensionLoader<T> {
                 instance = (T) EXTENSION_INSTANCES.get(clazz);
             }
 
-            // 注入拓展接口中依赖的拓展类（本质是dubbo生成的拓展接口的代理类)
+            /**
+             * 向拓展对象中注入依赖(Dubbo IOC)
+             *
+             * Dubbo IOC 是通过 setter 方法注入依赖。setter注入也是dubbo IOC的唯一一种注入方式。
+             */
             injectExtension(instance);
 
             Set<Class<?>> wrapperClasses = cachedWrapperClasses;
             if (CollectionUtils.isNotEmpty(wrapperClasses)) {
                 for (Class<?> wrapperClass : wrapperClasses) {
-                    // 将当前 instance 作为参数传给 Wrapper 的构造方法，并通过反射创建 Wrapper 实例。
-                    // 然后向 Wrapper 实例中注入依赖，最后将 Wrapper 实例再次赋值给 instance 变量
+                    /**
+                     * 将拓展对象包裹在相应的 Wrapper 对象中(Dubbo AOP)
+                     *
+                     * 将当前 instance 作为参数传给 Wrapper 的构造方法，并通过反射创建 Wrapper 实例。
+                     * 然后向 Wrapper 实例中注入依赖，最后将 Wrapper 实例再次赋值给 instance 变量
+                     */
                     instance = injectExtension((T) wrapperClass.getConstructor(type).newInstance(instance));
                 }
             }
@@ -616,12 +625,8 @@ public class ExtensionLoader<T> {
             if (objectFactory != null) {
                 // 遍历目标类的所有方法
                 for (Method method : instance.getClass().getMethods()) {
+                    // 检测方法是否以 set 开头，且方法仅有一个参数，且方法访问级别为 public
                     if (isSetter(method)) {
-                        /**
-                         * Check {@link DisableInject} to see if we need auto injection for this property
-                         *
-                         * 检测方法是否以 set 开头，且方法仅有一个参数，且方法访问级别为 public
-                         */
                         if (method.getAnnotation(DisableInject.class) != null) {
                             continue;
                         }
@@ -634,9 +639,15 @@ public class ExtensionLoader<T> {
                             // 获取属性名，比如 setName 方法对应属性名 name
                             String property = getSetterProperty(method);
                             /**
-                             * 从 ObjectFactory 中获取依赖对象
+                             *  从 ObjectFactory 中获取依赖对象
                              *
-                             * @see AdaptiveExtensionFactory#getExtension(java.lang.Class, java.lang.String)
+                             *  objectFactory 变量的类型为 AdaptiveExtensionFactory，AdaptiveExtensionFactory 内部维护了一个 ExtensionFactory 列表，
+                             *  用于存储其他类型的 ExtensionFactory。
+                             *
+                             *  Dubbo 目前提供了两种 ExtensionFactory，分别是 SpiExtensionFactory 和 SpringExtensionFactory。
+                             *  前者用于创建自适应的拓展，后者是用于从 Spring 的 IOC 容器中获取所需的拓展。
+                             *
+                             *  @see AdaptiveExtensionFactory#getExtension(java.lang.Class, java.lang.String)
                              */
                             Object object = objectFactory.getExtension(pt, property);
                             if (object != null) {
@@ -799,7 +810,7 @@ public class ExtensionLoader<T> {
                                 line = line.substring(i + 1).trim();
                             }
                             if (line.length() > 0) {
-                                // 加载类，并通过 loadClass 方法对类进行缓存
+                                // 通过反射加载类，并通过 loadClass 方法对类进行缓存
                                 loadClass(extensionClasses, resourceURL, Class.forName(line, true, classLoader), name);
                             }
                         } catch (Throwable t) {
