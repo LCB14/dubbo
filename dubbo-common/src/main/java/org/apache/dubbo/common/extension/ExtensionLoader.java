@@ -974,10 +974,18 @@ public class ExtensionLoader<T> {
         }
     }
 
+    /**
+     * getAdaptiveExtensionClass 方法同样包含了三个逻辑，如下：
+     *
+     * 调用 getExtensionClasses 获取所有的拓展类
+     * 检查缓存，若缓存不为空，则返回缓存
+     * 若缓存为空，则调用 createAdaptiveExtensionClass 创建自适应拓展类
+     */
     private Class<?> getAdaptiveExtensionClass() {
         // 获取拓展接口在配置文件中的所有实现类
         getExtensionClasses();
 
+        // cachedAdaptiveClass只有在拓展接口的实现类存在被@Adaptive注解修饰的时候才会不为null
         if (cachedAdaptiveClass != null) {
             /**
              * @see ExtensionLoader#loadClass(java.util.Map, java.net.URL, java.lang.Class, java.lang.String)
@@ -997,10 +1005,12 @@ public class ExtensionLoader<T> {
     }
 
     private Class<?> createAdaptiveExtensionClass() {
-        // 按规则生成代理类代码
+        // 按规则生成自适应拓展代码
         String code = new AdaptiveClassCodeGenerator(type, cachedDefaultName).generate();
         ClassLoader classLoader = findClassLoader();
+        // 获取编译器实现类
         org.apache.dubbo.common.compiler.Compiler compiler = ExtensionLoader.getExtensionLoader(org.apache.dubbo.common.compiler.Compiler.class).getAdaptiveExtension();
+        // 编译代码，生成 Class
         return compiler.compile(code, classLoader);
     }
 
