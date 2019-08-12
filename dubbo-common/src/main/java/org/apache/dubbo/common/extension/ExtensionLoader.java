@@ -121,7 +121,9 @@ public class ExtensionLoader<T> {
     private volatile Throwable createAdaptiveInstanceError;
 
     /**
-     *   在加载拓展接口实例时进行初始化，缓存的是拓展接口的包装实现类
+     * 在加载拓展接口实例时进行初始化，缓存的是拓展接口的包装实现类
+     *
+     * @see ExtensionLoader#loadClass(java.util.Map, java.net.URL, java.lang.Class, java.lang.String)
      */
     private Set<Class<?>> cachedWrapperClasses;
 
