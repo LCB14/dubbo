@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="768deaee-b44c-4776-9944-0fd361d07562" name="Default Changelist" comment="" />
+    <list default="true" id="768deaee-b44c-4776-9944-0fd361d07562" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/factory/AdaptiveExtensionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/factory/AdaptiveExtensionFactory.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +184,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1562665994129</updated>
-      <workItem from="1565336015452" duration="45178000" />
+      <workItem from="1565336015452" duration="45940000" />
     </task>
     <servers />
   </component>
@@ -226,7 +228,7 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
           <line>1008</line>
-          <option name="timeStamp" value="248" />
+          <option name="timeStamp" value="257" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
