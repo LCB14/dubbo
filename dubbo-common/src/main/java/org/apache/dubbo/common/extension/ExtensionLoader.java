@@ -957,9 +957,17 @@ public class ExtensionLoader<T> {
         return extension.value();
     }
 
+    /**
+     *  createAdaptiveExtension 方法的代码比较少，但却包含了三个逻辑，分别如下：
+     *
+     *  1、调用 getAdaptiveExtensionClass 方法获取自适应拓展 Class 对象
+     *  2、通过反射进行实例化
+     *  3、调用 injectExtension 方法向拓展实例中注入依赖
+     */
     @SuppressWarnings("unchecked")
     private T  createAdaptiveExtension() {
         try {
+            // 获取自适应拓展类，并通过反射实例化
             return injectExtension((T) getAdaptiveExtensionClass().newInstance());
         } catch (Exception e) {
             throw new IllegalStateException("Can't create adaptive extension " + type + ", cause: " + e.getMessage(), e);
@@ -977,8 +985,14 @@ public class ExtensionLoader<T> {
              */
             return cachedAdaptiveClass;
         }
-        // @Adaptive注解如果加在类上，则被修饰的类则会作为拓展接口的代理类返回。
-        // 否者dubbo会利用createAdaptiveExtensionClass()方法--动态代理生成拓展接口的代理类
+
+        /**
+         * 创建自适应拓展类
+         *
+         * 当 Adaptive 注解在类上时，Dubbo 不会为该类生成代理类。注解在方法（接口方法）上时，Dubbo 则会为该方法生成代理逻辑。
+         * Adaptive 注解在类上的情况很少，在 Dubbo 中，仅有两个类被 Adaptive 注解了，分别是 AdaptiveCompiler 和 AdaptiveExtensionFactory。
+         * 此种情况，表示拓展的加载逻辑由人工编码完成。更多时候，Adaptive 是注解在接口方法上的，表示拓展的加载逻辑需由框架自动生成。
+         */
         return cachedAdaptiveClass = createAdaptiveExtensionClass();
     }
 
