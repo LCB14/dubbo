@@ -623,6 +623,11 @@ public class ExtensionLoader<T> {
         }
     }
 
+    /**
+     *  Dubbo 中有两种类型的自适应拓展，一种是手工编码的，一种是自动生成的。
+     *  手工编码的自适应拓展中可能存在着一些依赖，而自动生成的 Adaptive 拓展则不会依赖其他类。
+     *  这里调用 injectExtension 方法的目的是为手工编码的自适应拓展注入依赖
+     */
     private T injectExtension(T instance) {
         try {
             if (objectFactory != null) {
