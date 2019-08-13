@@ -414,6 +414,12 @@ public class AdaptiveClassCodeGenerator {
      * 2, test if argi.getXX() returns null
      * 3, assign url with argi.getXX()
      */
+    //    大概生成代码样式
+    //    if (arg0 == null)
+    //            throw new IllegalArgumentException("com.alibaba.dubbo.rpc.Invoker argument == null");
+    //    if (arg0.getUrl() == null)
+    //        throw new IllegalArgumentException("com.alibaba.dubbo.rpc.Invoker argument getUrl() == null");
+    //    com.alibaba.dubbo.common.URL url = arg0.getUrl();
     private String generateGetUrlNullCheck(int index, Class<?> type, String method) {
         // Null point check
         StringBuilder code = new StringBuilder();
