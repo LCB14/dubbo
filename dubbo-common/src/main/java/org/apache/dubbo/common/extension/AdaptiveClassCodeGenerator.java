@@ -246,8 +246,14 @@ public class AdaptiveClassCodeGenerator {
                 code.append(generateUrlAssignmentIndirectly(method));
             }
 
+            // 获取@Adaptive注解中的值，如果没有值则利用类名生成默认值
             String[] value = getMethodAdaptiveValue(adaptiveAnnotation);
 
+            /**
+             * 检测方法列表中是否存在 Invocation 类型的参数，若存在，则为其生成判空代码和其他一些代码。
+             *
+             * @see org.apache.dubbo.rpc.Invocation
+             */
             boolean hasInvocation = hasInvocationArgument(method);
             
             code.append(generateInvocationArgumentNullCheck(method));
@@ -359,6 +365,7 @@ public class AdaptiveClassCodeGenerator {
     private String[] getMethodAdaptiveValue(Adaptive adaptiveAnnotation) {
         String[] value = adaptiveAnnotation.value();
         // value is not set, use the value generated from class name as the key
+        // 生成形式：LoadBalance -> load.balance
         if (value.length == 0) {
             String splitName = StringUtils.camelToSplitName(type.getSimpleName(), ".");
             value = new String[]{splitName};
