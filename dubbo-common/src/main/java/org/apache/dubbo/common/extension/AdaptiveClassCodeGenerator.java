@@ -417,6 +417,7 @@ public class AdaptiveClassCodeGenerator {
     private String generateGetUrlNullCheck(int index, Class<?> type, String method) {
         // Null point check
         StringBuilder code = new StringBuilder();
+
         // 为可返回 URL 的参数生成判空代码，格式如下：
         // if (arg + urlTypeIndex == null)
         //     throw new IllegalArgumentException("参数全限定名 + argument == null");
