@@ -108,6 +108,7 @@ public class AdaptiveClassCodeGenerator {
         for (Method method : methods) {
             code.append(generateMethod(method));
         }
+
         code.append("}");
         
         if (logger.isDebugEnabled()) {
@@ -208,6 +209,14 @@ public class AdaptiveClassCodeGenerator {
     private String generateMethodContent(Method method) {
         Adaptive adaptiveAnnotation = method.getAnnotation(Adaptive.class);
         StringBuilder code = new StringBuilder(512);
+        /**
+         * 拓展接口中未标注Adaptive注解的方法
+         * Dubbo 不会为没有标注 Adaptive 注解的方法生成代理逻辑，对于该种类型的方法，仅会生成一句抛出异常的代码。
+         *
+         * 生成类似如下代码：
+         * throw new UnsupportedOperationException(
+         *             "method public abstract void com.alibaba.dubbo.rpc.Protocol.destroy() of interface com.alibaba.dubbo.rpc.Protocol is not adaptive method!");
+         */
         if (adaptiveAnnotation == null) {
             return generateUnsupported(method);
         } else {
