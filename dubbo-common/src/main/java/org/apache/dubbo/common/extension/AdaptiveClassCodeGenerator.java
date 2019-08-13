@@ -167,6 +167,7 @@ public class AdaptiveClassCodeGenerator {
     private String generateMethod(Method method) {
         String methodReturnType = method.getReturnType().getCanonicalName();
         String methodName = method.getName();
+        // 重点逻辑
         String methodContent = generateMethodContent(method);
         String methodArgs = generateMethodArguments(method);
         String methodThrows = generateMethodThrows(method);
@@ -220,14 +221,16 @@ public class AdaptiveClassCodeGenerator {
         if (adaptiveAnnotation == null) {
             return generateUnsupported(method);
         } else {
+            // 遍历拓展接口中添加@Adaptive注解方法的参数列表，并获取URL类型参数在参数列表中的位置。
             int urlTypeIndex = getUrlTypeIndex(method);
             
             // found parameter in URL type
-            // urlTypeIndex != -1，表示参数列表中存在 URL 参数
+            // urlTypeIndex != -1，表示参数列表中存在 URL 类型的参数
             if (urlTypeIndex != -1) {
                 // Null Point check
                 /**
                  * 为 URL 类型参数生成判空代码，格式如下：
+                 * arg + urlTypeIndex -> 表示第几个参数内容
                  * if (arg + urlTypeIndex == null)
                  *     throw new IllegalArgumentException("url == null");
                  */
@@ -235,6 +238,11 @@ public class AdaptiveClassCodeGenerator {
             // 参数列表中不存在 URL 类型参数
             } else {
                 // did not find parameter in URL type
+                /**
+                 * 如果被代理的方法参数中不直接包含URL类型的参数，则获取这些参数对象中的所有方法
+                 * 判断是否包含可以间接获取URL的getUrl()方法，如果连getUrl()方法也没有直接抛出异常
+                 * 表示没法玩了！！
+                 */
                 code.append(generateUrlAssignmentIndirectly(method));
             }
 
