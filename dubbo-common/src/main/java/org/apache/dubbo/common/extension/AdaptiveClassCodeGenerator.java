@@ -266,7 +266,10 @@ public class AdaptiveClassCodeGenerator {
             // check extName == null?
             code.append(generateExtNameNullCheck(value));
 
-            // 生成 extName 赋值代码
+            // 生成拓展获取代码，格式如下：
+            // type全限定名 extension = (type全限定名)ExtensionLoader全限定名
+            //     .getExtensionLoader(type全限定名.class).getExtension(extName);
+            // Tips: 格式化字符串中的 %<s 表示使用前一个转换符所描述的参数，即 type 全限定名
             code.append(generateExtensionAssignment());
 
             // return statement
