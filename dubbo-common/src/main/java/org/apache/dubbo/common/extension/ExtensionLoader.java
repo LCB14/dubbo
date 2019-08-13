@@ -524,6 +524,9 @@ public class ExtensionLoader<T> {
         }
     }
 
+    /**
+     * 获取自适应拓展
+     */
     @SuppressWarnings("unchecked")
     public T getAdaptiveExtension() {
         /**
