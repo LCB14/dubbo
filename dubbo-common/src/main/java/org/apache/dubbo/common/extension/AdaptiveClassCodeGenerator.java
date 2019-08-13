@@ -93,12 +93,11 @@ public class AdaptiveClassCodeGenerator {
             throw new IllegalStateException("No adaptive method exist on extension " + type.getName() + ", refuse to create the adaptive class!");
         }
 
-        /**
-         * 生成类似如下代码：
-         * package com.alibaba.dubbo.rpc;
-         * import com.alibaba.dubbo.common.extension.ExtensionLoader;
-         * public class Protocol$Adaptive implements com.alibaba.dubbo.rpc.Protocol {
-         */
+
+        // 生成类似如下代码：
+        // package com.alibaba.dubbo.rpc;
+        // import com.alibaba.dubbo.common.extension.ExtensionLoader;
+        // public class Protocol$Adaptive implements com.alibaba.dubbo.rpc.Protocol {
         StringBuilder code = new StringBuilder();
         code.append(generatePackageInfo());
         code.append(generateImports());

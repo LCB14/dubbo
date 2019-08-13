@@ -540,8 +540,9 @@ public class ExtensionLoader<T> {
                     instance = cachedAdaptiveInstance.get();
                     if (instance == null) {
                         try {
-                            // 创建自适应拓展接口代理类
+                            // 创建自适应拓展
                             instance = createAdaptiveExtension();
+                            // 设置自适应拓展到缓存中
                             cachedAdaptiveInstance.set(instance);
                         } catch (Throwable t) {
                             createAdaptiveInstanceError = t;
