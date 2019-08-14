@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="768deaee-b44c-4776-9944-0fd361d07562" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/AdaptiveClassCodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/AdaptiveClassCodeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/utils/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/utils/StringUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/extension/AdaptiveClassCodeGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/extension/AdaptiveClassCodeGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/utils/StringUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/utils/StringUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/loader/WheelMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/loader/WheelMaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/packet/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/packet/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lcb-dubbo/target/classes/com/lcb/dubbo/spi/test/auto/packet/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/lcb-dubbo/target/classes/com/lcb/dubbo/spi/test/auto/packet/Test.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,20 +97,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.StringUtils">
-    <configuration name="Application (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.apache.dubbo.demo.consumer.Application" />
-      <module name="dubbo-demo-xml-consumer" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.apache.dubbo.demo.consumer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Test (1)">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.apache.dubbo.demo.provider.Application" />
       <module name="dubbo-demo-xml-provider" />
@@ -133,6 +124,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lcb.dubbo.spi.test.auto.loader.Test" />
+      <module name="lcb-dubbo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lcb.dubbo.spi.test.auto.loader.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lcb.dubbo.spi.test.auto.packet.Test" />
+      <module name="lcb-dubbo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lcb.dubbo.spi.test.auto.packet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DubboSPITest.sayHello" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lcb-dubbo" />
       <extension name="coverage">
@@ -149,29 +166,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JavaSPITest.sayHello" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lcb-dubbo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.lcb.dubbo.spi.test.javaSPI.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.lcb.dubbo.spi.test.javaSPI" />
-      <option name="MAIN_CLASS_NAME" value="com.lcb.dubbo.spi.test.javaSPI.JavaSPITest" />
-      <option name="METHOD_NAME" value="sayHello" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test (1)" />
+        <item itemvalue="Application.Test" />
         <item itemvalue="Application.StringUtils" />
         <item itemvalue="JUnit.DubboSPITest.sayHello" />
         <item itemvalue="Application.Application" />
-        <item itemvalue="JUnit.JavaSPITest.sayHello" />
-        <item itemvalue="Application.Application (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -185,7 +186,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1562665994129</updated>
-      <workItem from="1565336015452" duration="57418000" />
+      <workItem from="1565336015452" duration="61316000" />
+      <workItem from="1565685866057" duration="1578000" />
     </task>
     <servers />
   </component>
