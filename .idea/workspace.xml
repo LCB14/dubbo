@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="768deaee-b44c-4776-9944-0fd361d07562" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/adapt/WheelMakeImplFirst.java" beforeDir="false" afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/adapt/WheelMakeImplFirst.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/adapt/WheelMakeImplSecond.java" beforeDir="false" afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/adapt/WheelMakeImplSecond.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/loader/WheelMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/loader/WheelMaker.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +93,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Test (2)">
+  <component name="RunManager" selected="Application.Test (1)">
     <configuration name="StringUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.apache.dubbo.common.utils.StringUtils" />
       <module name="dubbo-common" />
@@ -164,8 +164,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Test (2)" />
         <item itemvalue="Application.Test (1)" />
+        <item itemvalue="Application.Test (2)" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.StringUtils" />
         <item itemvalue="JUnit.DubboSPITest.sayHello" />
@@ -183,7 +183,7 @@
       <option name="presentableId" value="Default" />
       <updated>1562665994129</updated>
       <workItem from="1565336015452" duration="61316000" />
-      <workItem from="1565685866057" duration="2314000" />
+      <workItem from="1565685866057" duration="5103000" />
     </task>
     <servers />
   </component>
@@ -228,6 +228,31 @@
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
           <line>740</line>
           <option name="timeStamp" value="261" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
+          <line>660</line>
+          <option name="timeStamp" value="274" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
+          <line>543</line>
+          <option name="timeStamp" value="282" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
+          <line>979</line>
+          <option name="timeStamp" value="286" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
+          <line>1017</line>
+          <option name="timeStamp" value="289" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/AdaptiveClassCodeGenerator.java</url>
+          <line>91</line>
+          <option name="timeStamp" value="290" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
