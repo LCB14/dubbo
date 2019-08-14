@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="768deaee-b44c-4776-9944-0fd361d07562" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/extension/AdaptiveClassCodeGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/extension/AdaptiveClassCodeGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/utils/StringUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/utils/StringUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/loader/WheelMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/loader/WheelMaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/packet/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/packet/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lcb-dubbo/target/classes/com/lcb/dubbo/spi/test/auto/packet/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/lcb-dubbo/target/classes/com/lcb/dubbo/spi/test/auto/packet/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lcb-dubbo/target/classes/com/lcb/dubbo/spi/test/auto/loader/WheelMaker.class" beforeDir="false" afterPath="$PROJECT_DIR$/lcb-dubbo/target/classes/com/lcb/dubbo/spi/test/auto/loader/WheelMaker.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -187,7 +182,7 @@
       <option name="presentableId" value="Default" />
       <updated>1562665994129</updated>
       <workItem from="1565336015452" duration="61316000" />
-      <workItem from="1565685866057" duration="1578000" />
+      <workItem from="1565685866057" duration="1983000" />
     </task>
     <servers />
   </component>
