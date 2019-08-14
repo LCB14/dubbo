@@ -5,7 +5,7 @@ import org.apache.dubbo.common.URL;
 
 /**
  * @author changbao.li
- * @Description TODO
+ * @Description WheelMake拓展点实现2
  * @Date 2019-07-09 23:04
  */
 public class WheelMakeImplSecond implements WheelMaker {

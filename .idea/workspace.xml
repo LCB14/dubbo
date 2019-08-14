@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="768deaee-b44c-4776-9944-0fd361d07562" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/lcb-dubbo/target/classes/com/lcb/dubbo/spi/test/auto/loader/WheelMaker.class" beforeDir="false" afterPath="$PROJECT_DIR$/lcb-dubbo/target/classes/com/lcb/dubbo/spi/test/auto/loader/WheelMaker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/adapt/WheelMakeImplFirst.java" beforeDir="false" afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/adapt/WheelMakeImplFirst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/adapt/WheelMakeImplSecond.java" beforeDir="false" afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/auto/adapt/WheelMakeImplSecond.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,20 +93,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Test (1)">
-    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.apache.dubbo.demo.provider.Application" />
-      <module name="dubbo-demo-xml-provider" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.apache.dubbo.demo.provider.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Test (2)">
     <configuration name="StringUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.apache.dubbo.common.utils.StringUtils" />
       <module name="dubbo-common" />
@@ -125,6 +113,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.lcb.dubbo.spi.test.auto.loader.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lcb.dubbo.spi.test.auto.adapt.Test" />
+      <module name="lcb-dubbo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lcb.dubbo.spi.test.auto.adapt.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -163,11 +164,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test (2)" />
         <item itemvalue="Application.Test (1)" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.StringUtils" />
         <item itemvalue="JUnit.DubboSPITest.sayHello" />
-        <item itemvalue="Application.Application" />
       </list>
     </recent_temporary>
   </component>
@@ -182,7 +183,7 @@
       <option name="presentableId" value="Default" />
       <updated>1562665994129</updated>
       <workItem from="1565336015452" duration="61316000" />
-      <workItem from="1565685866057" duration="1983000" />
+      <workItem from="1565685866057" duration="2314000" />
     </task>
     <servers />
   </component>
