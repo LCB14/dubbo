@@ -505,6 +505,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
             String pathKey = URL.buildKey(getContextPath(protocolConfig).map(p -> p + "/" + path).orElse(path), group, version);
             ProviderModel providerModel = new ProviderModel(pathKey, ref, interfaceClass);
             ApplicationModel.initProviderModel(pathKey, providerModel);
+            // 组装 URL
             doExportUrlsFor1Protocol(protocolConfig, registryURLs);
         }
     }
@@ -520,11 +521,10 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
         }
 
         Map<String, String> map = new HashMap<String, String>();
-        // 添加 side信息到 map 中
+        // 添加 side、版本、时间戳以及进程号等信息到 map 中
         map.put(SIDE_KEY, PROVIDER_SIDE);
-
         appendRuntimeParameters(map);
-        // 通过反射将对象的字段信息添加到 map 中
+        // 通过反射将对象的字段信息添加到 map 中,除返回值是Object或@Parameter(excluded=true)的
         appendParameters(map, metrics);
         appendParameters(map, application);
         appendParameters(map, module);
