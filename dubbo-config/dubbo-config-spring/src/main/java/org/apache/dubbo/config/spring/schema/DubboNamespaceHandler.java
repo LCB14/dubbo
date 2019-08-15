@@ -36,6 +36,9 @@ import org.springframework.beans.factory.xml.NamespaceHandlerSupport;
 /**
  * DubboNamespaceHandler
  *
+ * Spring的自定义标签解析是通过，写一个继承自NamespaceHandlerSupport的类，并实现init()方法，
+ * 在init()方法中，去注册解析器。然后在解析xml时，通过约定的key去Map中拿到相应的解析器进行解析。
+ *
  * @export
  */
 public class DubboNamespaceHandler extends NamespaceHandlerSupport {
