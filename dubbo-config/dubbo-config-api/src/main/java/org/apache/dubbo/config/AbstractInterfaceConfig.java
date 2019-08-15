@@ -343,9 +343,9 @@ public abstract class AbstractInterfaceConfig extends AbstractMethodConfig {
                 }
                 if (!RegistryConfig.NO_AVAILABLE.equalsIgnoreCase(address)) {
                     Map<String, String> map = new HashMap<String, String>();
-                    // 添加 ApplicationConfig 中的字段信息到 map 中
+                    // 添加 ApplicationConfig 中getter方法返回值，key为@Paramer的key或getter方法名驼峰转句点分隔的名字入getXxxYyy->xxx.yyy
                     appendParameters(map, application);
-                    // 添加 RegistryConfig 字段信息到 map 中
+                    // 添加 RegistryConfig 中getter方法返回值
                     appendParameters(map, config);
                     // 添加 path信息到 map 中
                     map.put(PATH_KEY, RegistryService.class.getName());
@@ -363,9 +363,9 @@ public abstract class AbstractInterfaceConfig extends AbstractMethodConfig {
                      */
                     List<URL> urls = UrlUtils.parseURLs(address, map);
                     for (URL url : urls) {
-                        // 将 URL 协议头设置为 registry
                         url = URLBuilder.from(url)
                                 .addParameter(REGISTRY_KEY, url.getProtocol())
+                                // 将 URL 协议头设置为 registry
                                 .setProtocol(REGISTRY_PROTOCOL)
                                 .build();
 
