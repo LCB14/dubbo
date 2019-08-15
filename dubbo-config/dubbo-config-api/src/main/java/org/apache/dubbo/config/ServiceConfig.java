@@ -291,19 +291,34 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
 
     public void checkAndUpdateSubConfigs() {
         // Use default configs defined explicitly on global configs
+        /**
+         * 用于检测 provider、application 等核心配置类对象是否为空，
+         * 若为空，则尝试从其他配置类对象中获取相应的实例。
+         */
         completeCompoundConfigs();
+
         // Config Center should always being started first.
+        // 启动配置中心
         startConfigCenter();
 
+        // 如果没有ProviderConfig创建一个默认的
         checkDefault();
+
+        // 检查ProtocolConfig配置，未配置使用provider.getProtocols()或创建一个默认的
         checkProtocol();
+
+        // 如果没有ApplicationConfig创建一个默认的
         checkApplication();
+
         // if protocol is not in jvm checkRegistry
         if (!isOnlyInJvm()) {
             checkRegistry();
         }
-        // 读取dubbo配置，并按配置优先级进行初始化。
+
+        // 刷新ServiceConfig配置
         this.refresh();
+
+        // 检查MetadataReportConfig，没有创建一个默认的
         checkMetadataReport();
 
         if (StringUtils.isEmpty(interfaceName)) {
@@ -374,7 +389,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
 
     public synchronized void export() {
         /**
-         *  检查和更新配置信息
+         *  检查一些必要的属性和设置一些必要的默认值
          *  之所以更新，因为dubbo的配置方式并不限于xml
          *  （例如：xml,系统配置，dubbo配置中心，dubbo.properties等)
          *
@@ -390,7 +405,14 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
         if (!shouldExport()) {
             return;
         }
-        // 判断是否需要延迟操作
+        /**
+         * note：Dubbo-2.6.5 及以后版本所有服务都将在 Spring 初始化完成后进行暴露，如果你不需要延迟暴露服务，无需配置 delay。
+         * 即<dubbo:service delay="-1" />这种之前的配置已经没有意义。
+         *
+         * <dubbo:service delay="5000" />  -- 延迟到 Spring 初始化完成后，再暴露服务
+         *
+         * 判断是否需要延迟操作
+         */
         if (shouldDelay()) {
             DELAY_EXPORT_EXECUTOR.schedule(this::doExport, getDelay(), TimeUnit.MILLISECONDS);
         } else {
