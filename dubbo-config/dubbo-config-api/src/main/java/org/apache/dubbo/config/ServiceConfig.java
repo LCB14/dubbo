@@ -310,7 +310,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
         completeCompoundConfigs();
 
         // Config Center should always being started first.
-        // 启动配置中心
+        // 启动配置中心，从dubbo2.7.0开始支持了配置中心动态修改配置
         startConfigCenter();
 
         // 检测 provider 是否为空，为空则新建一个，并通过系统变量为其初始化
@@ -339,7 +339,11 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
             throw new IllegalStateException("<dubbo:service interface=\"\" /> interface not allow null!");
         }
 
-        // 检测 ref 是否为泛化服务类型
+        /**
+         * 检测 ref 是否为泛化服务类型
+         *
+         * GenericService作用参考：https://www.cnblogs.com/notlate/p/10127942.html
+         */
         if (ref instanceof GenericService) {
             // 设置 interfaceClass 为 GenericService.class
             interfaceClass = GenericService.class;
@@ -360,6 +364,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
             // 设置 generic = "false"
             generic = Boolean.FALSE.toString();
         }
+
         // local 和 stub 在功能应该是一致的，用于配置本地存根
         if (local != null) {
             if ("true".equals(local)) {
@@ -377,6 +382,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
                 throw new IllegalStateException("The local implementation class " + localClass.getName() + " not implement interface " + interfaceName);
             }
         }
+
         /**
          *  dubbo本地存根
          *
@@ -396,7 +402,15 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
                 throw new IllegalStateException("The stub implementation class " + stubClass.getName() + " not implement interface " + interfaceName);
             }
         }
+
+        // 检测存根类的构造方法参数必须是有且仅有一个接口类型的参数
         checkStubAndLocal(interfaceClass);
+
+        /**
+         * 检测服务端Mock类是否合法
+         *
+         * 详细参考：https://www.cnblogs.com/libin6505/p/10592669.html
+         */
         checkMock(interfaceClass);
     }
 
