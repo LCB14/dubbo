@@ -322,10 +322,9 @@ public abstract class AbstractInterfaceConfig extends AbstractMethodConfig {
      *
      *
      * loadRegistries 方法主要包含如下的逻辑：
-     *  1、检测是否存在注册中心配置类，不存在则抛出异常
-     *  2、构建参数映射集合，也就是 map
-     *  3、构建注册中心链接列表
-     *  4、遍历链接列表，并根据条件决定是否将其添加到 registryList 中
+     *  1、构建参数映射集合，也就是 map
+     *  2、构建注册中心链接列表
+     *  3、遍历链接列表，并根据条件决定是否将其添加到 registryList 中
      *
      * @param provider whether it is the provider side
      * @return
@@ -341,6 +340,7 @@ public abstract class AbstractInterfaceConfig extends AbstractMethodConfig {
                     // 若 address 为空，则将其设为 0.0.0.0
                     address = ANYHOST_VALUE;
                 }
+                // 检测 address 是否合法
                 if (!RegistryConfig.NO_AVAILABLE.equalsIgnoreCase(address)) {
                     Map<String, String> map = new HashMap<String, String>();
                     // 添加 ApplicationConfig 中getter方法返回值，key为@Paramer的key或getter方法名驼峰转句点分隔的名字入getXxxYyy->xxx.yyy

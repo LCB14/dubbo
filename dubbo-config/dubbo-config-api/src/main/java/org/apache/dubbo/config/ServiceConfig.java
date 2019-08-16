@@ -289,6 +289,14 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
         return unexported;
     }
 
+    /**
+     * 下面方法主要完成下功能：
+     * 1、检测 <dubbo:service> 标签的 interface 属性合法性，不合法则抛出异常
+     * 2、检测 ProviderConfig、ApplicationConfig 等核心配置类对象是否为空，若为空，则尝试从其他配置类对象中获取相应的实例。
+     * 3、检测并处理泛化服务和普通服务类
+     * 4、检测本地存根配置，并进行相应的处理
+     * 5、对 ApplicationConfig、RegistryConfig 等配置类进行检测，为空则尝试创建，若无法创建则抛出异常
+     */
     public void checkAndUpdateSubConfigs() {
         // Use default configs defined explicitly on global configs
         /**
@@ -314,6 +322,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
 
         // if protocol is not in jvm checkRegistry
         if (!isOnlyInJvm()) {
+            // 检测是否存在注册中心配置类，不存在则抛出异常
             checkRegistry();
         }
 
@@ -510,7 +519,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
      */
     @SuppressWarnings({"unchecked", "rawtypes"})
     private void doExportUrls() {
-        // 加载注册中心连接
+        // 加载注册中心链接
         List<URL> registryURLs = loadRegistries(true);
 
         // 遍历 protocols，并在每个协议下导出服务
@@ -518,7 +527,11 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
             String pathKey = URL.buildKey(getContextPath(protocolConfig).map(p -> p + "/" + path).orElse(path), group, version);
             ProviderModel providerModel = new ProviderModel(pathKey, ref, interfaceClass);
             ApplicationModel.initProviderModel(pathKey, providerModel);
-            // 组装 URL
+            /**
+             * 组装 URL
+             *
+             * URL 是 Dubbo 配置的载体，通过 URL 可让 Dubbo 的各种配置在各个模块之间传递。
+             */
             doExportUrlsFor1Protocol(protocolConfig, registryURLs);
         }
     }
