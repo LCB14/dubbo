@@ -141,6 +141,11 @@ public abstract class Wrapper {
      *
      */
     private static Wrapper makeWrapper(Class<?> c) {
+        /**
+         * 截止到分割线1，下面代码主要完成下面逻辑：
+         *
+         * 创建 c1、c2、c3 以及 pts、ms、mns 等变量，以及向 c1、c2、c3 中添加方法定义和类型转换代码。
+         */
         // 检测 c 是否为基本类型，若是则抛出异常
         if (c.isPrimitive()) {
             throw new IllegalArgumentException("Can not create wrapper for primitive type: " + c);
@@ -184,7 +189,11 @@ public abstract class Wrapper {
         List<String> dmns = new ArrayList<>();
 
         // --------------------------------✨ 分割线1 ✨-------------------------------------
-
+        /**
+         * 分割线1和分割线2主要完成如下逻辑：
+         *
+         * 用于为 public 级别的字段生成条件判断取值与赋值代码。
+         */
         // get all public field.
         // 获取 public 访问级别的字段，并为所有字段生成条件判断语句
         for (Field f : c.getFields()) {
@@ -213,6 +222,11 @@ public abstract class Wrapper {
 
         // --------------------------------✨ 分割线2 ✨-------------------------------------
 
+        /**
+         * 分割线2到分割线3这段逻辑主要完成下面功能：
+         *
+         * 用于为定义在当前类中的方法生成判断语句，和方法调用语句。
+         */
         Method[] methods = c.getMethods();
         // get all public method.
         // 检测 c 中是否包含在当前类中声明的方法
@@ -314,6 +328,12 @@ public abstract class Wrapper {
 
         // --------------------------------✨ 分割线3 ✨-------------------------------------
 
+        /**
+         * 分割线3到分割线4代码主要完成下面功能：
+         *
+         * 处理 getter、setter 以及以 is/has/can 开头的方法。处理方式是通过正则表达式获取方法类型（get/set/is/...），
+         * 以及属性名。之后为属性名生成判断语句，然后为方法生成调用语句。
+         */
         // deal with get/set method.
         // 处理 get/set 方法
         Matcher matcher;
@@ -352,6 +372,12 @@ public abstract class Wrapper {
 
         // --------------------------------✨ 分割线4 ✨-------------------------------------
 
+        /**
+         * 分割线4之后的代码主要完成如下功能：
+         *
+         * 通过 ClassGenerator 为刚刚生成的代码构建 Class 类，并通过反射创建对象。ClassGenerator 是 Dubbo 自己封装的，
+         * 该类的核心是 toClass() 的重载方法 toClass(ClassLoader, ProtectionDomain)，该方法通过 javassist 构建 Class。
+         */
         // make class
         long id = WRAPPER_CLASS_COUNTER.getAndIncrement();
         // 创建类生成器
