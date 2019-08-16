@@ -40,6 +40,7 @@ import org.apache.dubbo.rpc.ProxyFactory;
 import org.apache.dubbo.rpc.cluster.ConfiguratorFactory;
 import org.apache.dubbo.rpc.model.ApplicationModel;
 import org.apache.dubbo.rpc.model.ProviderModel;
+import org.apache.dubbo.rpc.proxy.javassist.JavassistProxyFactory;
 import org.apache.dubbo.rpc.service.GenericService;
 import org.apache.dubbo.rpc.support.ProtocolUtils;
 
@@ -708,6 +709,13 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
                     .getExtension(url.getProtocol()).getConfigurator(url).configure(url);
         }
 
+        /**
+         *  url 中的 scope 参数决定服务导出方式，分别如下：
+         *
+         *  scope = none，不导出服务
+         *  scope != remote，导出到本地
+         *  scope != local，导出到远程
+         */
         String scope = url.getParameter(SCOPE_KEY);
         // don't export when none is configured
         // 如果 scope = none，则什么都不做
@@ -788,7 +796,15 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
                 .setHost(LOCALHOST_VALUE)
                 .setPort(0)
                 .build();
-        // 创建 Invoker，并导出服务，这里的 protocol 会在运行时调用 InjvmProtocol 的 export 方法
+
+        /**
+         * 创建 Invoker，并导出服务，这里的 protocol 会在运行时调用 InjvmProtocol 的 export 方法
+         *
+         * Invoker 是实体域，它是 Dubbo 的核心模型，其它模型都向它靠扰，或转换成它，它代表一个可执行体，
+         * 可向它发起 invoke 调用，它有可能是一个本地的实现，也可能是一个远程的实现，也可能一个集群实现。
+         *
+         * @see JavassistProxyFactory#getInvoker(java.lang.Object, java.lang.Class, org.apache.dubbo.common.URL)
+         */
         Exporter<?> exporter = protocol.export(
                 PROXY_FACTORY.getInvoker(ref, (Class) interfaceClass, local));
         exporters.add(exporter);

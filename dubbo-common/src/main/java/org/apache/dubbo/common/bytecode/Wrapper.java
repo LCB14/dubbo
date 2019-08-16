@@ -104,8 +104,8 @@ public abstract class Wrapper {
      * @return Wrapper instance(not null).
      */
     public static Wrapper getWrapper(Class<?> c) {
-        while (ClassGenerator.isDynamicClass(c)) // can not wrapper on dynamic class.
-        {
+        // can not wrapper on dynamic class.
+        while (ClassGenerator.isDynamicClass(c)) {
             c = c.getSuperclass();
         }
 
@@ -156,19 +156,32 @@ public abstract class Wrapper {
         // c3 用于存储 invokeMethod 方法代码
         StringBuilder c3 = new StringBuilder("public Object invokeMethod(Object o, String n, Class[] p, Object[] v) throws " + InvocationTargetException.class.getName() + "{ ");
 
-        // 生成类型转换代码及异常捕捉代码
+        // 生成类型转换代码及异常捕捉代码 比如：
+        //   DemoService w;
+        //   try {
+        //      w = ((DemoServcie) $1);
+        //   }catch(Throwable e){
+        //      throw new IllegalArgumentException(e);
+        //   }
         c1.append(name).append(" w; try{ w = ((").append(name).append(")$1); }catch(Throwable e){ throw new IllegalArgumentException(e); }");
         c2.append(name).append(" w; try{ w = ((").append(name).append(")$1); }catch(Throwable e){ throw new IllegalArgumentException(e); }");
         c3.append(name).append(" w; try{ w = ((").append(name).append(")$1); }catch(Throwable e){ throw new IllegalArgumentException(e); }");
 
+        // <property name, property types>
         // pts 用于存储成员变量名和类型
-        Map<String, Class<?>> pts = new HashMap<>(); // <property name, property types>
+        Map<String, Class<?>> pts = new HashMap<>();
+
+        // <method desc, Method instance>
         // ms 用于存储方法描述信息（可理解为方法签名）及 Method 实例
-        Map<String, Method> ms = new LinkedHashMap<>(); // <method desc, Method instance>
+        Map<String, Method> ms = new LinkedHashMap<>();
+
+        // method names.
         // mns 为方法名列表
-        List<String> mns = new ArrayList<>(); // method names.
+        List<String> mns = new ArrayList<>();
+
+        // declaring method names.
         // dmns 用于存储“定义在当前类中的方法”的名称
-        List<String> dmns = new ArrayList<>(); // declaring method names.
+        List<String> dmns = new ArrayList<>();
 
         // --------------------------------✨ 分割线1 ✨-------------------------------------
 
