@@ -292,6 +292,8 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
     public void checkAndUpdateSubConfigs() {
         // Use default configs defined explicitly on global configs
         /**
+         * 彻底的构造完整的配置信息
+         *
          * 用于检测 provider、application 等核心配置类对象是否为空，
          * 若为空，则尝试从其他配置类对象中获取相应的实例。
          */
@@ -301,7 +303,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
         // 启动配置中心
         startConfigCenter();
 
-        // 如果没有ProviderConfig创建一个默认的
+        // 检测 provider 是否为空，为空则新建一个，并通过系统变量为其初始化
         checkDefault();
 
         // 检查ProtocolConfig配置，未配置使用provider.getProtocols()或创建一个默认的
@@ -321,11 +323,14 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
         // 检查MetadataReportConfig，没有创建一个默认的
         checkMetadataReport();
 
+        // 检测 interfaceName 是否合法
         if (StringUtils.isEmpty(interfaceName)) {
             throw new IllegalStateException("<dubbo:service interface=\"\" /> interface not allow null!");
         }
 
+        // 检测 ref 是否为泛化服务类型
         if (ref instanceof GenericService) {
+            // 设置 interfaceClass 为 GenericService.class
             interfaceClass = GenericService.class;
             if (StringUtils.isEmpty(generic)) {
                 generic = Boolean.TRUE.toString();
@@ -337,20 +342,26 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
             } catch (ClassNotFoundException e) {
                 throw new IllegalStateException(e.getMessage(), e);
             }
+            // 对 interfaceClass，以及 <dubbo:method> 标签中的必要字段进行检查
             checkInterfaceAndMethods(interfaceClass, methods);
+            // 对 ref 合法性进行检测
             checkRef();
+            // 设置 generic = "false"
             generic = Boolean.FALSE.toString();
         }
+        // local 和 stub 在功能应该是一致的，用于配置本地存根
         if (local != null) {
             if ("true".equals(local)) {
                 local = interfaceName + "Local";
             }
             Class<?> localClass;
             try {
+                // 获取本地存根类
                 localClass = ClassUtils.forNameWithThreadContextClassLoader(local);
             } catch (ClassNotFoundException e) {
                 throw new IllegalStateException(e.getMessage(), e);
             }
+            // 检测本地存根类是否可赋值给接口类，若不可赋值则会抛出异常，提醒使用者本地存根类类型不合法
             if (!interfaceClass.isAssignableFrom(localClass)) {
                 throw new IllegalStateException("The local implementation class " + localClass.getName() + " not implement interface " + interfaceName);
             }
@@ -400,7 +411,8 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
         /**
          * <dubbo:provider export="false" />
          *
-         *  检查export 配置，这个配置决定了是否导出服务。
+         *  检查export 配置，这个配置决定了是否导出服务。如果 export 为 false，则不导出服务
+         *  有时候我们只是想本地启动服务进行一些调试工作，我们并不希望把本地启动的服务暴露出去给别人调用。此时，我们可通过配置 export 禁止服务导出.
          */
         if (!shouldExport()) {
             return;
@@ -454,6 +466,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
             path = interfaceName;
         }
         /**
+         *  导出服务
          *  Dubbo 允许我们使用不同的协议导出服务，也允许我们向多个注册中心注册服务。
          */
         doExportUrls();
@@ -926,13 +939,8 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
     }
 
     /**
-     * 下面代码主要是对配置检查的逻辑进行简单的总结，如下：
-     *
-     * 1、检测 <dubbo:service> 标签的 interface 属性合法性，不合法则抛出异常
-     * 2、检测 ProviderConfig、ApplicationConfig 等核心配置类对象是否为空，若为空，则尝试从其他配置类对象中获取相应的实例。
-     * 3、检测并处理泛化服务和普通服务类
-     * 4、检测本地存根配置，并进行相应的处理
-     * 5、对 ApplicationConfig、RegistryConfig 等配置类进行检测，为空则尝试创建，若无法创建则抛出异常
+     * 下面几个 if 语句用于检测 provider、application 等核心配置类对象是否为空，
+     * 若为空，则尝试从其他配置类对象中获取相应的实例。
      */
     private void completeCompoundConfigs() {
         if (provider != null) {

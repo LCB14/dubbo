@@ -4,6 +4,10 @@
     <list default="true" id="768deaee-b44c-4776-9944-0fd361d07562" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ServiceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ServiceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/classes/org/apache/dubbo/config/AbstractInterfaceConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/classes/org/apache/dubbo/config/AbstractInterfaceConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/classes/org/apache/dubbo/config/ServiceConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/classes/org/apache/dubbo/config/ServiceConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/main/java/org/apache/dubbo/config/spring/ServiceBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/main/java/org/apache/dubbo/config/spring/ServiceBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-spring/target/classes/org/apache/dubbo/config/spring/schema/DubboNamespaceHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-spring/target/classes/org/apache/dubbo/config/spring/schema/DubboNamespaceHandler.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -182,7 +186,8 @@
       <workItem from="1565336015452" duration="61316000" />
       <workItem from="1565685866057" duration="6304000" />
       <workItem from="1565751522802" duration="1990000" />
-      <workItem from="1565833838664" duration="9216000" />
+      <workItem from="1565833838664" duration="9864000" />
+      <workItem from="1565920383311" duration="3346000" />
     </task>
     <servers />
   </component>

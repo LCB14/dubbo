@@ -113,7 +113,11 @@ public class ServiceBean<T> extends ServiceConfig<T> implements InitializingBean
      * Dubbo进行服务导出，主要由下面三部分工作组成：
      *
      * 第一部分是前置工作，主要用于检查参数，组装 URL。
+     *  前置工作主要包含两个部分，分别是配置检查，以及 URL 装配。在导出服务之前，Dubbo 需要检查用户的配置是否合理，或者为用户补充缺省配置。
+     *  配置检查完成后，接下来需要根据这些配置组装 URL。在 Dubbo 中，URL 的作用十分重要。Dubbo 使用 URL 作为配置载体，所有的拓展点都是通过 URL 获取配置。
+     *
      * 第二部分是导出服务，包含导出服务到本地 (JVM)，和导出服务到远程两个过程。
+     *
      * 第三部分是向注册中心注册服务，用于服务发现。本篇文章将会对这三个部分代码进行详细的分析。
      *
      * @param event
