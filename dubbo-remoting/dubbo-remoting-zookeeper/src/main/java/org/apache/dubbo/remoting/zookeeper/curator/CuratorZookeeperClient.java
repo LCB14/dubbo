@@ -62,6 +62,7 @@ public class CuratorZookeeperClient extends AbstractZookeeperClient<CuratorZooke
         super(url);
         try {
             int timeout = url.getParameter(TIMEOUT_KEY, 5000);
+            // 创建 CuratorFramework 构造器
             CuratorFrameworkFactory.Builder builder = CuratorFrameworkFactory.builder()
                     .connectString(url.getBackupAddress())
                     .retryPolicy(new RetryNTimes(1, 1000))
@@ -70,7 +71,9 @@ public class CuratorZookeeperClient extends AbstractZookeeperClient<CuratorZooke
             if (authority != null && authority.length() > 0) {
                 builder = builder.authorization("digest", authority.getBytes());
             }
+            // 构建 CuratorFramework 实例
             client = builder.build();
+            // 添加监听器
             client.getConnectionStateListenable().addListener(new ConnectionStateListener() {
                 @Override
                 public void stateChanged(CuratorFramework client, ConnectionState state) {
@@ -83,6 +86,7 @@ public class CuratorZookeeperClient extends AbstractZookeeperClient<CuratorZooke
                     }
                 }
             });
+            // 启动客户端
             client.start();
         } catch (Exception e) {
             throw new IllegalStateException(e.getMessage(), e);
@@ -102,6 +106,7 @@ public class CuratorZookeeperClient extends AbstractZookeeperClient<CuratorZooke
     @Override
     public void createEphemeral(String path) {
         try {
+            // 通过 Curator 框架创建节点
             client.create().withMode(CreateMode.EPHEMERAL).forPath(path);
         } catch (NodeExistsException e) {
         } catch (Exception e) {

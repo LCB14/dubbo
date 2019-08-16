@@ -31,6 +31,7 @@ import org.apache.dubbo.registry.NotifyListener;
 import org.apache.dubbo.registry.Registry;
 import org.apache.dubbo.registry.RegistryFactory;
 import org.apache.dubbo.registry.RegistryService;
+import org.apache.dubbo.registry.support.AbstractRegistryFactory;
 import org.apache.dubbo.registry.support.ProviderConsumerRegTable;
 import org.apache.dubbo.registry.support.ProviderInvokerWrapper;
 import org.apache.dubbo.rpc.Exporter;
@@ -181,7 +182,13 @@ public class RegistryProtocol implements Protocol {
     }
 
     public void register(URL registryUrl, URL registeredProviderUrl) {
+        /**
+         * 获取 Registry
+         *
+         * @see AbstractRegistryFactory#getRegistry(org.apache.dubbo.common.URL)
+         */
         Registry registry = registryFactory.getRegistry(registryUrl);
+        // 注册服务
         registry.register(registeredProviderUrl);
     }
 
