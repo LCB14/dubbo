@@ -411,11 +411,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
 
     public synchronized void export() {
         /**
-         *  检查一些必要的属性和设置一些必要的默认值
-         *  之所以更新，因为dubbo的配置方式并不限于xml
-         *  （例如：xml,系统配置，dubbo配置中心，dubbo.properties等)
-         *
-         *  思考：dubbo是如何协调这些配置的优先级的？
+         * 该方法用来检测配置文件内容中的一些必要的属性和设置一些默认值
          */
         checkAndUpdateSubConfigs();
 

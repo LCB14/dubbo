@@ -105,7 +105,7 @@ public class ServiceBean<T> extends ServiceConfig<T> implements InitializingBean
     }
 
     /**
-     * dubbo导出之立即导出
+     * dubbo 服务导出 -- 立即导出
      *
      * Spring 容器发布刷新事件，Dubbo 在接收到事件后，会立即执行服务导出逻辑。
      * @see ApplicationListener
@@ -113,8 +113,10 @@ public class ServiceBean<T> extends ServiceConfig<T> implements InitializingBean
      * Dubbo进行服务导出，主要由下面三部分工作组成：
      *
      * 第一部分是前置工作，主要用于检查参数，组装 URL。
-     *  前置工作主要包含两个部分，分别是配置检查，以及 URL 装配。在导出服务之前，Dubbo 需要检查用户的配置是否合理，或者为用户补充缺省配置。
-     *  配置检查完成后，接下来需要根据这些配置组装 URL。在 Dubbo 中，URL 的作用十分重要。Dubbo 使用 URL 作为配置载体，所有的拓展点都是通过 URL 获取配置。
+     *  前置工作主要包含两个部分，分别是配置检查，以及 URL 装配。
+     *  在导出服务之前，Dubbo 需要检查用户的配置是否合理，或者为用户补充缺省配置。
+     *  配置检查完成后，接下来需要根据这些配置组装 URL。
+     *  在 Dubbo 中，URL 的作用十分重要。Dubbo 使用 URL 作为配置载体，所有的拓展点都是通过 URL 获取配置。
      *
      * 第二部分是导出服务，包含导出服务到本地 (JVM)，和导出服务到远程两个过程。
      *
@@ -135,7 +137,7 @@ public class ServiceBean<T> extends ServiceConfig<T> implements InitializingBean
     }
 
     /**
-     * dubbo导出之延迟导出
+     * dubbo服务导出 -- 延迟导出
      *
      * afterPropertiesSet检查ServiceBean的某个属性是否为空，如果为空，
      * 从applicationContext获取相应类型的bean，如果获取到了，则进行相应的设置。常见的6个属性如下（还有其它的)：
