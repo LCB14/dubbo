@@ -282,7 +282,11 @@ public class RegistryProtocol implements Protocol {
         return (ExporterChangeableWrapper<T>) bounds.computeIfAbsent(key, s -> {
             // 创建 Invoker 为委托类对象
             Invoker<?> invokerDelegate = new InvokerDelegate<>(originInvoker, providerUrl);
-            // 调用 protocol 的 export 方法导出服务
+            /**
+             * 调用 protocol 的 export 方法导出服务
+             *
+             * @see org.apache.dubbo.rpc.protocol.dubbo.DubboProtocol#export(org.apache.dubbo.rpc.Invoker)
+             */
             return new ExporterChangeableWrapper<>((Exporter<T>) protocol.export(invokerDelegate), originInvoker);
         });
     }

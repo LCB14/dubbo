@@ -280,14 +280,17 @@ public class DubboProtocol extends AbstractProtocol {
 
     @Override
     public <T> Exporter<T> export(Invoker<T> invoker) throws RpcException {
+        //  dubbo://192.168.1.101:20880/org.apache.dubbo.demo.DemoService?anyhost=true&application=demo-provider&bean.name=org.apache.dubbo.demo.DemoService&bind.ip=192.168.1.101&bind.port=20880&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&interface=org.apache.dubbo.demo.DemoService&methods=sayHello&pid=34660&qos.port=22222&register=true&release=&side=provider&timestamp=1566046808988
         URL url = invoker.getUrl();
 
         // export service.
-        // 获取服务标识，理解成服务坐标也行。由服务组名，服务名，服务版本号以及端口组成。比如：
+        // 获取服务标识，理解成服务坐标也行。由服务所在包名，服务名，端口组成。比如：
         // org.apache.dubbo.demo.DemoService:20880
         String key = serviceKey(url);
+
         // 创建 DubboExporter
         DubboExporter<T> exporter = new DubboExporter<T>(invoker, key, exporterMap);
+
         // 将 <key, exporter> 键值对放入缓存中
         exporterMap.put(key, exporter);
 
@@ -329,12 +332,16 @@ public class DubboProtocol extends AbstractProtocol {
                 synchronized (this) {
                     server = serverMap.get(key);
                     if (server == null) {
-                        // 创建服务器实例
+                        /**
+                         *  创建服务器实例
+                         *  @see DubboProtocol#createServer(org.apache.dubbo.common.URL)
+                         */
                         serverMap.put(key, createServer(url));
                     }
                 }
             } else {
                 // server supports reset, use together with override
+                // 在同一台机器上（单网卡），同一个端口上仅允许启动一个服务器实例
                 // 服务器已创建，则根据 url 中的配置重置服务器
                 server.reset(url);
             }
@@ -345,10 +352,13 @@ public class DubboProtocol extends AbstractProtocol {
      * createServer 包含三个核心的逻辑:
      *
      * 第一是检测是否存在 server 参数所代表的 Transporter 拓展，不存在则抛出异常。
+     *
      * 第二是创建服务器实例。
+     *
      * 第三是检测是否支持 client 参数所表示的 Transporter 拓展，不存在也是抛出异常。
      */
     private ExchangeServer createServer(URL url) {
+        // dubbo://192.168.1.101:20880/org.apache.dubbo.demo.DemoService?anyhost=true&application=demo-provider&bean.name=org.apache.dubbo.demo.DemoService&bind.ip=192.168.1.101&bind.port=20880&channel.readonly.sent=true&codec=dubbo&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&heartbeat=60000&interface=org.apache.dubbo.demo.DemoService&methods=sayHello&pid=34725&qos.port=22222&register=true&release=&side=provider&timestamp=1566047392462
         url = URLBuilder.from(url)
                 // send readonly event when server closes, it's enabled by default
                 .addParameterIfAbsent(CHANNEL_READONLYEVENT_SENT_KEY, Boolean.TRUE.toString())
@@ -358,6 +368,7 @@ public class DubboProtocol extends AbstractProtocol {
                 // 添加编码解码器参数
                 .addParameter(CODEC_KEY, DubboCodec.NAME)
                 .build();
+
         // 获取 server 参数，默认为 netty
         String str = url.getParameter(SERVER_KEY, DEFAULT_REMOTING_SERVER);
 
