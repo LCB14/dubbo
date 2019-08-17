@@ -550,6 +550,8 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
     }
 
     /**
+     * 进行二次组装URL
+     *
      * 参考 link http://dubbo.apache.org/zh-cn/docs/source_code_guide/export-service.html
      */
     private void doExportUrlsFor1Protocol(ProtocolConfig protocolConfig, List<URL> registryURLs) {
@@ -572,7 +574,21 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
         appendParameters(map, provider);
         appendParameters(map, protocolConfig);
         appendParameters(map, this);
-        // methods 为 MethodConfig 集合，MethodConfig 中存储了 <dubbo:method> 标签的配置信息
+        /**
+         *  methods 为 MethodConfig 集合，MethodConfig 中存储了 <dubbo:method> 标签的配置信息
+         *
+         *  <dubbo:method/> 方法配置，用于ServiceConfig和ReferenceConfig指定方法级的配置信息。
+         *
+         *  例如：服务提供方：
+         *  <dubbo:service interface="com.xxx.XxxService">
+         *      <dubbo:method name="findXxx" timeout="2000"/>
+         *  <dubbo:service/>
+         *
+         *  例如：服务消费方：
+         *  <dubbo:reference interface="com.xxx.XxxService">
+         *      <dubbo:method name="findXxx" timeout="2000"/>
+         *  <dubbo:reference/>
+         */
         if (CollectionUtils.isNotEmpty(methods)) {
             for (MethodConfig method : methods) {
                 /**
@@ -589,6 +605,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
                         map.put(method.getName() + ".retries", "0");
                     }
                 }
+
                 // 获取 ArgumentConfig 列表
                 List<ArgumentConfig> arguments = method.getArguments();
                 if (CollectionUtils.isNotEmpty(arguments)) {
@@ -657,7 +674,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
                                     }
                                 }
                             }
-                            // 用户未配置 type 属性，但配置了 index 属性，且 index != -1
+                        // 用户未配置 type 属性，但配置了 index 属性，且 index != -1
                         } else if (argument.getIndex() != -1) { // 分支4 ⭐️
                             // 添加 ArgumentConfig 字段信息到 map 中
                             appendParameters(map, argument, method.getName() + "." + argument.getIndex());
