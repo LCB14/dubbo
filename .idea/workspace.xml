@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="768deaee-b44c-4776-9944-0fd361d07562" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ServiceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ServiceConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/classes/org/apache/dubbo/config/ServiceConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/classes/org/apache/dubbo/config/ServiceConfig.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -184,7 +183,7 @@
       <workItem from="1565685866057" duration="6304000" />
       <workItem from="1565751522802" duration="1990000" />
       <workItem from="1565833838664" duration="9864000" />
-      <workItem from="1565920383311" duration="23246000" />
+      <workItem from="1565920383311" duration="27451000" />
     </task>
     <servers />
   </component>
@@ -241,9 +240,9 @@
           <option name="timeStamp" value="300" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ServiceConfig.java</url>
-          <line>577</line>
-          <option name="timeStamp" value="320" />
+          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
+          <line>1012</line>
+          <option name="timeStamp" value="326" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
