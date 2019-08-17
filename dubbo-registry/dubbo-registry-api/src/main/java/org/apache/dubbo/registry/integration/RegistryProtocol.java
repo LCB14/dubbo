@@ -201,14 +201,23 @@ public class RegistryProtocol implements Protocol {
      * 主要完成下面功能：
      *
      * 1、调用 doLocalExport 导出服务
+     *      @see RegistryProtocol#doLocalExport(org.apache.dubbo.rpc.Invoker, org.apache.dubbo.common.URL)
+     *
      * 2、向注册中心注册服务
+     *
      * 3、向注册中心进行订阅 override 数据
+     *
      * 4、创建并返回 DestroyableExporter
      */
     @Override
     public <T> Exporter<T> export(final Invoker<T> originInvoker) throws RpcException {
+        // 获取注册中心 URL，以 zookeeper 注册中心为例，得到的示例 URL 如下：
+        // zookeeper://127.0.0.1:2181/org.apache.dubbo.registry.RegistryService?application=demo-provider&dubbo=2.0.2&export=dubbo%3A%2F%2F192.168.1.101%3A20880%2Forg.apache.dubbo.demo.DemoService%3Fanyhost%3Dtrue%26application%3Ddemo-provider%26bean.name%3Dorg.apache.dubbo.demo.DemoService%26bind.ip%3D192.168.1.101%26bind.port%3D20880%26deprecated%3Dfalse%26dubbo%3D2.0.2%26dynamic%3Dtrue%26generic%3Dfalse%26interface%3Dorg.apache.dubbo.demo.DemoService%26methods%3DsayHello%26pid%3D34546%26qos.port%3D22222%26register%3Dtrue%26release%3D%26side%3Dprovider%26timestamp%3D1566045815192&pid=34546&qos.port=22222&timestamp=1566045815163
         URL registryUrl = getRegistryUrl(originInvoker);
+
         // url to export locally
+        // 获取服务URL,就是originInvoker.getUrl() export参数部分，如
+        // dubbo://192.168.1.101:20880/org.apache.dubbo.demo.DemoService?anyhost=true&application=demo-provider&bean.name=org.apache.dubbo.demo.DemoService&bind.ip=192.168.1.101&bind.port=20880&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&interface=org.apache.dubbo.demo.DemoService&methods=sayHello&pid=34558&qos.port=22222&register=true&release=&side=provider&timestamp=1566045886880
         URL providerUrl = getProviderUrl(originInvoker);
 
         // Subscribe the override data
@@ -218,20 +227,20 @@ public class RegistryProtocol implements Protocol {
         // 获取订阅 URL，比如：
         // provider://192.168.1.101:20880/org.apache.dubbo.demo.DemoService?anyhost=true&application=demo-provider&bean.name=org.apache.dubbo.demo.DemoService&bind.ip=192.168.1.101&bind.port=20880&category=configurators&check=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&interface=org.apache.dubbo.demo.DemoService&methods=sayHello&pid=31571&qos.port=22222&register=true&release=&side=provider&timestamp=1565941821727
         final URL overrideSubscribeUrl = getSubscribedOverrideUrl(providerUrl);
+
         // 创建监听器
         final OverrideListener overrideSubscribeListener = new OverrideListener(overrideSubscribeUrl, originInvoker);
         overrideListeners.put(overrideSubscribeUrl, overrideSubscribeListener);
 
         providerUrl = overrideUrlWithConfig(providerUrl, overrideSubscribeListener);
         // export invoker
-        // 导出服务
         final ExporterChangeableWrapper<T> exporter = doLocalExport(originInvoker, providerUrl);
 
         // url to registry
         // 根据 URL 加载 Registry 实现类，比如 ZookeeperRegistry
         final Registry registry = getRegistry(originInvoker);
 
-        // 获取注册中心 URL，以 zookeeper 注册中心为例，得到的示例 URL 如下：
+        // 获取已注册的服务提供者 URL，比如：
         // dubbo://192.168.1.101:20880/org.apache.dubbo.demo.DemoService?anyhost=true&application=demo-provider&bean.name=org.apache.dubbo.demo.DemoService&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&interface=org.apache.dubbo.demo.DemoService&methods=sayHello&pid=31531&register=true&release=&side=provider&timestamp=1565941509828
         final URL registeredProviderUrl = getRegisteredProviderUrl(providerUrl, registryUrl);
         // 向服务提供者与消费者注册表中注册服务提供者
@@ -248,6 +257,7 @@ public class RegistryProtocol implements Protocol {
         }
 
         // Deprecated! Subscribe to override rules in 2.6.x or before.
+        // 已过时的代码，订阅2.6.x或之前的覆盖规则
         // 向注册中心进行订阅 override 数据
         registry.subscribe(overrideSubscribeUrl, overrideSubscribeListener);
 
