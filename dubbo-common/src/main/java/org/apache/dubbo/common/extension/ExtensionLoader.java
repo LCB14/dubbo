@@ -1044,7 +1044,7 @@ public class ExtensionLoader<T> {
      *
      *     public org.apache.dubbo.rpc.Invoker refer(java.lang.Class arg0, org.apache.dubbo.common.URL arg1) throws org.apache.dubbo.rpc.RpcException {
      *         if (arg1 == null)
-     *              throw new IllegalArgumentException("url == null");
+     *            throw new IllegalArgumentException("url == null");
      *         org.apache.dubbo.common.URL url = arg1;
      *         String extName = (url.getProtocol() == null ? "dubbo" : url.getProtocol());
      *         if (extName == null)
