@@ -258,7 +258,11 @@ public class RegistryProtocol implements Protocol {
 
         // Deprecated! Subscribe to override rules in 2.6.x or before.
         // 已过时的代码，订阅2.6.x或之前的覆盖规则
-        // 向注册中心进行订阅 override 数据
+        /**
+         * 向注册中心进行订阅 override 数据
+         *
+         * 参考：https://blog.csdn.net/shenchaohao12321/article/details/90639551
+         */
         registry.subscribe(overrideSubscribeUrl, overrideSubscribeListener);
 
         exporter.setRegisterUrl(registeredProviderUrl);
