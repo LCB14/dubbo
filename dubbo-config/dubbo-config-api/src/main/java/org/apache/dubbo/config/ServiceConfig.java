@@ -423,6 +423,15 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
         return getProtocols().size() == 1 && LOCAL_PROTOCOL.equalsIgnoreCase(getProtocols().get(0).getName());
     }
 
+    /**
+     *  export service
+     *
+     *  1、获取注册中心列表，由于支持多注册中心，因此注册中心list
+     *  2、根据注册中心，创建rpc协议
+     *  3、进行本地暴露或者远程暴露
+     *
+     *  参考 link https://www.jianshu.com/p/24c9f917aa97
+     */
     public synchronized void export() {
         /**
          * 该方法用来检测配置文件内容中的一些必要的属性和设置一些默认值
@@ -694,6 +703,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
         }
 
         // 检测 generic 是否为 "true"，并根据检测结果向 map 中添加不同的信息
+        // generic代表是否存在泛化服务
         if (ProtocolUtils.isGeneric(generic)) {
             map.put(GENERIC_KEY, generic);
             map.put(METHODS_KEY, ANY_VALUE);
@@ -723,15 +733,6 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
                 map.put(TOKEN_KEY, token);
             }
         }
-        /**
-         *  export service
-         *
-         *  1、获取注册中心列表，由于支持多注册中心，因此注册中心list
-         *  2、根据注册中心，创建rpc协议
-         *  3、进行本地暴露或者远程暴露
-         *
-         *  参考 link https://www.jianshu.com/p/24c9f917aa97
-         */
 
         String host = this.findConfigedHosts(protocolConfig, registryURLs, map);
         Integer port = this.findConfigedPorts(protocolConfig, name, map);
