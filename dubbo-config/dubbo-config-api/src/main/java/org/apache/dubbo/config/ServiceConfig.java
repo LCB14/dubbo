@@ -606,7 +606,13 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
                     }
                 }
 
-                // 获取 ArgumentConfig 列表
+                /**
+                 * 获取 ArgumentConfig 列表
+                 *
+                 * dubbo:method name="findXxx" timeout="3000" retries="2">
+                 *     <dubbo:argument index="0" callback="true" />
+                 * <dubbo:method>
+                 */
                 List<ArgumentConfig> arguments = method.getArguments();
                 if (CollectionUtils.isNotEmpty(arguments)) {
                     /**
