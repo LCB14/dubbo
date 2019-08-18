@@ -105,7 +105,7 @@ public class ServiceBean<T> extends ServiceConfig<T> implements InitializingBean
     }
 
     /**
-     * dubbo 服务导出 -- 立即导出
+     * dubbo 服务导出
      *
      * Spring 容器发布刷新事件，Dubbo 在接收到事件后，会立即执行服务导出逻辑。
      * @see ApplicationListener
@@ -138,7 +138,7 @@ public class ServiceBean<T> extends ServiceConfig<T> implements InitializingBean
 
     /**
      * afterPropertiesSet检查ServiceBean的某个属性是否为空，如果为空，
-     * 从applicationContext获取相应类型的bean，如果获取到了，则进行相应的设置。常见的6个属性如下（还有其它的)：
+     * 从ApplicationContext获取相应类型的bean，如果获取到了，则进行相应的设置。常见的6个属性如下（还有其它的)：
      *
      * 1、ProviderConfig provider：其实就是看有没有配置<dubbo:provider>
      *

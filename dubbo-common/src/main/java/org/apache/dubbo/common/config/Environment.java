@@ -117,13 +117,18 @@ public class Environment {
         // Config center has the highest priority
         // system配置
         compositeConfiguration.addConfiguration(this.getSystemConfig(prefix, id));
+
         compositeConfiguration.addConfiguration(this.getEnvironmentConfig(prefix, id));
+
         // 配置中心APP
         compositeConfiguration.addConfiguration(this.getAppExternalConfig(prefix, id));
+
         // 配置中心全局
         compositeConfiguration.addConfiguration(this.getExternalConfig(prefix, id));
+
         // dubbo.properties配置
         compositeConfiguration.addConfiguration(this.getPropertiesConfig(prefix, id));
+
         return compositeConfiguration;
     }
 
