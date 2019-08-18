@@ -137,8 +137,6 @@ public class ServiceBean<T> extends ServiceConfig<T> implements InitializingBean
     }
 
     /**
-     * dubbo服务导出 -- 延迟导出
-     *
      * afterPropertiesSet检查ServiceBean的某个属性是否为空，如果为空，
      * 从applicationContext获取相应类型的bean，如果获取到了，则进行相应的设置。常见的6个属性如下（还有其它的)：
      *

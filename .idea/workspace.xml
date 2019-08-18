@@ -3,16 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="768deaee-b44c-4776-9944-0fd361d07562" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryProtocol.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryProtocol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/classes/org/apache/dubbo/registry/integration/RegistryProtocol$DestroyableExporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/classes/org/apache/dubbo/registry/integration/RegistryProtocol$DestroyableExporter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/classes/org/apache/dubbo/registry/integration/RegistryProtocol$ExporterChangeableWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/classes/org/apache/dubbo/registry/integration/RegistryProtocol$ExporterChangeableWrapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/classes/org/apache/dubbo/registry/integration/RegistryProtocol$InvokerDelegate.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/classes/org/apache/dubbo/registry/integration/RegistryProtocol$InvokerDelegate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/classes/org/apache/dubbo/registry/integration/RegistryProtocol$OverrideListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/classes/org/apache/dubbo/registry/integration/RegistryProtocol$OverrideListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/classes/org/apache/dubbo/registry/integration/RegistryProtocol$ProviderConfigurationListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/classes/org/apache/dubbo/registry/integration/RegistryProtocol$ProviderConfigurationListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/classes/org/apache/dubbo/registry/integration/RegistryProtocol$ServiceConfigurationListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/classes/org/apache/dubbo/registry/integration/RegistryProtocol$ServiceConfigurationListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/classes/org/apache/dubbo/registry/integration/RegistryProtocol.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/classes/org/apache/dubbo/registry/integration/RegistryProtocol.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/src/main/java/org/apache/dubbo/rpc/protocol/dubbo/DubboProtocol.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/src/main/java/org/apache/dubbo/rpc/protocol/dubbo/DubboProtocol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/target/classes/org/apache/dubbo/rpc/protocol/dubbo/DubboProtocol.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/target/classes/org/apache/dubbo/rpc/protocol/dubbo/DubboProtocol.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -192,7 +182,8 @@
       <workItem from="1565685866057" duration="6304000" />
       <workItem from="1565751522802" duration="1990000" />
       <workItem from="1565833838664" duration="9864000" />
-      <workItem from="1565920383311" duration="34001000" />
+      <workItem from="1565920383311" duration="36747000" />
+      <workItem from="1566090529848" duration="1033000" />
     </task>
     <servers />
   </component>
@@ -248,10 +239,15 @@
           <line>314</line>
           <option name="timeStamp" value="300" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/src/main/java/org/apache/dubbo/rpc/protocol/dubbo/DubboProtocol.java</url>
-          <line>388</line>
-          <option name="timeStamp" value="347" />
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ServiceConfig.java</url>
+          <line>803</line>
+          <option name="timeStamp" value="349" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryProtocol.java</url>
+          <line>254</line>
+          <option name="timeStamp" value="350" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
