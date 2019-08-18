@@ -241,7 +241,7 @@ public class ReferenceConfig<T> extends AbstractReferenceConfig {
     }
 
     public synchronized T get() {
-        // 和服务导入类似，检查配置设置默认值
+        // 和服务导出类似，检查配置设置默认值
         checkAndUpdateSubConfigs();
 
         if (destroyed) {
@@ -277,10 +277,9 @@ public class ReferenceConfig<T> extends AbstractReferenceConfig {
         }
         checkStubAndLocal(interfaceClass);
         checkMock(interfaceClass);
+
         Map<String, String> map = new HashMap<String, String>();
-
         map.put(SIDE_KEY, CONSUMER_SIDE);
-
         appendRuntimeParameters(map);
         if (!isGeneric()) {
             String revision = Version.getVersion(interfaceClass, version);

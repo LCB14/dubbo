@@ -70,6 +70,8 @@ public class ReferenceBean<T> extends ReferenceConfig<T> implements FactoryBean,
 
     /**
      * dubbo服务引入
+     *  getObject()来源于Spring的FactoryBean接口
+     *  具体用法可以参考Spring FactoryBean
      */
     @Override
     public Object getObject() {
