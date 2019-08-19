@@ -461,7 +461,7 @@ public class RegistryProtocol implements Protocol {
 
         //构建路由链，为进行后续的过滤做准备
         directory.buildRouterChain(subscribeUrl);
-        // 对指定的目录进行订阅
+        // 通过subscribeUrl向Zookeeper订阅服务节点信息并watch变更,从而实现服务自动发现。
         directory.subscribe(subscribeUrl.addParameter(CATEGORY_KEY,
                 PROVIDERS_CATEGORY + "," + CONFIGURATORS_CATEGORY + "," + ROUTERS_CATEGORY));
 
