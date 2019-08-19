@@ -68,6 +68,11 @@ public class MockClusterInvoker<T> implements Invoker<T> {
         return directory.getInterface();
     }
 
+    /**
+     *  调用之前 Dubbo 会先检查 URL 中是否有 mock 参数（通过服务治理后台 Consumer 端的屏蔽和容错进行设置，
+     *  或者直接动态设置 mock 参数值），如果存在且以 force 开头，则不发起远程调用直接执行降级逻辑；如果存在且以 fail 开头，
+     *  则在远程调用异常时才会执行降级逻辑。
+     */
     @Override
     public Result invoke(Invocation invocation) throws RpcException {
         Result result = null;
