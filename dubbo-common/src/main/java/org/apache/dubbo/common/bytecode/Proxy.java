@@ -145,7 +145,7 @@ public abstract class Proxy {
         long id = PROXY_CLASS_COUNTER.getAndIncrement();
         String pkg = null;
         // ccp 用于为服务接口生成代理类
-        // ccm 则是用于为 org.apache.dubbo.common.bytecode.Proxy 抽象类生成子类
+        // ccm 则是用于为 org.apache.dubbo.common.bytecode.Proxy 抽象类生成子类，主要是实现 Proxy 类的抽象方法。
         ClassGenerator ccp = null, ccm = null;
         try {
             // 放置标志位到缓存中，并跳出 while 循环进行后续操作
