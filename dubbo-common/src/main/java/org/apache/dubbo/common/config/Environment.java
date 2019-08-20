@@ -108,8 +108,8 @@ public class Environment {
      * Otherwise, if use cache, we should make sure each Config has a unique id which is difficult to guarantee because is on the user's side,
      * especially when it comes to ServiceConfig and ReferenceConfig.
      *
-     * @param prefix
-     * @param id
+     * @param prefix dubbo.application
+     * @param id demo-provider
      * @return
      */
     public CompositeConfiguration getConfiguration(String prefix, String id) {
