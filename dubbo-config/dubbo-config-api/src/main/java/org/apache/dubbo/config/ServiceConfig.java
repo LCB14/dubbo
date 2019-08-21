@@ -424,13 +424,13 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
     }
 
     /**
-     *  export service
-     *
-     *  1、获取注册中心列表，由于支持多注册中心，因此注册中心list
-     *  2、根据注册中心，创建rpc协议
-     *  3、进行本地暴露或者远程暴露
-     *
-     *  参考 link https://www.jianshu.com/p/24c9f917aa97
+     * export service
+     * <p>
+     * 1、获取注册中心列表，由于支持多注册中心，因此注册中心list
+     * 2、根据注册中心，创建rpc协议
+     * 3、进行本地暴露或者远程暴露
+     * <p>
+     * 参考 link https://www.jianshu.com/p/24c9f917aa97
      */
     public synchronized void export() {
         /**
@@ -560,7 +560,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
 
     /**
      * 进行二次组装URL
-     *
+     * <p>
      * 参考 link http://dubbo.apache.org/zh-cn/docs/source_code_guide/export-service.html
      */
     private void doExportUrlsFor1Protocol(ProtocolConfig protocolConfig, List<URL> registryURLs) {
@@ -689,7 +689,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
                                     }
                                 }
                             }
-                        // 用户未配置 type 属性，但配置了 index 属性，且 index != -1
+                            // 用户未配置 type 属性，但配置了 index 属性，且 index != -1
                         } else if (argument.getIndex() != -1) { // 分支4 ⭐️
                             // 添加 ArgumentConfig 字段信息到 map 中
                             appendParameters(map, argument, method.getName() + "." + argument.getIndex());
@@ -758,13 +758,16 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
         if (!SCOPE_NONE.equalsIgnoreCase(scope)) {
 
             // export to local if the config is not remote (export to remote only when config is remote)
-            // scope != remote，导出到本地
+            // scope != remote
+            // 导出到本地
             if (!SCOPE_REMOTE.equalsIgnoreCase(scope)) {
+                // url -> dubbo://192.168.1.101:20880/org.apache.dubbo.demo.DemoService?anyhost=true&application=demo-provider&bean.name=org.apache.dubbo.demo.DemoService&bind.ip=192.168.1.101&bind.port=20880&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&interface=org.apache.dubbo.demo.DemoService&methods=sayHello&pid=2527&qos.port=22222&register=true&release=&side=provider&timestamp=1566368855692
                 exportLocal(url);
             }
 
             // export to remote if the config is not local (export to local only when config is local)
-            // scope != local，导出到远程
+            // scope != local
+            // 导出到远程
             if (!SCOPE_LOCAL.equalsIgnoreCase(scope)) {
                 if (!isOnlyInJvm() && logger.isInfoEnabled()) {
                     logger.info("Export dubbo service " + interfaceClass.getName() + " to url " + url);
