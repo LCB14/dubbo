@@ -817,6 +817,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
                 /**
                  * @since 2.7.0
                  * ServiceData Store
+                 * 如果配置了MetadataReportConfig 推送服务配置元数据到元数据中心
                  */
                 MetadataReportService metadataReportService = null;
                 if ((metadataReportService = getMetadataReportService()) != null) {
