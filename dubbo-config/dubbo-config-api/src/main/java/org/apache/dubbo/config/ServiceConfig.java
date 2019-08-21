@@ -800,7 +800,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
                          *  如果没有指定这个参数使用SPI默认值javassist为服务提供类(ref)生成 Invoker。
                          *
                          *  PROXY_FACTORY最终获得是JavassistProxyFactory类的代理对象
-                         *  @see JavassistProxyFactory
+                         *  @see JavassistProxyFactory#getInvoker(java.lang.Object, java.lang.Class, org.apache.dubbo.common.URL)
                          */
                         Invoker<?> invoker = PROXY_FACTORY.getInvoker(ref, (Class) interfaceClass, registryURL.addParameterAndEncoded(EXPORT_KEY, url.toFullString()));
                         // DelegateProviderMetaDataInvoker 用于持有 Invoker 和 ServiceConfig

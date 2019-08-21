@@ -5,6 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ServiceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ServiceConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/classes/org/apache/dubbo/config/ServiceConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/classes/org/apache/dubbo/config/ServiceConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/src/main/java/org/apache/dubbo/rpc/proxy/javassist/JavassistProxyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/src/main/java/org/apache/dubbo/rpc/proxy/javassist/JavassistProxyFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/target/classes/org/apache/dubbo/rpc/proxy/javassist/JavassistProxyFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/target/classes/org/apache/dubbo/rpc/proxy/javassist/JavassistProxyFactory$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/target/classes/org/apache/dubbo/rpc/proxy/javassist/JavassistProxyFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/target/classes/org/apache/dubbo/rpc/proxy/javassist/JavassistProxyFactory.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -195,18 +198,9 @@
       <workItem from="1566090529848" duration="6252000" />
       <workItem from="1566174436056" duration="14806000" />
       <workItem from="1566265017505" duration="9312000" />
-      <workItem from="1566353503858" duration="5930000" />
+      <workItem from="1566353503858" duration="8285000" />
     </task>
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -253,7 +247,7 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ServiceConfig.java</url>
-          <line>811</line>
+          <line>812</line>
           <option name="timeStamp" value="349" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
@@ -302,9 +296,9 @@
           <option name="timeStamp" value="370" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ServiceConfig.java</url>
-          <line>803</line>
-          <option name="timeStamp" value="371" />
+          <url>file://$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/src/main/java/org/apache/dubbo/rpc/proxy/javassist/JavassistProxyFactory.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="376" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

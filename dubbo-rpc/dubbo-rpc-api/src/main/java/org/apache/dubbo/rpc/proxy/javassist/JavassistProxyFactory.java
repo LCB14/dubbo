@@ -52,6 +52,8 @@ public class JavassistProxyFactory extends AbstractProxyFactory {
          * Wrapper 是一个抽象类，仅可通过 getWrapper(Class) 方法创建子类。
          * 在创建 Wrapper 子类的过程中，子类代码生成逻辑会对 getWrapper 方法传入的 Class 对象进行解析，拿到诸如类方法，类成员变量等信息。
          * 以及生成 invokeMethod 方法代码和其他一些方法代码。代码生成完毕后，通过 Javassist 生成 Class 对象，最后再通过反射创建 Wrapper 实例。
+         *
+         * URL -> injvm://127.0.0.1/org.apache.dubbo.demo.DemoService?anyhost=true&application=demo-provider&bean.name=org.apache.dubbo.demo.DemoService&bind.ip=192.168.1.101&bind.port=20880&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&interface=org.apache.dubbo.demo.DemoService&methods=sayHello&pid=2827&qos.port=22222&register=true&release=&side=provider&timestamp=1566371426556
          */
         // TODO Wrapper cannot handle this scenario correctly: the classname contains '$'
         final Wrapper wrapper = Wrapper.getWrapper(proxy.getClass().getName().indexOf('$') < 0 ? proxy.getClass() : type);
