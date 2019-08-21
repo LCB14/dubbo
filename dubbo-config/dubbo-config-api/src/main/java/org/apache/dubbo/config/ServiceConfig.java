@@ -795,7 +795,13 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
                             registryURL = registryURL.addParameter(PROXY_KEY, proxy);
                         }
 
-                        // 为服务提供类(ref)生成 Invoker
+                        /**
+                         *  Adaptive$ProxyFactory根据URL的proxy参数选择具体实现，
+                         *  如果没有指定这个参数使用SPI默认值javassist为服务提供类(ref)生成 Invoker。
+                         *
+                         *  PROXY_FACTORY最终获得是JavassistProxyFactory类的代理对象
+                         *  @see JavassistProxyFactory
+                         */
                         Invoker<?> invoker = PROXY_FACTORY.getInvoker(ref, (Class) interfaceClass, registryURL.addParameterAndEncoded(EXPORT_KEY, url.toFullString()));
                         // DelegateProviderMetaDataInvoker 用于持有 Invoker 和 ServiceConfig
                         DelegateProviderMetaDataInvoker wrapperInvoker = new DelegateProviderMetaDataInvoker(invoker, this);
