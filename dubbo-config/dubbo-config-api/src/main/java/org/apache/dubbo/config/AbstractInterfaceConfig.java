@@ -360,6 +360,9 @@ public abstract class AbstractInterfaceConfig extends AbstractMethodConfig {
                     /**
                      *  解析得到 URL 列表，address 可能包含多个注册中心 ip，
                      *  因此解析得到的是一个 URL 列表
+                     *
+                     *   <!-- 多注册中心配置，竖号分隔表示同时连接多个不同注册中心，同一注册中心的多个集群地址用逗号分隔 -->
+                     *   <dubbo:registry address="10.20.141.150:9090|10.20.154.177:9010" />
                      */
                     List<URL> urls = UrlUtils.parseURLs(address, map);
                     for (URL url : urls) {

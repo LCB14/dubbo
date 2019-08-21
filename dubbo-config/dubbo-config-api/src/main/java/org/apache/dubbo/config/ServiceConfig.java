@@ -618,14 +618,14 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
                 /**
                  * 获取 ArgumentConfig 列表
                  *
-                 * dubbo:method name="findXxx" timeout="3000" retries="2">
+                 * <dubbo:method name="findXxx" timeout="3000" retries="2">
                  *     <dubbo:argument index="0" callback="true" />
                  * <dubbo:method>
                  */
                 List<ArgumentConfig> arguments = method.getArguments();
                 if (CollectionUtils.isNotEmpty(arguments)) {
                     /**
-                     * / 获取 ArgumentConfig 列表
+                     * // 获取 ArgumentConfig 列表
                      * for (遍历 ArgumentConfig 列表) {
                      *     if (type 不为 null，也不为空串) {    // 分支1
                      *         1. 通过反射获取 interfaceClass 的方法列表
