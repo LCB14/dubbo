@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="768deaee-b44c-4776-9944-0fd361d07562" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ServiceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ServiceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/classes/org/apache/dubbo/config/ServiceConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/classes/org/apache/dubbo/config/ServiceConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/src/main/java/org/apache/dubbo/rpc/proxy/javassist/JavassistProxyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/src/main/java/org/apache/dubbo/rpc/proxy/javassist/JavassistProxyFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/target/classes/org/apache/dubbo/rpc/proxy/javassist/JavassistProxyFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/target/classes/org/apache/dubbo/rpc/proxy/javassist/JavassistProxyFactory$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/target/classes/org/apache/dubbo/rpc/proxy/javassist/JavassistProxyFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/target/classes/org/apache/dubbo/rpc/proxy/javassist/JavassistProxyFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-api/src/main/java/org/apache/dubbo/remoting/exchange/codec/ExchangeCodec.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-api/src/main/java/org/apache/dubbo/remoting/exchange/codec/ExchangeCodec.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +92,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Application-Provider">
+  <component name="RunManager" selected="Application.ExchangeCodec">
     <configuration name="Application-Consumer" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="org.apache.dubbo.demo.consumer.Application" />
       <module name="dubbo-demo-xml-consumer" />
@@ -124,12 +119,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.lcb.dubbo.spi.test.auto.loader.Test" />
-      <module name="lcb-dubbo" />
+    <configuration name="ExchangeCodec" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.apache.dubbo.remoting.exchange.codec.ExchangeCodec" />
+      <module name="dubbo-remoting-api" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.lcb.dubbo.spi.test.auto.loader.*" />
+          <option name="PATTERN" value="org.apache.dubbo.remoting.exchange.codec.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -137,12 +132,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.lcb.dubbo.spi.test.auto.adapt.Test" />
+    <configuration name="Test (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lcb.dubbo.spi.test.auto.loader.Test" />
       <module name="lcb-dubbo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.lcb.dubbo.spi.test.auto.adapt.*" />
+          <option name="PATTERN" value="com.lcb.dubbo.spi.test.auto.loader.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -168,15 +163,15 @@
       <item itemvalue="Application.Application-Consumer" />
       <item itemvalue="Application.Test" />
       <item itemvalue="Application.Test (1)" />
-      <item itemvalue="Application.Test (2)" />
+      <item itemvalue="Application.ExchangeCodec" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ExchangeCodec" />
         <item itemvalue="Application.Application-Provider" />
         <item itemvalue="Application.Application-Consumer" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.Test (1)" />
-        <item itemvalue="Application.Test (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -198,7 +193,7 @@
       <workItem from="1566090529848" duration="6252000" />
       <workItem from="1566174436056" duration="14806000" />
       <workItem from="1566265017505" duration="9312000" />
-      <workItem from="1566353503858" duration="8285000" />
+      <workItem from="1566353503858" duration="13491000" />
     </task>
     <servers />
   </component>

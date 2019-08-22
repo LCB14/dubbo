@@ -47,11 +47,15 @@ import java.io.InputStream;
 public class ExchangeCodec extends TelnetCodec {
 
     // header length.
+    // dubbo协议的消息头是一个定长的 16个字节。
     protected static final int HEADER_LENGTH = 16;
+
     // magic header.
+    // 第1-2个字节：是一个魔数数字：就是一个固定的数字
     protected static final short MAGIC = (short) 0xdabb;
     protected static final byte MAGIC_HIGH = Bytes.short2bytes(MAGIC)[0];
     protected static final byte MAGIC_LOW = Bytes.short2bytes(MAGIC)[1];
+
     // message flag.
     protected static final byte FLAG_REQUEST = (byte) 0x80;
     protected static final byte FLAG_TWOWAY = (byte) 0x40;
@@ -74,6 +78,12 @@ public class ExchangeCodec extends TelnetCodec {
         }
     }
 
+    /**
+     *  1、首先先判断此次传输的信息包的大小
+     *
+     *  2、根据传输包的大小，确定本次传输的信息是否包含整个请求头，取与请求头固定长度比较最小值，
+     *  然后读取相关信息到header中。如果此次信息包大于等于16字节，说明请求头是完整的。
+     */
     @Override
     public Object decode(Channel channel, ChannelBuffer buffer) throws IOException {
         int readable = buffer.readableBytes();
@@ -85,6 +95,7 @@ public class ExchangeCodec extends TelnetCodec {
     @Override
     protected Object decode(Channel channel, ChannelBuffer buffer, int readable, byte[] header) throws IOException {
         // check magic number.
+        // 检查魔法数，魔法数高位和低位各占1字节
         if (readable > 0 && header[0] != MAGIC_HIGH
                 || readable > 1 && header[1] != MAGIC_LOW) {
             int length = header.length;
@@ -101,7 +112,9 @@ public class ExchangeCodec extends TelnetCodec {
             }
             return super.decode(channel, buffer, readable, header);
         }
+
         // check length.
+        //1：当前buffer的可读长度还没有消息头长，说明当前buffer连协议栈的头都不完整
         if (readable < HEADER_LENGTH) {
             return DecodeResult.NEED_MORE_INPUT;
         }
@@ -111,14 +124,22 @@ public class ExchangeCodec extends TelnetCodec {
         checkPayload(channel, len);
 
         int tt = len + HEADER_LENGTH;
+        /**
+         *  2：当前buffer包含了完整的消息头，便可以得到payload的长度，发现它的可读的长度，并没有包含整个协议栈的数据
+         */
         if (readable < tt) {
             return DecodeResult.NEED_MORE_INPUT;
         }
 
         // limit input stream.
+        /**
+         * 3：如果上面两个情况都不符合，那么说明当前的buffer至少包含一个dubbo协议栈的数据，那么从当前buffer中读取一个dubbo协议栈的数据，解析出一个dubbo数据，
+         * 当然这里可能读取完一个dubbo数据之后还会有剩余的数据。读取一个dubbo协议栈的数据
+         */
         ChannelBufferInputStream is = new ChannelBufferInputStream(buffer, len);
 
         try {
+            // 解析消息体
             return decodeBody(channel, is, header);
         } finally {
             if (is.available() > 0) {
