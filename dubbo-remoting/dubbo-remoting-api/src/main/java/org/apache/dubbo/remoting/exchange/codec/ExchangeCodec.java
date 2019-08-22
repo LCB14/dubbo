@@ -47,11 +47,9 @@ import java.io.InputStream;
 public class ExchangeCodec extends TelnetCodec {
 
     // header length.
-    // dubbo协议的消息头是一个定长的 16个字节。
     protected static final int HEADER_LENGTH = 16;
 
     // magic header.
-    // 第1-2个字节：是一个魔数数字：就是一个固定的数字
     protected static final short MAGIC = (short) 0xdabb;
     protected static final byte MAGIC_HIGH = Bytes.short2bytes(MAGIC)[0];
     protected static final byte MAGIC_LOW = Bytes.short2bytes(MAGIC)[1];
@@ -280,17 +278,24 @@ public class ExchangeCodec extends TelnetCodec {
             Serialization serialization = getSerialization(channel);
             // header.
             byte[] header = new byte[HEADER_LENGTH];
+
             // set magic number.
+            // 第1-2个字节：是一个魔数数字：就是一个固定的数字
             Bytes.short2bytes(MAGIC, header);
+
             // set request and serialization flag.
+            // 第3个字节：序列号组件类型，它用于和客户端约定的序列号编码号
             header[2] = serialization.getContentTypeId();
             if (res.isHeartbeat()) {
                 header[2] |= FLAG_EVENT;
             }
             // set response status.
+            // 第4个字节：它是response的结果响应码 例如 OK=20
             byte status = res.getStatus();
             header[3] = status;
+
             // set request id.
+            // 第5-12个字节：请求id：long型8个字节。异步变同步的全局唯一ID，用来做consumer和provider的来回通信标记。
             Bytes.long2bytes(res.getId(), header, 4);
 
             buffer.writerIndex(savedWriteIndex + HEADER_LENGTH);
@@ -315,6 +320,7 @@ public class ExchangeCodec extends TelnetCodec {
 
             int len = bos.writtenBytes();
             checkPayload(channel, len);
+            // 第13-16个字节：消息体的长度，也就是消息头+请求数据的长度。
             Bytes.int2bytes(len, header, 12);
             // write
             buffer.writerIndex(savedWriteIndex);
