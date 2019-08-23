@@ -41,6 +41,12 @@ public abstract class AbstractCodec implements Codec2 {
 
     private static final String SERVER_SIDE = "server";
 
+    /**
+     * 检查负载长度是否符合协议规范。
+     * @param channel
+     * @param size
+     * @throws IOException
+     */
     protected static void checkPayload(Channel channel, long size) throws IOException {
         int payload = Constants.DEFAULT_PAYLOAD;
         if (channel != null && channel.getUrl() != null) {
@@ -54,10 +60,20 @@ public abstract class AbstractCodec implements Codec2 {
         }
     }
 
+    /**
+     * 根据序列化协议配置，获取对应的序列化实现类。
+     * @param channel
+     * @return
+     */
     protected Serialization getSerialization(Channel channel) {
         return CodecSupport.getSerialization(channel.getUrl());
     }
 
+    /**
+     * 判断当前是否是客户端
+     * @param channel
+     * @return
+     */
     protected boolean isClientSide(Channel channel) {
         String side = (String)channel.getAttribute(SIDE_KEY);
         if (CLIENT_SIDE.equals(side)) {
@@ -77,6 +93,11 @@ public abstract class AbstractCodec implements Codec2 {
         }
     }
 
+    /**
+     * 判断当前是否是服务端
+     * @param channel
+     * @return
+     */
     protected boolean isServerSide(Channel channel) {
         return !isClientSide(channel);
     }
