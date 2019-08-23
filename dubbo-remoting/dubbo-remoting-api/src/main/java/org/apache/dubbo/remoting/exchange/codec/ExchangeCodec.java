@@ -103,15 +103,31 @@ public class ExchangeCodec extends TelnetCodec {
     @Override
     public Object decode(Channel channel, ChannelBuffer buffer) throws IOException {
         int readable = buffer.readableBytes();
+        // 创建一个byte数组，其长度为 头部长度和可读字节数取最小值。
         byte[] header = new byte[Math.min(readable, HEADER_LENGTH)];
+        // 读取指定字节到header中。
         buffer.readBytes(header);
+        // 调用decode方法尝试解码。
         return decode(channel, buffer, readable, header);
     }
 
+    /**
+     * @param channel   网络通道
+     * @param buffer    通道读缓存区
+     * @param readable  可读字节数
+     * @param header    已读字节数，（尝试读取一个完整头部）
+     * @return
+     * @throws IOException
+     */
     @Override
     protected Object decode(Channel channel, ChannelBuffer buffer, int readable, byte[] header) throws IOException {
         // check magic number.
-        // 检查魔法数，魔法数高位和低位各占1字节
+        /**
+         *  检查魔数，判断是否是dubbo协议，如果不是dubbo协议，则调用父类的解码方法，例如telnet协议。
+         *
+         *  如果至少读取到一个字节，如果第一个字节与魔数的高位字节不相等或至少读取了两个字节，并且第二个字节与魔数的地位字节不相等，
+         *  则认为不是dubbo协议，则调用父类的解码方法,如果是其他协议的化，将剩余的可读字节从通道中读出，提交其父类解码。
+         */
         if (readable > 0 && header[0] != MAGIC_HIGH
                 || readable > 1 && header[1] != MAGIC_LOW) {
             int length = header.length;
@@ -130,32 +146,36 @@ public class ExchangeCodec extends TelnetCodec {
         }
 
         // check length.
-        //1：当前buffer的可读长度还没有消息头长，说明当前buffer连协议栈的头都不完整
+        /**
+         * 如果是dubbo协议，判断可读字节的长度是否大于协议头部的长度，如果可读字节小于头部字节，
+         * 则跳过本次读事件处理，待读缓存区中更多的数据到达。
+         */
         if (readable < HEADER_LENGTH) {
             return DecodeResult.NEED_MORE_INPUT;
         }
 
         // get data length.
+        /**
+         * 如果读取到一个完整的协议头，然后读取消息体长度，如果当前可读字节数小于消息体+header的长度，
+         * 返回NEED_MORE_INPUT,表示放弃本次解码，待更多数据到达缓冲区时再解码.
+         */
         int len = Bytes.bytes2int(header, 12);
         checkPayload(channel, len);
 
         int tt = len + HEADER_LENGTH;
-        /**
-         *  2：当前buffer包含了完整的消息头，便可以得到payload的长度，发现它的可读的长度，并没有包含整个协议栈的数据
-         */
         if (readable < tt) {
             return DecodeResult.NEED_MORE_INPUT;
         }
 
         // limit input stream.
         /**
-         * 3：如果上面两个情况都不符合，那么说明当前的buffer至少包含一个dubbo协议栈的数据，那么从当前buffer中读取一个dubbo协议栈的数据，解析出一个dubbo数据，
+         * 如果上面两个情况都不符合，那么说明当前的buffer至少包含一个dubbo协议栈的数据，那么从当前buffer中读取一个dubbo协议栈的数据，解析出一个dubbo数据，
          * 当然这里可能读取完一个dubbo数据之后还会有剩余的数据。读取一个dubbo协议栈的数据
          */
         ChannelBufferInputStream is = new ChannelBufferInputStream(buffer, len);
 
         try {
-            // 解析消息体
+            // 解码消息体
             return decodeBody(channel, is, header);
         } finally {
             if (is.available() > 0) {
@@ -163,6 +183,7 @@ public class ExchangeCodec extends TelnetCodec {
                     if (logger.isWarnEnabled()) {
                         logger.warn("Skip input stream " + is.available());
                     }
+                    // 如果本次并未读取len个字节，则跳过这些字节，保证下一个包从正确的位置开始处理。
                     StreamUtils.skipUnusedStream(is);
                 } catch (IOException e) {
                     logger.warn(e.getMessage(), e);
@@ -172,16 +193,21 @@ public class ExchangeCodec extends TelnetCodec {
     }
 
     protected Object decodeBody(Channel channel, InputStream is, byte[] header) throws IOException {
+        // Step1：根据协议头获取标记为(header[2])（根据协议可知，包含请求类型、序列化器）。
         byte flag = header[2], proto = (byte) (flag & SERIALIZATION_MASK);
         // get request id.
         long id = Bytes.bytes2long(header, 4);
+        // 根据flag标记相应标记为，如果与FLAG_REQUEST进行逻辑与操作，为0说明不是请求类型，那对应的就是响应数据包。
         if ((flag & FLAG_REQUEST) == 0) {
             // decode response.
+            // 根据请求ID，构建响应结果。
             Response res = new Response(id);
+            // 如果是事件类型。
             if ((flag & FLAG_EVENT) != 0) {
                 res.setEvent(true);
             }
             // get status.
+            // 获取响应状态码。
             byte status = header[3];
             res.setStatus(status);
             try {
