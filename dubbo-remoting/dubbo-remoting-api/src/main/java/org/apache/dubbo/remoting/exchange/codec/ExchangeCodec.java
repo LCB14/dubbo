@@ -85,7 +85,7 @@ public class ExchangeCodec extends TelnetCodec {
         // 如果msg是Request，则按照请求对象协议编码。
         if (msg instanceof Request) {
             encodeRequest(channel, buffer, (Request) msg);
-        // 如果是响应对象，则按照响应协议编码。
+        // 如果msg是Response，则按照响应协议编码。
         } else if (msg instanceof Response) {
             encodeResponse(channel, buffer, (Response) msg);
         // 如果是业务类对象（请求、响应），则使用父类默认的编码方式
