@@ -4,9 +4,6 @@
     <list default="true" id="768deaee-b44c-4776-9944-0fd361d07562" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-api/src/main/java/org/apache/dubbo/remoting/exchange/codec/ExchangeCodec.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-api/src/main/java/org/apache/dubbo/remoting/exchange/codec/ExchangeCodec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-api/target/classes/org/apache/dubbo/remoting/Codec2$DecodeResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-api/target/classes/org/apache/dubbo/remoting/Codec2$DecodeResult.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-api/target/classes/org/apache/dubbo/remoting/exchange/codec/ExchangeCodec.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-api/target/classes/org/apache/dubbo/remoting/exchange/codec/ExchangeCodec.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-api/target/classes/org/apache/dubbo/remoting/transport/AbstractCodec.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-api/target/classes/org/apache/dubbo/remoting/transport/AbstractCodec.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -199,7 +196,7 @@
       <workItem from="1566265017505" duration="9312000" />
       <workItem from="1566353503858" duration="18048000" />
       <workItem from="1566481898296" duration="3488000" />
-      <workItem from="1566528054685" duration="9613000" />
+      <workItem from="1566528054685" duration="12091000" />
     </task>
     <servers />
   </component>

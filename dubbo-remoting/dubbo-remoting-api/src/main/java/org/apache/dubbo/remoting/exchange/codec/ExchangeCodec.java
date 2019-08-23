@@ -173,7 +173,6 @@ public class ExchangeCodec extends TelnetCodec {
          * 当然这里可能读取完一个dubbo数据之后还会有剩余的数据。读取一个dubbo协议栈的数据
          */
         ChannelBufferInputStream is = new ChannelBufferInputStream(buffer, len);
-
         try {
             // 解码消息体
             return decodeBody(channel, is, header);
@@ -197,7 +196,7 @@ public class ExchangeCodec extends TelnetCodec {
         byte flag = header[2], proto = (byte) (flag & SERIALIZATION_MASK);
         // get request id.
         long id = Bytes.bytes2long(header, 4);
-        // 根据flag标记相应标记为，如果与FLAG_REQUEST进行逻辑与操作，为0说明不是请求类型，那对应的就是响应数据包。
+        // 根据flag标记如果与FLAG_REQUEST进行逻辑与操作，为0说明不是请求类型，那对应的就是响应数据包。
         if ((flag & FLAG_REQUEST) == 0) {
             // decode response.
             // 根据请求ID，构建响应结果。
