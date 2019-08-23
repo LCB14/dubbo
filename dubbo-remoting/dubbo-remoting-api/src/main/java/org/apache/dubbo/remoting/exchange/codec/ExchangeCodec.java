@@ -253,12 +253,12 @@ public class ExchangeCodec extends TelnetCodec {
         byte[] header = new byte[HEADER_LENGTH];
 
         // set magic number.
-        // 首先填充头部的前两个字节，协议的魔数。header[0] = 魔数的高8个字节，header[1] = 魔数的低8个字节。
+        // 1、首先填充头部的前两个字节，协议的魔数。header[0] = 魔数的高8个字节，header[1] = 魔数的低8个字节。
         Bytes.short2bytes(MAGIC, header);
 
         // set request and serialization flag.
         /**
-         * 头部的第3个字节存储的是消息请求标识与序列化器类别，那这8位是如何存储的呢？
+         * 2、头部的第3个字节存储的是消息请求标识与序列化器类别，那这8位是如何存储的呢？
          *
          * 前4位，表示消息请求类型，依次为：请求、twoway、event，保留位。
          * 后4为：序列化的类型，也就是说dubbo协议只支持16中序列化协议。
@@ -272,7 +272,7 @@ public class ExchangeCodec extends TelnetCodec {
         }
 
         // set request id.
-        // head[4]- head[11] 共8个字节为请求ID。Dubbo传输使用大端字节序列，也就说在接受端，首先读到的字节是高位字节。
+        // 3、head[4]- head[11] 共8个字节为请求ID。Dubbo传输使用大端字节序列，也就说在接受端，首先读到的字节是高位字节。
         Bytes.long2bytes(req.getId(), header, 4);
 
         // encode request data.
@@ -297,7 +297,7 @@ public class ExchangeCodec extends TelnetCodec {
         // 最后得到bos的总长度，该长度等于 (header+body)的总长度，也就是一个完整请求包的长度。
         int len = bos.writtenBytes();
         checkPayload(channel, len);
-        // 将包总长度写入到header的header[12-15]中。
+        // 4、将包总长度写入到header的header[12-15]中。
         Bytes.int2bytes(len, header, 12);
 
         // write
