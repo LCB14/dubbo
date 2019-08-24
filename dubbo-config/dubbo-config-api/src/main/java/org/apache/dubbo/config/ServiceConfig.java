@@ -802,8 +802,8 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
                          *  PROXY_FACTORY最终获得是JavassistProxyFactory类的代理对象
                          *  @see JavassistProxyFactory#getInvoker(java.lang.Object, java.lang.Class, org.apache.dubbo.common.URL)
                          *
-                         *  感受：Dubbo之所以不管是导出到本地，还是远程。进行服务导出之前，均需要先创建 Invoker。是因为Invoke把服务提供对象中的
-                         *  方法进行了泛化。
+                         *  思考：Dubbo之所以不管是导出到本地，还是远程。进行服务导出之前，均需要先创建 Invoker。目的是将服务提供对象中的
+                         *  方法进行泛化。
                          */
                         Invoker<?> invoker = PROXY_FACTORY.getInvoker(ref, (Class) interfaceClass, registryURL.addParameterAndEncoded(EXPORT_KEY, url.toFullString()));
                         // DelegateProviderMetaDataInvoker 用于持有 Invoker 和 ServiceConfig
