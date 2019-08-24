@@ -842,7 +842,12 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
      * always export injvm
      */
     private void exportLocal(URL url) {
-        // 创建一个新的 URL 并将协议头、主机名以及端口设置成新的值。然后创建Invoker，并调用 InjvmProtocol的 export方法导出服务。
+        /**
+         *  创建一个新的 URL 并将协议头、主机名以及端口设置成新的值。然后创建Invoker，
+         *  并调用 InjvmProtocol的 export方法导出服务。
+         *
+         *  url经URLBuilder设置之前 -> dubbo://192.168.1.101:20880/org.apache.dubbo.demo.DemoService?anyhost=true&application=demo-provider&bean.name=org.apache.dubbo.demo.DemoService&bind.ip=192.168.1.101&bind.port=20880&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&interface=org.apache.dubbo.demo.DemoService&methods=sayHello&pid=11850&qos.port=22222&register=true&release=&side=provider&timestamp=1566638202239
+         */
         URL local = URLBuilder.from(url)
                 .setProtocol(LOCAL_PROTOCOL)
                 .setHost(LOCALHOST_VALUE)
@@ -854,6 +859,8 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
          *
          * Invoker 是实体域，它是 Dubbo 的核心模型，其它模型都向它靠扰，或转换成它，它代表一个可执行体，
          * 可向它发起 invoke 调用，它有可能是一个本地的实现，也可能是一个远程的实现，也可能一个集群实现。
+         *
+         * url经URLBuilder设置之后 -> injvm://127.0.0.1/org.apache.dubbo.demo.DemoService?anyhost=true&application=demo-provider&bean.name=org.apache.dubbo.demo.DemoService&bind.ip=192.168.1.101&bind.port=20880&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&interface=org.apache.dubbo.demo.DemoService&methods=sayHello&pid=11850&qos.port=22222&register=true&release=&side=provider&timestamp=1566638202239
          *
          * @see InjvmProtocol#export(org.apache.dubbo.rpc.Invoker)
          * @see JavassistProxyFactory#getInvoker(java.lang.Object, java.lang.Class, org.apache.dubbo.common.URL)
