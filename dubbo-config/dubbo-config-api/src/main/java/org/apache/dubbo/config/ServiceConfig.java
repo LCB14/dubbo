@@ -857,8 +857,8 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
         /**
          * 创建 Invoker，并导出服务，这里的 protocol 会在运行时调用 InjvmProtocol 的 export 方法
          *
-         * Invoker 是实体域，它是 Dubbo 的核心模型，其它模型都向它靠扰，或转换成它，它代表一个可执行体，
-         * 可向它发起 invoke 调用，它有可能是一个本地的实现，也可能是一个远程的实现，也可能一个集群实现。
+         * protocol执行带有@Adaptive方法的时候即export()会根据参数的getUrl().getProtocol()
+         * 方法的返回值再次调用ExtensionLoader选出最适合的Protocol，这里指的就是InjvmProtocol。
          *
          * url经URLBuilder设置之后 -> injvm://127.0.0.1/org.apache.dubbo.demo.DemoService?anyhost=true&application=demo-provider&bean.name=org.apache.dubbo.demo.DemoService&bind.ip=192.168.1.101&bind.port=20880&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&interface=org.apache.dubbo.demo.DemoService&methods=sayHello&pid=11850&qos.port=22222&register=true&release=&side=provider&timestamp=1566638202239
          *
