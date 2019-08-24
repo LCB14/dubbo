@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="768deaee-b44c-4776-9944-0fd361d07562" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ReferenceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ReferenceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/classes/org/apache/dubbo/config/ReferenceConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/classes/org/apache/dubbo/config/ReferenceConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/main/java/org/apache/dubbo/config/spring/ReferenceBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/main/java/org/apache/dubbo/config/spring/ReferenceBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-spring/target/classes/org/apache/dubbo/config/spring/ReferenceBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-spring/target/classes/org/apache/dubbo/config/spring/ReferenceBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/target/classes/org/apache/dubbo/rpc/protocol/dubbo/DubboProtocol.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/target/classes/org/apache/dubbo/rpc/protocol/dubbo/DubboProtocol.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/extension/ExtensionLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/extension/ExtensionLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryProtocol.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryProtocol.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -202,7 +198,7 @@
       <workItem from="1566353503858" duration="18048000" />
       <workItem from="1566481898296" duration="3488000" />
       <workItem from="1566528054685" duration="12423000" />
-      <workItem from="1566577219197" duration="20304000" />
+      <workItem from="1566577219197" duration="20960000" />
     </task>
     <servers />
   </component>
@@ -261,17 +257,17 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryProtocol.java</url>
-          <line>453</line>
+          <line>455</line>
           <option name="timeStamp" value="357" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryProtocol.java</url>
-          <line>475</line>
+          <line>477</line>
           <option name="timeStamp" value="358" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryProtocol.java</url>
-          <line>487</line>
+          <line>489</line>
           <option name="timeStamp" value="359" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
@@ -299,10 +295,25 @@
           <line>347</line>
           <option name="timeStamp" value="397" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ReferenceConfig.java</url>
-          <line>101</line>
-          <option name="timeStamp" value="421" />
+          <line>436</line>
+          <option name="timeStamp" value="425" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ReferenceConfig.java</url>
+          <line>385</line>
+          <option name="timeStamp" value="426" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryProtocol.java</url>
+          <line>432</line>
+          <option name="timeStamp" value="427" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryProtocol.java</url>
+          <line>438</line>
+          <option name="timeStamp" value="428" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

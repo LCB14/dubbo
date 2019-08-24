@@ -428,12 +428,15 @@ public class RegistryProtocol implements Protocol {
     @SuppressWarnings("unchecked")
     public <T> Invoker<T> refer(Class<T> type, URL url) throws RpcException {
         // 1、取 registry 参数值，并将其设置为协议头
+        // url 进行URLBuilder设置前 -> registry://127.0.0.1:2181/org.apache.dubbo.registry.RegistryService?application=demo-consumer&dubbo=2.0.2&pid=12950&qos.port=33333&refer=application%3Ddemo-consumer%26check%3Dfalse%26dubbo%3D2.0.2%26interface%3Dorg.apache.dubbo.demo.DemoService%26lazy%3Dfalse%26methods%3DsayHello%26pid%3D12950%26qos.port%3D33333%26register.ip%3D192.168.1.101%26side%3Dconsumer%26sticky%3Dfalse%26timestamp%3D1566662322919&registry=zookeeper&timestamp=1566662323836
+        // url 进行URLBuilder设置后 -> zookeeper://127.0.0.1:2181/org.apache.dubbo.registry.RegistryService?application=demo-consumer&dubbo=2.0.2&pid=12961&qos.port=33333&refer=application%3Ddemo-consumer%26check%3Dfalse%26dubbo%3D2.0.2%26interface%3Dorg.apache.dubbo.demo.DemoService%26lazy%3Dfalse%26methods%3DsayHello%26pid%3D12961%26qos.port%3D33333%26register.ip%3D192.168.1.101%26side%3Dconsumer%26sticky%3Dfalse%26timestamp%3D1566662434016&timestamp=1566662435296
         url = URLBuilder.from(url)
                 .setProtocol(url.getParameter(REGISTRY_KEY, DEFAULT_REGISTRY))
                 .removeParameter(REGISTRY_KEY)
                 .build();
 
         // 2、获取注册中心实例
+        // zookeeper://127.0.0.1:2181/org.apache.dubbo.registry.RegistryService?application=demo-consumer&dubbo=2.0.2&interface=org.apache.dubbo.registry.RegistryService&pid=12969&qos.port=33333&timestamp=1566662488154
         Registry registry = registryFactory.getRegistry(url);
         if (RegistryService.class.equals(type)) {
             return proxyFactory.getInvoker((T) registry, type, url);
