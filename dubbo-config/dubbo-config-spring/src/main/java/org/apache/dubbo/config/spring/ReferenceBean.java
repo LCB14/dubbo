@@ -70,9 +70,11 @@ public class ReferenceBean<T> extends ReferenceConfig<T> implements FactoryBean,
 
     /**
      * dubbo服务引入
-     * 
-     * Dubbo 基于 Spring 的 Schema 扩展实现 XML 配置解析，DubboNamespaceHandler 会将 <dubbo:reference> 标签解析为 ReferenceBean，
-     * ReferenceBean 实现了 FactoryBean，因此当它在代码中有引用时，会调用 ReferenceBean#getObject() 方法进入节点注册和服务发现流程。
+     *
+     * 核心主要是三步：
+     * 1、对配置信息（xml,注解信息）进行解析并转换成相应的bean；
+     * 2、利用bean信息进行连接、订阅Zookeeper节点信息创建一个invoker；
+     * 3、利用invoke信息创建一个动态代理对象。
      */
     @Override
     public Object getObject() {

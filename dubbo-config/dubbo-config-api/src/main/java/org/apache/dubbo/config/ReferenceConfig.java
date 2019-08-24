@@ -388,7 +388,8 @@ public class ReferenceConfig<T> extends AbstractReferenceConfig {
                 logger.info("Using injvm service " + interfaceClass.getName());
             }
         } else {
-            urls.clear(); // reference retry init will add url to urls, lead to OOM
+            // reference retry init will add url to urls, lead to OOM
+            urls.clear();
             // user specified URL, could be peer-to-peer address, or register center's address.
             // 2.1 判断用户有没指定直连url
             // <dubbo:reference id="",check="" interface="" url="http://127.0.0.1:2181,registry://127.0.0.1:2181">
