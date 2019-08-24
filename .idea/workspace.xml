@@ -194,7 +194,7 @@
       <workItem from="1566353503858" duration="18048000" />
       <workItem from="1566481898296" duration="3488000" />
       <workItem from="1566528054685" duration="12423000" />
-      <workItem from="1566577219197" duration="8266000" />
+      <workItem from="1566577219197" duration="10129000" />
     </task>
     <servers />
   </component>
@@ -243,7 +243,7 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ServiceConfig.java</url>
-          <line>813</line>
+          <line>812</line>
           <option name="timeStamp" value="349" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
@@ -292,9 +292,14 @@
           <option name="timeStamp" value="370" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/AdaptiveClassCodeGenerator.java</url>
-          <line>294</line>
-          <option name="timeStamp" value="375" />
+          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
+          <line>1077</line>
+          <option name="timeStamp" value="379" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/src/main/java/org/apache/dubbo/rpc/proxy/javassist/JavassistProxyFactory.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="380" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
