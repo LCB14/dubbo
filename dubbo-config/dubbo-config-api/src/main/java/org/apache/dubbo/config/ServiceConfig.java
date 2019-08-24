@@ -384,7 +384,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
         }
 
         /**
-         *  dubbo本地存根
+         *  dubbo本地存根 -- 可以达到AOP的效果
          *
          *  参考 link https://www.cnblogs.com/hzhuxin/p/8250602.html
          */
@@ -442,7 +442,8 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
          * <dubbo:provider export="false" />
          *
          *  检查export 配置，这个配置决定了是否导出服务。如果 export 为 false，则不导出服务
-         *  有时候我们只是想本地启动服务进行一些调试工作，我们并不希望把本地启动的服务暴露出去给别人调用。此时，我们可通过配置 export 禁止服务导出.
+         *  有时候我们只是想本地启动服务进行一些调试工作，我们并不希望把本地启动的服务暴露出去给别人调用。
+         *  此时，我们可通过配置 export 禁止服务导出.
          */
         if (!shouldExport()) {
             return;
@@ -541,7 +542,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
      */
     @SuppressWarnings({"unchecked", "rawtypes"})
     private void doExportUrls() {
-        // 加载注册中心链接
+        // 加载注册中心链接，因为Dubbo允许多注册中心，所以返回值这里为List -- 第一次组装URL
         List<URL> registryURLs = loadRegistries(true);
 
         // 遍历 protocols，并在每个协议下导出服务
@@ -550,7 +551,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
             ProviderModel providerModel = new ProviderModel(pathKey, ref, interfaceClass);
             ApplicationModel.initProviderModel(pathKey, providerModel);
             /**
-             * 组装 URL
+             * 组装 URL -- 第二次组装URL
              *
              * URL 是 Dubbo 配置的载体，通过 URL 可让 Dubbo 的各种配置在各个模块之间传递。
              */
