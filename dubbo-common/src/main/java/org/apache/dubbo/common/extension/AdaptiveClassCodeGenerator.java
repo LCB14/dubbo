@@ -260,7 +260,8 @@ public class AdaptiveClassCodeGenerator {
             /**
              * 生成拓展名获取逻辑
              *
-             * 本段逻辑用于根据 @SPI 和 @Adaptive 注解值生成“获取拓展名逻辑”，同时生成逻辑也受 Invocation 类型参数影响，综合因素导致本段逻辑相对复杂。
+             * 本段逻辑用于根据 @SPI 和 @Adaptive 注解值生成“获取拓展名逻辑”，
+             * 同时生成逻辑也受 Invocation 类型参数影响，综合因素导致本段逻辑相对复杂。
              */
             code.append(generateExtNameAssignment(value, hasInvocation));
             // check extName == null?
