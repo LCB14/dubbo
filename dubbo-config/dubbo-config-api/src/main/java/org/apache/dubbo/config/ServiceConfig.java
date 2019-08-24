@@ -811,6 +811,8 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
 
                         /**
                          *  导出服务，并生成 Exporter
+                         *
+                         *  思考这里面protocol.export()为什么对应的是RegistryProtocol中的export方法？
                          *  @see org.apache.dubbo.registry.integration.RegistryProtocol#export
                          */
                         Exporter<?> exporter = protocol.export(wrapperInvoker);

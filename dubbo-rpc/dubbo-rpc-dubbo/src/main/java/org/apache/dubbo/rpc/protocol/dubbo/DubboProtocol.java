@@ -313,6 +313,7 @@ public class DubboProtocol extends AbstractProtocol {
 
         // 启动服务器
         openServer(url);
+
         // 优化序列化
         optimizeSerialization(url);
 
@@ -322,7 +323,9 @@ public class DubboProtocol extends AbstractProtocol {
     private void openServer(URL url) {
         // find server.
         // 获取 host:port，并将其作为服务器实例的 key，用于标识当前的服务器实例
+        // 192.168.1.101:20880
         String key = url.getAddress();
+
         //client can export a service which's only for server to invoke
         boolean isServer = url.getParameter(IS_SERVER_KEY, true);
         if (isServer) {
@@ -342,7 +345,7 @@ public class DubboProtocol extends AbstractProtocol {
             } else {
                 // server supports reset, use together with override
                 // 在同一台机器上（单网卡），同一个端口上仅允许启动一个服务器实例
-                // 服务器已创建，则根据 url 中的配置重置服务器
+                // 若某个端口上已有服务器实例，此时则调用 reset 方法重置服务器的一些配置。
                 server.reset(url);
             }
         }
@@ -390,8 +393,7 @@ public class DubboProtocol extends AbstractProtocol {
         if (str != null && str.length() > 0) {
             // 获取所有的 Transporter 实现类名称集合，比如 supportedTypes = [netty, mina]
             Set<String> supportedTypes = ExtensionLoader.getExtensionLoader(Transporter.class).getSupportedExtensions();
-            // 检测当前 Dubbo 所支持的 Transporter 实现类名称列表中，
-            // 是否包含 client 所表示的 Transporter，若不包含，则抛出异常
+            // 检测当前 Dubbo 所支持的 Transporter 实现类名称列表中，是否包含 client 所表示的 Transporter，若不包含，则抛出异常
             if (!supportedTypes.contains(str)) {
                 throw new RpcException("Unsupported client type: " + str);
             }
