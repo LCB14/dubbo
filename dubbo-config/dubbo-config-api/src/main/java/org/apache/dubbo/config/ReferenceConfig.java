@@ -392,7 +392,7 @@ public class ReferenceConfig<T> extends AbstractReferenceConfig {
             urls.clear();
             // user specified URL, could be peer-to-peer address, or register center's address.
             // 2.1 判断用户有没指定直连url
-            // <dubbo:reference id="",check="" interface="" url="http://127.0.0.1:2181,registry://127.0.0.1:2181">
+            // <dubbo:reference id="",check="" interface="" url="http://127.0.0.1:2181;registry://127.0.0.1:2181">
             if (url != null && url.length() > 0) {
                 String[] us = SEMICOLON_SPLIT_PATTERN.split(url);
                 if (us != null && us.length > 0) {
