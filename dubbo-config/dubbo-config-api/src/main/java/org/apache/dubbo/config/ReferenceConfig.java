@@ -385,8 +385,8 @@ public class ReferenceConfig<T> extends AbstractReferenceConfig {
      *
      * 2、若不是，则读取直连配置项，或注册中心 url，并将读取到的 url 存储到 urls 中。然后根据 urls 元素数量进行后续操作。
      *
-     * 3、若 urls 元素数量为1，则直接通过 Protocol 自适应拓展类构建 Invoker 实例接口。若 urls 元素数量大于1，
-     * 即存在多个注册中心或服务直连 url，此时先根据 url 构建 Invoker。
+     * 3、若 urls 元素数量为1，则直接通过 Protocol 自适应拓展类构建 Invoker 实例接口。
+     * 若 urls 元素数量大于1，即存在多个注册中心或服务直连 url，此时先根据 url 构建 Invoker。
      *
      * 4、然后再通过 Cluster 合并多个 Invoker，最后调用 ProxyFactory 生成代理类。
      */
@@ -474,7 +474,6 @@ public class ReferenceConfig<T> extends AbstractReferenceConfig {
                 // registry url is available
                 if (registryURL != null) {
                     // use RegistryAwareCluster only when register's CLUSTER is available
-                    // 如果注册中心链接不为空，则将使用 AvailableCluster
                     URL u = registryURL.addParameter(CLUSTER_KEY, RegistryAwareCluster.NAME);
                     // The invoker wrap relation would be: RegistryAwareClusterInvoker(StaticDirectory) -> FailoverClusterInvoker(RegistryDirectory, will execute route) -> Invoker
                     // 创建 StaticDirectory 实例，并由 Cluster 对多个 Invoker 进行合并
@@ -493,7 +492,9 @@ public class ReferenceConfig<T> extends AbstractReferenceConfig {
         }
         /**
          * @since 2.7.0
-         * ServiceData Store
+         * ServiceData Store -- 元数据中心（dubbo三大中心之一)
+         *
+         * 注册中心，配置中心，元数据中心
          */
         MetadataReportService metadataReportService = null;
         if ((metadataReportService = getMetadataReportService()) != null) {
