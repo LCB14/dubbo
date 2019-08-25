@@ -288,13 +288,19 @@ public class ReferenceConfig<T> extends AbstractReferenceConfig {
         if (initialized) {
             return;
         }
+
+        // 检查是否设置本地存根
         checkStubAndLocal(interfaceClass);
+
+        // 检查是否设置mock属性来实现容错
         checkMock(interfaceClass);
 
         // 用于收集各种配置，并将配置存储到 map 中。
         Map<String, String> map = new HashMap<String, String>();
         map.put(SIDE_KEY, CONSUMER_SIDE);
         appendRuntimeParameters(map);
+
+        // 检查是否为泛化接口
         if (!isGeneric()) {
             String revision = Version.getVersion(interfaceClass, version);
             if (revision != null && revision.length() > 0) {
@@ -318,7 +324,13 @@ public class ReferenceConfig<T> extends AbstractReferenceConfig {
         appendParameters(map, consumer);
         appendParameters(map, this);
 
-        // 处理 MethodConfig 实例。该实例包含了事件通知配置，比如 onreturn、onthrow、oninvoke 等。
+        /**
+         *  处理 MethodConfig 实例。该实例包含了事件通知配置，比如 onreturn、onthrow、oninvoke 等。
+         *
+         * <dubbo:reference interface="com.xxx.XxxService">
+         *     <dubbo:method name="findXxx" timeout="3000" retries="2" />
+         * </dubbo:reference>
+         */
         Map<String, Object> attributes = null;
         if (CollectionUtils.isNotEmpty(methods)) {
             attributes = new HashMap<String, Object>();
