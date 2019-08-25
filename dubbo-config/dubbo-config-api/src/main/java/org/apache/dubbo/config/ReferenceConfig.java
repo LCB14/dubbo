@@ -406,16 +406,23 @@ public class ReferenceConfig<T> extends AbstractReferenceConfig {
             // 2.1 判断用户有没指定直连url
             // <dubbo:reference id="",check="" interface="" url="http://127.0.0.1:2181;registry://127.0.0.1:2181">
             if (url != null && url.length() > 0) {
+                // 当需要配置多个 url 时，可用分号进行分割，这里会进行切分
                 String[] us = SEMICOLON_SPLIT_PATTERN.split(url);
                 if (us != null && us.length > 0) {
                     for (String u : us) {
                         URL url = URL.valueOf(u);
                         if (StringUtils.isEmpty(url.getPath())) {
+                            // 设置接口全限定名为 url 路径
                             url = url.setPath(interfaceName);
                         }
+                        // 检测 url 协议是否为 registry，若是，表明用户想使用指定的注册中心
                         if (REGISTRY_PROTOCOL.equals(url.getProtocol())) {
+                            // 将 map 转换为查询字符串，并作为 refer 参数的值添加到 url 中
                             urls.add(url.addParameterAndEncoded(REFER_KEY, StringUtils.toQueryString(map)));
                         } else {
+                            // 合并 url，移除服务提供者的一些配置（这些配置来源于用户配置的 url 属性），
+                            // 比如线程池相关配置。并保留服务提供者的部分配置，比如版本，group，时间戳等
+                            // 最后将合并后的配置设置为 url 查询字符串中。
                             urls.add(ClusterUtils.mergeUrl(url, map));
                         }
                     }
@@ -442,24 +449,35 @@ public class ReferenceConfig<T> extends AbstractReferenceConfig {
             }
 
             // 3 根据url数量，采用不同的方式构建invoke
+            // 单个注册中心或服务提供者(服务直连，下同)
             if (urls.size() == 1) {
                 /**
+                 * 调用 RegistryProtocol 的 refer 构建 Invoker 实例
+                 *
                  * @see RegistryProtocol#refer(java.lang.Class, org.apache.dubbo.common.URL)
                  */
                 invoker = REF_PROTOCOL.refer(interfaceClass, urls.get(0));
+            // 多个注册中心或多个服务提供者，或者两者混合
             } else {
                 List<Invoker<?>> invokers = new ArrayList<Invoker<?>>();
                 URL registryURL = null;
+                // 获取所有的 Invoker
                 for (URL url : urls) {
+                    // 通过 refprotocol 调用 refer 构建 Invoker，refprotocol 会在运行时
+                    // 根据 url 协议头加载指定的 Protocol 实例，并调用实例的 refer 方法
                     invokers.add(REF_PROTOCOL.refer(interfaceClass, url));
                     if (REGISTRY_PROTOCOL.equals(url.getProtocol())) {
-                        registryURL = url; // use last registry url
+                        // use last registry url
+                        registryURL = url;
                     }
                 }
-                if (registryURL != null) { // registry url is available
+                // registry url is available
+                if (registryURL != null) {
                     // use RegistryAwareCluster only when register's CLUSTER is available
+                    // 如果注册中心链接不为空，则将使用 AvailableCluster
                     URL u = registryURL.addParameter(CLUSTER_KEY, RegistryAwareCluster.NAME);
                     // The invoker wrap relation would be: RegistryAwareClusterInvoker(StaticDirectory) -> FailoverClusterInvoker(RegistryDirectory, will execute route) -> Invoker
+                    // 创建 StaticDirectory 实例，并由 Cluster 对多个 Invoker 进行合并
                     invoker = CLUSTER.join(new StaticDirectory(u, invokers));
                 } else { // not a registry url, must be direct invoke.
                     invoker = CLUSTER.join(new StaticDirectory(invokers));
@@ -500,13 +518,17 @@ public class ReferenceConfig<T> extends AbstractReferenceConfig {
         boolean isJvmRefer;
         if (isInjvm() == null) {
             // if a url is specified, don't do local reference
+            // url 配置被指定，则不做本地引用
             if (url != null && url.length() > 0) {
                 isJvmRefer = false;
+            // 根据 url 的协议、scope 以及 injvm 等参数检测是否需要本地引用
+            // 比如如果用户显式配置了 scope=local，此时 isInjvmRefer 返回 true
             } else {
                 // by default, reference local service if there is
                 isJvmRefer = InjvmProtocol.getInjvmProtocol().isInjvmRefer(tmpUrl);
             }
         } else {
+            // 获取 injvm 配置值
             isJvmRefer = isInjvm();
         }
         return isJvmRefer;
