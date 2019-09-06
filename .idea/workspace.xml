@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="768deaee-b44c-4776-9944-0fd361d07562" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/proxy/test/HelloImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/proxy/test/IHello.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/proxy/test/MyInvocationHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/proxy/test/MyProxyTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lcb-dubbo/target/classes/com/lcb/dubbo/spi/test/auto/packet/WrapperProtocol.class" beforeDir="false" afterPath="$PROJECT_DIR$/lcb-dubbo/target/classes/com/lcb/dubbo/spi/test/auto/packet/WrapperProtocol.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ServiceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ServiceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/main/java/org/apache/dubbo/config/spring/ServiceBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/main/java/org/apache/dubbo/config/spring/ServiceBean.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -204,7 +201,7 @@
       <workItem from="1566528054685" duration="12423000" />
       <workItem from="1566577219197" duration="30486000" />
       <workItem from="1567070819361" duration="10527000" />
-      <workItem from="1567690003225" duration="4564000" />
+      <workItem from="1567690003225" duration="7604000" />
     </task>
     <servers />
   </component>

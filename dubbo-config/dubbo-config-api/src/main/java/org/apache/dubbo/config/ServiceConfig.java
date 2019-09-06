@@ -342,7 +342,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
         /**
          * 检测 ref 是否为泛化服务类型
          *
-         * GenericService作用参考：https://www.cnblogs.com/notlate/p/10127942.html
+         * GenericService作用参考：http://dubbo.apache.org/zh-cn/docs/user/demos/generic-service.html
          */
         if (ref instanceof GenericService) {
             // 设置 interfaceClass 为 GenericService.class

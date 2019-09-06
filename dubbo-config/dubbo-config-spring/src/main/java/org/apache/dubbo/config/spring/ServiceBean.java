@@ -109,7 +109,7 @@ public class ServiceBean<T> extends ServiceConfig<T> implements InitializingBean
      *
      * Spring 容器发布刷新事件，Dubbo 在接收到事件后，会立即执行服务导出逻辑。
      * @see ApplicationListener
-     *
+     * 参考：https://cloud.tencent.com/developer/article/1395017
      * Dubbo进行服务导出，主要由下面三部分工作组成：
      *
      * 第一部分是前置工作，主要用于检查参数，组装 URL。
