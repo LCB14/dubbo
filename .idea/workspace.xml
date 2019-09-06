@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="768deaee-b44c-4776-9944-0fd361d07562" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/proxy/test/HelloImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/proxy/test/IHello.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/proxy/test/MyInvocationHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/proxy/test/MyProxyTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lcb-dubbo/target/classes/com/lcb/dubbo/spi/test/auto/packet/WrapperProtocol.class" beforeDir="false" afterPath="$PROJECT_DIR$/lcb-dubbo/target/classes/com/lcb/dubbo/spi/test/auto/packet/WrapperProtocol.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,6 +61,7 @@
   </component>
   <component name="ProjectId" id="1OSwR42D0sAh6LtvKshmFzt3kNk" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -92,7 +98,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Application-Consumer">
+  <component name="RunManager" selected="Application.MyProxyTest">
     <configuration name="Application-Consumer" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="org.apache.dubbo.demo.consumer.Application" />
       <module name="dubbo-demo-xml-consumer" />
@@ -132,12 +138,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.lcb.dubbo.spi.test.auto.loader.Test" />
+    <configuration name="MyProxyTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lcb.dubbo.proxy.test.MyProxyTest" />
       <module name="lcb-dubbo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.lcb.dubbo.spi.test.auto.loader.*" />
+          <option name="PATTERN" value="com.lcb.dubbo.proxy.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -162,16 +168,16 @@
       <item itemvalue="Application.Application-Provider" />
       <item itemvalue="Application.Application-Consumer" />
       <item itemvalue="Application.Test" />
-      <item itemvalue="Application.Test (1)" />
       <item itemvalue="Application.ExchangeCodec" />
+      <item itemvalue="Application.MyProxyTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MyProxyTest" />
         <item itemvalue="Application.Application-Consumer" />
         <item itemvalue="Application.Application-Provider" />
         <item itemvalue="Application.ExchangeCodec" />
         <item itemvalue="Application.Test" />
-        <item itemvalue="Application.Test (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -197,7 +203,8 @@
       <workItem from="1566481898296" duration="3488000" />
       <workItem from="1566528054685" duration="12423000" />
       <workItem from="1566577219197" duration="30486000" />
-      <workItem from="1567070819361" duration="6354000" />
+      <workItem from="1567070819361" duration="10527000" />
+      <workItem from="1567690003225" duration="4564000" />
     </task>
     <servers />
   </component>
