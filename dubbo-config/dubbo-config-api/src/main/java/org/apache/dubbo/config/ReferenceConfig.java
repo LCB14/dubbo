@@ -450,6 +450,7 @@ public class ReferenceConfig<T> extends AbstractReferenceConfig {
 
             // 3 根据url数量，采用不同的方式构建invoke
             // 单个注册中心或服务提供者(服务直连，下同)
+            // registry://127.0.0.1:2181/org.apache.dubbo.registry.RegistryService?application=demo-consumer&dubbo=2.0.2&pid=55280&qos.port=33333&refer=application%3Ddemo-consumer%26check%3Dfalse%26dubbo%3D2.0.2%26interface%3Dorg.apache.dubbo.demo.DemoService%26lazy%3Dfalse%26methods%3DsayHello%26pid%3D55280%26qos.port%3D33333%26register.ip%3D192.168.1.106%26side%3Dconsumer%26sticky%3Dfalse%26timestamp%3D1568819444649&registry=zookeeper&timestamp=1568819445502
             if (urls.size() == 1) {
                 /**
                  * 调用 RegistryProtocol 的 refer 构建 Invoker 实例
