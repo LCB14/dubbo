@@ -564,7 +564,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
              */
             ProviderModel providerModel = new ProviderModel(pathKey, ref, interfaceClass);
 
-            // 缓存ProviderModel
+            // 缓存ProviderModel --> PROVIDED_SERVICES
             ApplicationModel.initProviderModel(pathKey, providerModel);
 
             /**
@@ -577,11 +577,12 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
     }
 
     /**
-     * 进行二次组装URL
+     * 进行第二次组装URL
      * <p>
      * 参考 link http://dubbo.apache.org/zh-cn/docs/source_code_guide/export-service.html
      */
     private void doExportUrlsFor1Protocol(ProtocolConfig protocolConfig, List<URL> registryURLs) {
+        // 获取协议名称
         String name = protocolConfig.getName();
         // 如果协议名为空，或空串，则将协议名变量设置为 dubbo
         if (StringUtils.isEmpty(name)) {
@@ -777,7 +778,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
 
             // export to local if the config is not remote (export to remote only when config is remote)
             // scope != remote
-            // 导出到本地
+            // 导出到本地 -- 尼玛直接等于SCOPE_LOCAL能死吗，还非得取反一下。。。。。暴走中。。。。
             if (!SCOPE_REMOTE.equalsIgnoreCase(scope)) {
                 // url -> dubbo://192.168.1.101:20880/org.apache.dubbo.demo.DemoService?anyhost=true&application=demo-provider&bean.name=org.apache.dubbo.demo.DemoService&bind.ip=192.168.1.101&bind.port=20880&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&interface=org.apache.dubbo.demo.DemoService&methods=sayHello&pid=2527&qos.port=22222&register=true&release=&side=provider&timestamp=1566368855692
                 exportLocal(url);
@@ -791,6 +792,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
                     logger.info("Export dubbo service " + interfaceClass.getName() + " to url " + url);
                 }
                 if (CollectionUtils.isNotEmpty(registryURLs)) {
+                    // registry://127.0.0.1:2181/org.apache.dubbo.registry.RegistryService?application=demo-provider&dubbo=2.0.2&pid=53790&qos.port=22222&registry=zookeeper&timestamp=1568811341844
                     for (URL registryURL : registryURLs) {
                         //if protocol is only injvm ,not register
                         if (LOCAL_PROTOCOL.equalsIgnoreCase(url.getProtocol())) {
@@ -866,6 +868,8 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
          *  并调用 InjvmProtocol的 export方法导出服务。
          *
          *  url经URLBuilder设置之前 -> dubbo://192.168.1.101:20880/org.apache.dubbo.demo.DemoService?anyhost=true&application=demo-provider&bean.name=org.apache.dubbo.demo.DemoService&bind.ip=192.168.1.101&bind.port=20880&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&interface=org.apache.dubbo.demo.DemoService&methods=sayHello&pid=11850&qos.port=22222&register=true&release=&side=provider&timestamp=1566638202239
+         *
+         *  注意：如果接口中有多个方法url的属性methods的值则为多个方法名之间用逗号进行分割
          */
         URL local = URLBuilder.from(url)
                 .setProtocol(LOCAL_PROTOCOL)

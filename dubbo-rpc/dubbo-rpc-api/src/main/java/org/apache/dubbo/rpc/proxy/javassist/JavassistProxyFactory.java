@@ -54,9 +54,12 @@ public class JavassistProxyFactory extends AbstractProxyFactory {
          * 以及生成 invokeMethod 方法代码和其他一些方法代码。代码生成完毕后，通过 Javassist 生成 Class 对象，最后再通过反射创建 Wrapper 实例。
          *
          * URL -> injvm://127.0.0.1/org.apache.dubbo.demo.DemoService?anyhost=true&application=demo-provider&bean.name=org.apache.dubbo.demo.DemoService&bind.ip=192.168.1.101&bind.port=20880&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&interface=org.apache.dubbo.demo.DemoService&methods=sayHello&pid=2827&qos.port=22222&register=true&release=&side=provider&timestamp=1566371426556
+         *
+         * 感悟：与其说Wrapper用于包裹目标类（服务实现类)，还不如说dubbo利用javassit对目标类进行代理，把目标类中的方法进行化整为零（泛化)。
          */
         // TODO Wrapper cannot handle this scenario correctly: the classname contains '$'
         final Wrapper wrapper = Wrapper.getWrapper(proxy.getClass().getName().indexOf('$') < 0 ? proxy.getClass() : type);
+
         // 创建匿名 Invoker 类对象，并实现 doInvoke 方法。
         return new AbstractProxyInvoker<T>(proxy, type, url) {
             @Override

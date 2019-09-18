@@ -332,6 +332,7 @@ public abstract class AbstractInterfaceConfig extends AbstractMethodConfig {
     protected List<URL> loadRegistries(boolean provider) {
         // check && override if necessary
         List<URL> registryList = new ArrayList<URL>();
+        // registries示例：<dubbo:registry address="zookeeper://127.0.0.1:2181" zookeeperProtocol="true" valid="true" id="org.apache.dubbo.config.RegistryConfig" prefix="dubbo.registries." />
         if (CollectionUtils.isNotEmpty(registries)) {
             for (RegistryConfig config : registries) {
                 // 获取注册中心地址
