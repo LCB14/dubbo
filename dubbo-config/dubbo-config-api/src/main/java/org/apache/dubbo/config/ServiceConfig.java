@@ -786,7 +786,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
 
             // export to remote if the config is not local (export to local only when config is local)
             // scope != local
-            // 导出到远程
+            // 导出到远程（包含服务导出和服务注册两个过程)
             if (!SCOPE_LOCAL.equalsIgnoreCase(scope)) {
                 if (!isOnlyInJvm() && logger.isInfoEnabled()) {
                     logger.info("Export dubbo service " + interfaceClass.getName() + " to url " + url);
@@ -844,6 +844,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
                     Exporter<?> exporter = protocol.export(wrapperInvoker);
                     exporters.add(exporter);
                 }
+
                 /**
                  * @since 2.7.0
                  * ServiceData Store

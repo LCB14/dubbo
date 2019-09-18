@@ -311,7 +311,7 @@ public class DubboProtocol extends AbstractProtocol {
             }
         }
 
-        // 启动服务器
+        // 启动服务器 NettyServer
         openServer(url);
 
         // 优化序列化

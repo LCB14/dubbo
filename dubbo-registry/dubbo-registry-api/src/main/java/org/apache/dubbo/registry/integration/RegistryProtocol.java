@@ -235,7 +235,7 @@ public class RegistryProtocol implements Protocol {
 
         providerUrl = overrideUrlWithConfig(providerUrl, overrideSubscribeListener);
         // export invoker
-        // 导出服务
+        // 1、导出服务
         final ExporterChangeableWrapper<T> exporter = doLocalExport(originInvoker, providerUrl);
 
         // url to registry
@@ -253,7 +253,7 @@ public class RegistryProtocol implements Protocol {
         // 根据 register 的值决定是否注册服务
         boolean register = registeredProviderUrl.getParameter("register", true);
         if (register) {
-            // 向注册中心注册服务
+            // 2、向注册中心注册服务 -- Zookeeper
             register(registryUrl, registeredProviderUrl);
             providerInvokerWrapper.setReg(true);
         }
@@ -261,7 +261,7 @@ public class RegistryProtocol implements Protocol {
         // Deprecated! Subscribe to override rules in 2.6.x or before.
         // 已过时的代码，订阅2.6.x或之前的覆盖规则
         /**
-         * 向注册中心进行订阅 override 数据
+         * 3、向注册中心进行订阅 override 数据
          *
          * 参考：https://blog.csdn.net/shenchaohao12321/article/details/90639551
          */
@@ -270,7 +270,7 @@ public class RegistryProtocol implements Protocol {
         exporter.setRegisterUrl(registeredProviderUrl);
         exporter.setSubscribeUrl(overrideSubscribeUrl);
         //Ensure that a new exporter instance is returned every time export
-        // 创建并返回 DestroyableExporter
+        // 4、创建并返回 DestroyableExporter
         return new DestroyableExporter<>(exporter);
     }
 
