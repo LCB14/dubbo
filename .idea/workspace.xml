@@ -3,8 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="768deaee-b44c-4776-9944-0fd361d07562" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-cluster/target/classes/org/apache/dubbo/rpc/cluster/loadbalance/AbstractLoadBalance.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-cluster/target/classes/org/apache/dubbo/rpc/cluster/loadbalance/AbstractLoadBalance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-cluster/target/classes/org/apache/dubbo/rpc/cluster/loadbalance/ConsistentHashLoadBalance$ConsistentHashSelector.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-cluster/target/classes/org/apache/dubbo/rpc/cluster/loadbalance/ConsistentHashLoadBalance$ConsistentHashSelector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-cluster/target/classes/org/apache/dubbo/rpc/cluster/loadbalance/ConsistentHashLoadBalance.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-cluster/target/classes/org/apache/dubbo/rpc/cluster/loadbalance/ConsistentHashLoadBalance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-cluster/target/classes/org/apache/dubbo/rpc/cluster/loadbalance/LeastActiveLoadBalance.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-cluster/target/classes/org/apache/dubbo/rpc/cluster/loadbalance/LeastActiveLoadBalance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-cluster/target/classes/org/apache/dubbo/rpc/cluster/loadbalance/RandomLoadBalance.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-cluster/target/classes/org/apache/dubbo/rpc/cluster/loadbalance/RandomLoadBalance.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ServiceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ServiceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/main/java/org/apache/dubbo/config/spring/ServiceBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/main/java/org/apache/dubbo/config/spring/ServiceBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/classes/org/apache/dubbo/config/ReferenceConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/classes/org/apache/dubbo/config/ReferenceConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/classes/org/apache/dubbo/config/ServiceConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/classes/org/apache/dubbo/config/ServiceConfig.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +101,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MyProxyTest">
+  <component name="RunManager" selected="Application.Application-Provider">
     <configuration name="Application-Consumer" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="org.apache.dubbo.demo.consumer.Application" />
       <module name="dubbo-demo-xml-consumer" />
@@ -170,9 +176,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MyProxyTest" />
-        <item itemvalue="Application.Application-Consumer" />
         <item itemvalue="Application.Application-Provider" />
+        <item itemvalue="Application.Application-Consumer" />
+        <item itemvalue="Application.MyProxyTest" />
         <item itemvalue="Application.ExchangeCodec" />
         <item itemvalue="Application.Test" />
       </list>
@@ -201,7 +207,9 @@
       <workItem from="1566528054685" duration="12423000" />
       <workItem from="1566577219197" duration="30486000" />
       <workItem from="1567070819361" duration="10527000" />
-      <workItem from="1567690003225" duration="7604000" />
+      <workItem from="1567690003225" duration="9635000" />
+      <workItem from="1568185268274" duration="395000" />
+      <workItem from="1568731520255" duration="3851000" />
     </task>
     <servers />
   </component>
@@ -312,6 +320,14 @@
           <url>file://$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ReferenceConfig.java</url>
           <line>467</line>
           <option name="timeStamp" value="445" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ServiceConfig.java</url>
+          <line>554</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="450" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

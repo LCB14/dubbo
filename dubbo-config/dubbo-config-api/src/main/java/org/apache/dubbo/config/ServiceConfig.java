@@ -542,16 +542,33 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
      */
     @SuppressWarnings({"unchecked", "rawtypes"})
     private void doExportUrls() {
-        // 加载注册中心链接，因为Dubbo允许多注册中心，所以返回值这里为List -- 第一次组装URL
+        /**
+         *  第一次组装URL
+         *
+         *  加载注册中心链接，因为Dubbo允许多注册中心，所以返回值这里为List
+         *
+         *  registry://127.0.0.1:2181/org.apache.dubbo.registry.RegistryService?application=demo-provider&dubbo=2.0.2&pid=53271&qos.port=22222&registry=zookeeper&timestamp=1568808606403
+         */
         List<URL> registryURLs = loadRegistries(true);
 
         // 遍历 protocols，并在每个协议下导出服务
         for (ProtocolConfig protocolConfig : protocols) {
+
+            // pathKey示例：org.apache.dubbo.demo.DemoService
             String pathKey = URL.buildKey(getContextPath(protocolConfig).map(p -> p + "/" + path).orElse(path), group, version);
-            ProviderModel providerModel = new ProviderModel(pathKey, ref, interfaceClass);
-            ApplicationModel.initProviderModel(pathKey, providerModel);
+
             /**
-             * 组装 URL -- 第二次组装URL
+             * ProviderModel 表示服务提供者模型，此对象中存储了与服务提供者相关的信息。
+             * 比如服务的配置信息，服务实例等。每个被导出的服务对应一个 ProviderModel。
+             * ApplicationModel 持有所有的 ProviderModel。
+             */
+            ProviderModel providerModel = new ProviderModel(pathKey, ref, interfaceClass);
+
+            // 缓存ProviderModel
+            ApplicationModel.initProviderModel(pathKey, providerModel);
+
+            /**
+             * 第二次组装URL
              *
              * URL 是 Dubbo 配置的载体，通过 URL 可让 Dubbo 的各种配置在各个模块之间传递。
              */
