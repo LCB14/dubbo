@@ -740,7 +740,10 @@ public class ExtensionLoader<T> {
      * 二是调用 loadDirectory 方法加载指定文件夹配置文件
      */
     private Map<String, Class<?>> loadExtensionClasses() {
-        // 解析SPI注解，缓存拓展接口默认的实现类的名称 （只能指定一个默认的实现类)
+        /**
+         * 解析SPI注解，缓存拓展接口默认的实现类的名称 （只能指定一个默认的实现类)
+         * 设置 cachedDefaultName 值
+          */
         cacheDefaultExtensionName();
 
         Map<String, Class<?>> extensionClasses = new HashMap<>();

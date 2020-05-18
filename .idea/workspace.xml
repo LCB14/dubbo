@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="768deaee-b44c-4776-9944-0fd361d07562" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/markdown-doclet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java" afterDir="false" />
     </list>
@@ -218,7 +215,7 @@
       <workItem from="1568975017540" duration="3177000" />
       <workItem from="1569314354798" duration="99000" />
       <workItem from="1589204735462" duration="767000" />
-      <workItem from="1589354594018" duration="5116000" />
+      <workItem from="1589354594018" duration="9581000" />
     </task>
     <servers />
   </component>
@@ -243,11 +240,15 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="565" y="234" width="670" height="658" key="search.everywhere.popup" timestamp="1589785592956">
+    <state x="452" y="226" key="NewModule_or_Project.wizard" timestamp="1589796935029">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="452" y="226" key="NewModule_or_Project.wizard/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589796935029" />
+    <state x="565" y="234" width="670" height="658" key="search.everywhere.popup" timestamp="1589790320883">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="505" y="-839" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589773987618" />
-    <state x="565" y="234" width="670" height="658" key="search.everywhere.popup/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589785592956" />
+    <state x="565" y="234" width="670" height="658" key="search.everywhere.popup/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589790320883" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -259,7 +260,7 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
-          <line>747</line>
+          <line>750</line>
           <option name="timeStamp" value="261" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
@@ -294,12 +295,12 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
-          <line>1021</line>
+          <line>1024</line>
           <option name="timeStamp" value="369" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
-          <line>986</line>
+          <line>989</line>
           <option name="timeStamp" value="370" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
