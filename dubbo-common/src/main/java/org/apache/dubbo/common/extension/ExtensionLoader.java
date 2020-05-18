@@ -102,6 +102,7 @@ public class ExtensionLoader<T> {
 
     /**
      * 什么时间被初始化的？
+     *
      * @see org.apache.dubbo.common.extension.ExtensionLoader#getAdaptiveExtension
      * @see org.apache.dubbo.common.extension.ExtensionLoader#createAdaptiveExtension
      * @see org.apache.dubbo.common.extension.ExtensionLoader#getAdaptiveExtensionClass
@@ -114,6 +115,7 @@ public class ExtensionLoader<T> {
 
     /**
      * 缓存SPI注解中指定的拓展接口实现类在配置文件中的名称
+     *
      * @see ExtensionLoader#cacheDefaultExtensionName()
      */
     private String cachedDefaultName;
@@ -530,6 +532,8 @@ public class ExtensionLoader<T> {
     @SuppressWarnings("unchecked")
     public T getAdaptiveExtension() {
         /**
+         * 首先尝试从缓存中获取自适应拓展
+         *
          * cachedAdaptiveInstance初始化的位置
          * @see ExtensionLoader#injectExtension(java.lang.Object)
          */
@@ -625,9 +629,9 @@ public class ExtensionLoader<T> {
     }
 
     /**
-     *  Dubbo 中有两种类型的自适应拓展，一种是手工编码的，一种是自动生成的。
-     *  手工编码的自适应拓展中可能存在着一些依赖，而自动生成的 Adaptive 拓展则不会依赖其他类。
-     *  这里调用 injectExtension 方法的目的是为手工编码的自适应拓展注入依赖
+     * Dubbo 中有两种类型的自适应拓展，一种是手工编码的，一种是自动生成的。
+     * 手工编码的自适应拓展中可能存在着一些依赖，而自动生成的 Adaptive 拓展则不会依赖其他类。
+     * 这里调用 injectExtension 方法的目的是为手工编码的自适应拓展注入依赖
      */
     private T injectExtension(T instance) {
         try {
@@ -715,7 +719,10 @@ public class ExtensionLoader<T> {
             synchronized (cachedClasses) {
                 classes = cachedClasses.get();
                 if (classes == null) {
-                    // 加载META-INF/dubbo路径下配置文件中拓展接口的所有实现类
+                    /**
+                     * 加载META-INF/dubbo路径下配置文件中拓展接口的所有实现类
+                     * 在获取实现类的过程中，如果某个实现类被 Adaptive 注解修饰了，那么该类就会被赋值给 cachedAdaptiveClass 变量。
+                     */
                     classes = loadExtensionClasses();
                     cachedClasses.set(classes);
                 }
@@ -727,10 +734,10 @@ public class ExtensionLoader<T> {
     // synchronized in getExtensionClasses
 
     /**
-     *  loadExtensionClasses 方法总共做了两件事情:
-     *
-     *  一是对 SPI 注解进行解析
-     *  二是调用 loadDirectory 方法加载指定文件夹配置文件
+     * loadExtensionClasses 方法总共做了两件事情:
+     * <p>
+     * 一是对 SPI 注解进行解析
+     * 二是调用 loadDirectory 方法加载指定文件夹配置文件
      */
     private Map<String, Class<?>> loadExtensionClasses() {
         // 解析SPI注解，缓存拓展接口默认的实现类的名称 （只能指定一个默认的实现类)
@@ -846,11 +853,11 @@ public class ExtensionLoader<T> {
         if (clazz.isAnnotationPresent(Adaptive.class)) {
             // 缓存自适应的拓展接口实现类
             cacheAdaptiveClass(clazz);
-        // 检测 clazz 是否是 Wrapper 类型
+            // 检测 clazz 是否是 Wrapper 类型
         } else if (isWrapperClass(clazz)) {
             // 把扩展点自动包装类加入缓存
             cacheWrapperClass(clazz);
-        // 程序进入此分支，表明 clazz 是一个普通的拓展类
+            // 程序进入此分支，表明 clazz 是一个普通的拓展类
         } else {
             // 检测 clazz 是否有默认的构造方法，如果没有，则抛出异常
             clazz.getConstructor();
@@ -967,14 +974,14 @@ public class ExtensionLoader<T> {
     }
 
     /**
-     *  createAdaptiveExtension 方法的代码比较少，但却包含了三个逻辑，分别如下：
-     *
-     *  1、调用 getAdaptiveExtensionClass 方法获取自适应拓展 Class 对象
-     *  2、通过反射进行实例化
-     *  3、调用 injectExtension 方法向拓展实例中注入依赖
+     * createAdaptiveExtension 方法的代码比较少，但却包含了三个逻辑，分别如下：
+     * <p>
+     * 1、调用 getAdaptiveExtensionClass 方法获取自适应拓展 Class 对象
+     * 2、通过反射进行实例化
+     * 3、调用 injectExtension 方法向拓展实例中注入依赖
      */
     @SuppressWarnings("unchecked")
-    private T  createAdaptiveExtension() {
+    private T createAdaptiveExtension() {
         try {
             // 获取自适应拓展类，并通过反射实例化
             return injectExtension((T) getAdaptiveExtensionClass().newInstance());
@@ -985,13 +992,15 @@ public class ExtensionLoader<T> {
 
     /**
      * getAdaptiveExtensionClass 方法同样包含了三个逻辑，如下：
-     *
+     * <p>
      * 调用 getExtensionClasses 获取所有的拓展类
      * 检查缓存，若缓存不为空，则返回缓存
      * 若缓存为空，则调用 createAdaptiveExtensionClass 创建自适应拓展类
      */
     private Class<?> getAdaptiveExtensionClass() {
-        // 获取拓展接口在配置文件中的所有实现类
+        /**
+         * 获取拓展接口在配置文件中的所有实现类 -- 结果保存在 cachedClasses 变量中
+         */
         getExtensionClasses();
 
         // cachedAdaptiveClass只有在拓展接口的实现类存在被@Adaptive注解修饰的时候才会不为null
@@ -1014,102 +1023,102 @@ public class ExtensionLoader<T> {
     }
 
     /**
-     *  生成的代理类大概样式举例：
-     *  例1；
+     * 生成的代理类大概样式举例：
+     * 例1；
      * package org.apache.dubbo.demo.consumer;
-     *
+     * <p>
      * import org.apache.dubbo.common.extension.ExtensionLoader;
-     *
+     * <p>
      * public class ProxyFactory$Adaptive implements org.apache.dubbo.rpc.ProxyFactory {
-     *
-     *     public java.lang.Object getProxy(org.apache.dubbo.rpc.Invoker arg0) throws org.apache.dubbo.rpc.RpcException {
-     *         if (arg0 == null) {
-     *             throw new IllegalArgumentException("org.apache.dubbo.rpc.Invoker argument == null");
-     *         }
-     *         if (arg0.getUrl() == null) {
-     *             throw new IllegalArgumentException("org.apache.dubbo.rpc.Invoker argument getUrl() == null");
-     *         }
-     *         org.apache.dubbo.common.URL url = arg0.getUrl();
-     *         String extName = url.getParameter("proxy", "javassist");
-     *         if (extName == null) {
-     *             throw new IllegalStateException("Failed to get extension (org.apache.dubbo.rpc.ProxyFactory) name from url (" + url.toString() + ") use keys([proxy])");
-     *         }
-     *         org.apache.dubbo.rpc.ProxyFactory extension = (org.apache.dubbo.rpc.ProxyFactory) ExtensionLoader.getExtensionLoader(org.apache.dubbo.rpc.ProxyFactory.class).getExtension(extName);
-     *         return extension.getProxy(arg0);
-     *     }
-     *
-     *     public java.lang.Object getProxy(org.apache.dubbo.rpc.Invoker arg0, boolean arg1) throws org.apache.dubbo.rpc.RpcException {
-     *         if (arg0 == null) {
-     *             throw new IllegalArgumentException("org.apache.dubbo.rpc.Invoker argument == null");
-     *         }
-     *         if (arg0.getUrl() == null) {
-     *             throw new IllegalArgumentException("org.apache.dubbo.rpc.Invoker argument getUrl() == null");
-     *         }
-     *         org.apache.dubbo.common.URL url = arg0.getUrl();
-     *         String extName = url.getParameter("proxy", "javassist");
-     *         if (extName == null) {
-     *             throw new IllegalStateException("Failed to get extension (org.apache.dubbo.rpc.ProxyFactory) name from url (" + url.toString() + ") use keys([proxy])");
-     *         }
-     *         org.apache.dubbo.rpc.ProxyFactory extension = (org.apache.dubbo.rpc.ProxyFactory) ExtensionLoader.getExtensionLoader(org.apache.dubbo.rpc.ProxyFactory.class).getExtension(extName);
-     *         return extension.getProxy(arg0, arg1);
-     *     }
-     *
-     *     public org.apache.dubbo.rpc.Invoker getInvoker(java.lang.Object arg0, java.lang.Class arg1, org.apache.dubbo.common.URL arg2) throws org.apache.dubbo.rpc.RpcException {
-     *         if (arg2 == null) {
-     *             throw new IllegalArgumentException("url == null");
-     *         }
-     *         org.apache.dubbo.common.URL url = arg2;
-     *         String extName = url.getParameter("proxy", "javassist");
-     *         if (extName == null) {
-     *             throw new IllegalStateException("Failed to get extension (org.apache.dubbo.rpc.ProxyFactory) name from url (" + url.toString() + ") use keys([proxy])");
-     *         }
-     *         org.apache.dubbo.rpc.ProxyFactory extension = (org.apache.dubbo.rpc.ProxyFactory) ExtensionLoader.getExtensionLoader(org.apache.dubbo.rpc.ProxyFactory.class).getExtension(extName);
-     *         return extension.getInvoker(arg0, arg1, arg2);
-     *     }
+     * <p>
+     * public java.lang.Object getProxy(org.apache.dubbo.rpc.Invoker arg0) throws org.apache.dubbo.rpc.RpcException {
+     * if (arg0 == null) {
+     * throw new IllegalArgumentException("org.apache.dubbo.rpc.Invoker argument == null");
      * }
-     *
+     * if (arg0.getUrl() == null) {
+     * throw new IllegalArgumentException("org.apache.dubbo.rpc.Invoker argument getUrl() == null");
+     * }
+     * org.apache.dubbo.common.URL url = arg0.getUrl();
+     * String extName = url.getParameter("proxy", "javassist");
+     * if (extName == null) {
+     * throw new IllegalStateException("Failed to get extension (org.apache.dubbo.rpc.ProxyFactory) name from url (" + url.toString() + ") use keys([proxy])");
+     * }
+     * org.apache.dubbo.rpc.ProxyFactory extension = (org.apache.dubbo.rpc.ProxyFactory) ExtensionLoader.getExtensionLoader(org.apache.dubbo.rpc.ProxyFactory.class).getExtension(extName);
+     * return extension.getProxy(arg0);
+     * }
+     * <p>
+     * public java.lang.Object getProxy(org.apache.dubbo.rpc.Invoker arg0, boolean arg1) throws org.apache.dubbo.rpc.RpcException {
+     * if (arg0 == null) {
+     * throw new IllegalArgumentException("org.apache.dubbo.rpc.Invoker argument == null");
+     * }
+     * if (arg0.getUrl() == null) {
+     * throw new IllegalArgumentException("org.apache.dubbo.rpc.Invoker argument getUrl() == null");
+     * }
+     * org.apache.dubbo.common.URL url = arg0.getUrl();
+     * String extName = url.getParameter("proxy", "javassist");
+     * if (extName == null) {
+     * throw new IllegalStateException("Failed to get extension (org.apache.dubbo.rpc.ProxyFactory) name from url (" + url.toString() + ") use keys([proxy])");
+     * }
+     * org.apache.dubbo.rpc.ProxyFactory extension = (org.apache.dubbo.rpc.ProxyFactory) ExtensionLoader.getExtensionLoader(org.apache.dubbo.rpc.ProxyFactory.class).getExtension(extName);
+     * return extension.getProxy(arg0, arg1);
+     * }
+     * <p>
+     * public org.apache.dubbo.rpc.Invoker getInvoker(java.lang.Object arg0, java.lang.Class arg1, org.apache.dubbo.common.URL arg2) throws org.apache.dubbo.rpc.RpcException {
+     * if (arg2 == null) {
+     * throw new IllegalArgumentException("url == null");
+     * }
+     * org.apache.dubbo.common.URL url = arg2;
+     * String extName = url.getParameter("proxy", "javassist");
+     * if (extName == null) {
+     * throw new IllegalStateException("Failed to get extension (org.apache.dubbo.rpc.ProxyFactory) name from url (" + url.toString() + ") use keys([proxy])");
+     * }
+     * org.apache.dubbo.rpc.ProxyFactory extension = (org.apache.dubbo.rpc.ProxyFactory) ExtensionLoader.getExtensionLoader(org.apache.dubbo.rpc.ProxyFactory.class).getExtension(extName);
+     * return extension.getInvoker(arg0, arg1, arg2);
+     * }
+     * }
+     * <p>
      * 例2：
      * package org.apache.dubbo.demo.consumer;
-     *
+     * <p>
      * import org.apache.dubbo.common.extension.ExtensionLoader;
-     *
+     * <p>
      * public class Protocol$Adaptive implements org.apache.dubbo.rpc.Protocol {
-     *     public void destroy() {
-     *         throw new UnsupportedOperationException("The method public abstract void org.apache.dubbo.rpc.Protocol.destroy() of interface org.apache.dubbo.rpc.Protocol is not adaptive method!");
-     *     }
-     *
-     *     public int getDefaultPort() {
-     *         throw new UnsupportedOperationException("The method public abstract int org.apache.dubbo.rpc.Protocol.getDefaultPort() of interface org.apache.dubbo.rpc.Protocol is not adaptive method!");
-     *     }
-     *
-     *     public org.apache.dubbo.rpc.Exporter export(org.apache.dubbo.rpc.Invoker arg0) throws org.apache.dubbo.rpc.RpcException {
-     *         if (arg0 == null) {
-     *             throw new IllegalArgumentException("org.apache.dubbo.rpc.Invoker argument == null");
-     *         }
-     *         if (arg0.getUrl() == null) {
-     *             throw new IllegalArgumentException("org.apache.dubbo.rpc.Invoker argument getUrl() == null");
-     *         }
-     *         org.apache.dubbo.common.URL url = arg0.getUrl();
-     *         String extName = (url.getProtocol() == null ? "dubbo" : url.getProtocol());
-     *         if (extName == null) {
-     *             throw new IllegalStateException("Failed to get extension (org.apache.dubbo.rpc.Protocol) name from url (" + url.toString() + ") use keys([protocol])");
-     *         }
-     *         org.apache.dubbo.rpc.Protocol extension = (org.apache.dubbo.rpc.Protocol) ExtensionLoader.getExtensionLoader(org.apache.dubbo.rpc.Protocol.class).getExtension(extName);
-     *         return extension.export(arg0);
-     *     }
-     *
-     *     public org.apache.dubbo.rpc.Invoker refer(java.lang.Class arg0, org.apache.dubbo.common.URL arg1) throws org.apache.dubbo.rpc.RpcException {
-     *         if (arg1 == null) {
-     *             throw new IllegalArgumentException("url == null");
-     *         }
-     *         org.apache.dubbo.common.URL url = arg1;
-     *         String extName = (url.getProtocol() == null ? "dubbo" : url.getProtocol());
-     *         if (extName == null) {
-     *             throw new IllegalStateException("Failed to get extension (org.apache.dubbo.rpc.Protocol) name from url (" + url.toString() + ") use keys([protocol])");
-     *         }
-     *         org.apache.dubbo.rpc.Protocol extension = (org.apache.dubbo.rpc.Protocol) ExtensionLoader.getExtensionLoader(org.apache.dubbo.rpc.Protocol.class).getExtension(extName);
-     *         return extension.refer(arg0, arg1);
-     *     }
+     * public void destroy() {
+     * throw new UnsupportedOperationException("The method public abstract void org.apache.dubbo.rpc.Protocol.destroy() of interface org.apache.dubbo.rpc.Protocol is not adaptive method!");
+     * }
+     * <p>
+     * public int getDefaultPort() {
+     * throw new UnsupportedOperationException("The method public abstract int org.apache.dubbo.rpc.Protocol.getDefaultPort() of interface org.apache.dubbo.rpc.Protocol is not adaptive method!");
+     * }
+     * <p>
+     * public org.apache.dubbo.rpc.Exporter export(org.apache.dubbo.rpc.Invoker arg0) throws org.apache.dubbo.rpc.RpcException {
+     * if (arg0 == null) {
+     * throw new IllegalArgumentException("org.apache.dubbo.rpc.Invoker argument == null");
+     * }
+     * if (arg0.getUrl() == null) {
+     * throw new IllegalArgumentException("org.apache.dubbo.rpc.Invoker argument getUrl() == null");
+     * }
+     * org.apache.dubbo.common.URL url = arg0.getUrl();
+     * String extName = (url.getProtocol() == null ? "dubbo" : url.getProtocol());
+     * if (extName == null) {
+     * throw new IllegalStateException("Failed to get extension (org.apache.dubbo.rpc.Protocol) name from url (" + url.toString() + ") use keys([protocol])");
+     * }
+     * org.apache.dubbo.rpc.Protocol extension = (org.apache.dubbo.rpc.Protocol) ExtensionLoader.getExtensionLoader(org.apache.dubbo.rpc.Protocol.class).getExtension(extName);
+     * return extension.export(arg0);
+     * }
+     * <p>
+     * public org.apache.dubbo.rpc.Invoker refer(java.lang.Class arg0, org.apache.dubbo.common.URL arg1) throws org.apache.dubbo.rpc.RpcException {
+     * if (arg1 == null) {
+     * throw new IllegalArgumentException("url == null");
+     * }
+     * org.apache.dubbo.common.URL url = arg1;
+     * String extName = (url.getProtocol() == null ? "dubbo" : url.getProtocol());
+     * if (extName == null) {
+     * throw new IllegalStateException("Failed to get extension (org.apache.dubbo.rpc.Protocol) name from url (" + url.toString() + ") use keys([protocol])");
+     * }
+     * org.apache.dubbo.rpc.Protocol extension = (org.apache.dubbo.rpc.Protocol) ExtensionLoader.getExtensionLoader(org.apache.dubbo.rpc.Protocol.class).getExtension(extName);
+     * return extension.refer(arg0, arg1);
+     * }
      * }
      */
     private Class<?> createAdaptiveExtensionClass() {

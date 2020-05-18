@@ -2,7 +2,8 @@
 <project version="4">
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="dubbo" options="-proc:none" />
+      <module name="dubbo" options="" />
+      <module name="dubbo (1)" options="-proc:none" />
       <module name="dubbo-cluster" options="-proc:none" />
       <module name="dubbo-common" options="-proc:none" />
       <module name="dubbo-compatible" options="-proc:none" />
