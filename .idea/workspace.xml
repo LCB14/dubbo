@@ -2,6 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="768deaee-b44c-4776-9944-0fd361d07562" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/xunhuanyilai/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/xunhuanyilai/Cat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/xunhuanyilai/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/xunhuanyilai/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/xunhuanyilai/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/xunhuanyilai/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/xunhuanyilai/Worker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/resources/META-INF/dubbo/com.lcb.dubbo.spi.test.xunhuanyilai.Animal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/resources/META-INF/dubbo/com.lcb.dubbo.spi.test.xunhuanyilai.Person" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/extension/ExtensionLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/extension/ExtensionLoader.class" afterDir="false" />
@@ -92,7 +101,7 @@
       <recent name="$PROJECT_DIR$/lcb-dubbo/src/main/resources/META-INF/dubbo/services" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DubboSPITest.sayHello">
+  <component name="RunManager" selected="Application.Test">
     <configuration name="Application-Consumer" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="org.apache.dubbo.demo.consumer.Application" />
       <module name="dubbo-demo-xml-consumer" />
@@ -132,6 +141,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lcb.dubbo.spi.test.xunhuanyilai.Test" />
+      <module name="lcb-dubbo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lcb.dubbo.spi.test.xunhuanyilai.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DubboSPITest.sayHello" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lcb-dubbo" />
       <extension name="coverage">
@@ -148,36 +170,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JavaSPITest.sayHello" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lcb-dubbo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.lcb.dubbo.spi.test.javaSPI.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.lcb.dubbo.spi.test.javaSPI" />
-      <option name="MAIN_CLASS_NAME" value="com.lcb.dubbo.spi.test.javaSPI.JavaSPITest" />
-      <option name="METHOD_NAME" value="sayHello" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.Application-Provider" />
       <item itemvalue="Application.Application-Consumer" />
       <item itemvalue="Application.DubboSPITest" />
-      <item itemvalue="JUnit.JavaSPITest.sayHello" />
       <item itemvalue="JUnit.DubboSPITest.sayHello" />
+      <item itemvalue="Application.Test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test" />
         <item itemvalue="JUnit.DubboSPITest.sayHello" />
         <item itemvalue="Application.Application-Consumer" />
         <item itemvalue="Application.Application-Provider" />
         <item itemvalue="Application.DubboSPITest" />
-        <item itemvalue="JUnit.JavaSPITest.sayHello" />
       </list>
     </recent_temporary>
   </component>
@@ -223,7 +229,7 @@
       <workItem from="1569314354798" duration="99000" />
       <workItem from="1589204735462" duration="767000" />
       <workItem from="1589354594018" duration="10920000" />
-      <workItem from="1589809531212" duration="13779000" />
+      <workItem from="1589809531212" duration="21945000" />
     </task>
     <servers />
   </component>
@@ -248,42 +254,54 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1638" height="363" key="GridCell.Tab.0.bottom" timestamp="1589863301186">
+    <state x="449" y="335" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589878911172">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.0.bottom/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589863301186" />
+    <state x="449" y="335" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589878911172" />
+    <state x="653" y="241" key="#com.intellij.ide.util.MemberChooser" timestamp="1589880881386">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="653" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589880881386" />
+    <state x="603" y="235" width="914" height="579" key="#xdebugger.evaluate" timestamp="1589881171231">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="603" y="235" width="914" height="579" key="#xdebugger.evaluate/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881171231" />
+    <state width="1638" height="566" key="GridCell.Tab.0.bottom" timestamp="1589881377132">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="566" key="GridCell.Tab.0.bottom/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881377132" />
     <state width="1638" height="545" key="GridCell.Tab.0.bottom/0.23.1680.1027/-184.-1057.2048.1057@0.23.1680.1027" timestamp="1589809432655" />
-    <state width="1638" height="363" key="GridCell.Tab.0.center" timestamp="1589863301184">
+    <state width="1638" height="566" key="GridCell.Tab.0.center" timestamp="1589881377129">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.0.center/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589863301184" />
+    <state width="1638" height="566" key="GridCell.Tab.0.center/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881377129" />
     <state width="1638" height="545" key="GridCell.Tab.0.center/0.23.1680.1027/-184.-1057.2048.1057@0.23.1680.1027" timestamp="1589809432653" />
-    <state width="1638" height="363" key="GridCell.Tab.0.left" timestamp="1589863301182">
+    <state width="1638" height="566" key="GridCell.Tab.0.left" timestamp="1589881377128">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.0.left/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589863301182" />
+    <state width="1638" height="566" key="GridCell.Tab.0.left/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881377128" />
     <state width="1638" height="545" key="GridCell.Tab.0.left/0.23.1680.1027/-184.-1057.2048.1057@0.23.1680.1027" timestamp="1589809432647" />
-    <state width="1638" height="363" key="GridCell.Tab.0.right" timestamp="1589863301185">
+    <state width="1638" height="566" key="GridCell.Tab.0.right" timestamp="1589881377131">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.0.right/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589863301185" />
+    <state width="1638" height="566" key="GridCell.Tab.0.right/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881377131" />
     <state width="1638" height="545" key="GridCell.Tab.0.right/0.23.1680.1027/-184.-1057.2048.1057@0.23.1680.1027" timestamp="1589809432654" />
-    <state width="1638" height="363" key="GridCell.Tab.1.bottom" timestamp="1589863301191">
+    <state width="1638" height="363" key="GridCell.Tab.1.bottom" timestamp="1589881217092">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.1.bottom/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589863301191" />
-    <state width="1638" height="363" key="GridCell.Tab.1.center" timestamp="1589863301189">
+    <state width="1638" height="363" key="GridCell.Tab.1.bottom/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881217092" />
+    <state width="1638" height="363" key="GridCell.Tab.1.center" timestamp="1589881217089">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.1.center/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589863301189" />
-    <state width="1638" height="363" key="GridCell.Tab.1.left" timestamp="1589863301188">
+    <state width="1638" height="363" key="GridCell.Tab.1.center/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881217089" />
+    <state width="1638" height="363" key="GridCell.Tab.1.left" timestamp="1589881217087">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.1.left/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589863301188" />
-    <state width="1638" height="363" key="GridCell.Tab.1.right" timestamp="1589863301190">
+    <state width="1638" height="363" key="GridCell.Tab.1.left/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881217087" />
+    <state width="1638" height="363" key="GridCell.Tab.1.right" timestamp="1589881217090">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.1.right/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589863301190" />
+    <state width="1638" height="363" key="GridCell.Tab.1.right/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881217090" />
     <state x="452" y="226" key="NewModule_or_Project.wizard" timestamp="1589796935029">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -292,6 +310,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="683" y="254" key="RollbackChangesDialog/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589859653861" />
+    <state x="359" y="268" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1589880495737">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="359" y="268" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589880495737" />
     <state x="498" y="282" width="683" height="486" key="find.popup" timestamp="1589805489798">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -342,7 +364,7 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
-          <line>1045</line>
+          <line>1046</line>
           <option name="timeStamp" value="369" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
@@ -365,10 +387,40 @@
           <line>468</line>
           <option name="timeStamp" value="445" />
         </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
+          <line>1150</line>
+          <option name="timeStamp" value="453" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
+          <line>435</line>
+          <option name="timeStamp" value="475" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
+          <line>739</line>
+          <option name="timeStamp" value="480" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
+          <line>748</line>
+          <option name="timeStamp" value="481" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
+          <line>822</line>
+          <option name="timeStamp" value="482" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
-          <line>1149</line>
-          <option name="timeStamp" value="453" />
+          <line>681</line>
+          <option name="timeStamp" value="483" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/factory/SpiExtensionFactory.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="485" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

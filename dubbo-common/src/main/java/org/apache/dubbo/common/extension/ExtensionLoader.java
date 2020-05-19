@@ -643,7 +643,8 @@ public class ExtensionLoader<T> {
      * 这里调用 injectExtension 方法的目的是为手工编码的自适应拓展注入依赖
      *
      *
-     * 思考：Dubbo是通过什么方式解决相互依赖的问题的？
+     * 思考：Dubbo自适应拓展会造成循环依赖的问题吗？
+     * 不会，因为加上@Adaptive注解的拓展点在外部是获取不到的！！
      */
     private T injectExtension(T instance) {
         try {
@@ -682,9 +683,10 @@ public class ExtensionLoader<T> {
                             Object object = objectFactory.getExtension(pt, property);
                             if (object != null) {
                                 /**
-                                 *  为当前拓展点装配上依赖的拓展点
+                                 *  method 表示的是一个set方法实例，为当前拓展点装配上依赖的拓展点
                                  *
                                  *  此时注入的依赖扩展点是一个 Adaptive 实例，直到扩展点方法执行时才决定调用是哪一个扩展点实现。
+                                 *  注意：object也可能是被@Adaptive注解修饰的拓展点实例（即手工编写的），这种情况少之又少！！
                                  */
                                 method.invoke(instance, object);
                             }

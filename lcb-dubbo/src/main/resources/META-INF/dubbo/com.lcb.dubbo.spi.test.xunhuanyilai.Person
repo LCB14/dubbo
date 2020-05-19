@@ -1,0 +1,2 @@
+student = com.lcb.dubbo.spi.test.xunhuanyilai.Student
+worker=com.lcb.dubbo.spi.test.xunhuanyilai.Worker
