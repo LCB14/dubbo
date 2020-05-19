@@ -110,6 +110,9 @@ public class ServiceBean<T> extends ServiceConfig<T> implements InitializingBean
      * Spring 容器发布刷新事件，Dubbo 在接收到事件后，会立即执行服务导出逻辑。
      * @see ApplicationListener
      * 参考：https://cloud.tencent.com/developer/article/1395017
+     *
+     * Dubbo采用 URL 作为配置信息的统一格式，所有扩展点都通过传递 URL 携带配置信息。
+     *
      * Dubbo进行服务导出，主要由下面三部分工作组成：
      *
      * 第一部分是前置工作，主要用于检查参数，组装 URL。
@@ -120,7 +123,7 @@ public class ServiceBean<T> extends ServiceConfig<T> implements InitializingBean
      *
      * 第二部分是导出服务，包含导出服务到本地 (JVM)，和导出服务到远程两个过程。
      *
-     * 第三部分是向注册中心注册服务，用于服务发现。本篇文章将会对这三个部分代码进行详细的分析。
+     * 第三部分是向注册中心注册服务，用于服务发现。
      *
      * @param event
      */

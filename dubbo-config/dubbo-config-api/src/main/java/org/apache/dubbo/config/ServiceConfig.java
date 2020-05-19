@@ -450,7 +450,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
         }
 
         /**
-         * note：Dubbo-2.6.5 及以后版本所有服务都将在 Spring 初始化完成后进行暴露，如果你不需要延迟暴露服务，无需配置 delay。
+         * 注意：Dubbo-2.6.5 及以后版本所有服务都将在 Spring 初始化完成后进行暴露，如果你不需要延迟暴露服务，无需配置 delay。
          * 即<dubbo:service delay="-1" />这种之前的配置已经没有意义。
          *
          * <dubbo:service delay="5000" />  -- 延迟到 Spring 初始化完成后，再暴露服务
