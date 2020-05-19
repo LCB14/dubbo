@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="768deaee-b44c-4776-9944-0fd361d07562" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/xunhuanyilai/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/xunhuanyilai/Cat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/xunhuanyilai/Dog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/xunhuanyilai/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/xunhuanyilai/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/xunhuanyilai/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/xunhuanyilai/Worker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/resources/META-INF/dubbo/com.lcb.dubbo.spi.test.xunhuanyilai.Animal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/resources/META-INF/dubbo/com.lcb.dubbo.spi.test.xunhuanyilai.Person" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/extension/ExtensionLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/extension/ExtensionLoader.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +218,7 @@
       <workItem from="1569314354798" duration="99000" />
       <workItem from="1589204735462" duration="767000" />
       <workItem from="1589354594018" duration="10920000" />
-      <workItem from="1589809531212" duration="21945000" />
+      <workItem from="1589809531212" duration="24410000" />
     </task>
     <servers />
   </component>
@@ -262,46 +251,46 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="653" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589880881386" />
-    <state x="603" y="235" width="914" height="579" key="#xdebugger.evaluate" timestamp="1589881171231">
+    <state x="603" y="235" width="914" height="579" key="#xdebugger.evaluate" timestamp="1589881740608">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="603" y="235" width="914" height="579" key="#xdebugger.evaluate/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881171231" />
-    <state width="1638" height="566" key="GridCell.Tab.0.bottom" timestamp="1589881377132">
+    <state x="603" y="235" width="914" height="579" key="#xdebugger.evaluate/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881740608" />
+    <state width="1638" height="363" key="GridCell.Tab.0.bottom" timestamp="1589881760553">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="566" key="GridCell.Tab.0.bottom/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881377132" />
+    <state width="1638" height="363" key="GridCell.Tab.0.bottom/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881760553" />
     <state width="1638" height="545" key="GridCell.Tab.0.bottom/0.23.1680.1027/-184.-1057.2048.1057@0.23.1680.1027" timestamp="1589809432655" />
-    <state width="1638" height="566" key="GridCell.Tab.0.center" timestamp="1589881377129">
+    <state width="1638" height="363" key="GridCell.Tab.0.center" timestamp="1589881760550">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="566" key="GridCell.Tab.0.center/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881377129" />
+    <state width="1638" height="363" key="GridCell.Tab.0.center/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881760550" />
     <state width="1638" height="545" key="GridCell.Tab.0.center/0.23.1680.1027/-184.-1057.2048.1057@0.23.1680.1027" timestamp="1589809432653" />
-    <state width="1638" height="566" key="GridCell.Tab.0.left" timestamp="1589881377128">
+    <state width="1638" height="363" key="GridCell.Tab.0.left" timestamp="1589881760548">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="566" key="GridCell.Tab.0.left/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881377128" />
+    <state width="1638" height="363" key="GridCell.Tab.0.left/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881760548" />
     <state width="1638" height="545" key="GridCell.Tab.0.left/0.23.1680.1027/-184.-1057.2048.1057@0.23.1680.1027" timestamp="1589809432647" />
-    <state width="1638" height="566" key="GridCell.Tab.0.right" timestamp="1589881377131">
+    <state width="1638" height="363" key="GridCell.Tab.0.right" timestamp="1589881760552">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="566" key="GridCell.Tab.0.right/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881377131" />
+    <state width="1638" height="363" key="GridCell.Tab.0.right/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881760552" />
     <state width="1638" height="545" key="GridCell.Tab.0.right/0.23.1680.1027/-184.-1057.2048.1057@0.23.1680.1027" timestamp="1589809432654" />
-    <state width="1638" height="363" key="GridCell.Tab.1.bottom" timestamp="1589881217092">
+    <state width="1638" height="363" key="GridCell.Tab.1.bottom" timestamp="1589881760558">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.1.bottom/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881217092" />
-    <state width="1638" height="363" key="GridCell.Tab.1.center" timestamp="1589881217089">
+    <state width="1638" height="363" key="GridCell.Tab.1.bottom/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881760558" />
+    <state width="1638" height="363" key="GridCell.Tab.1.center" timestamp="1589881760556">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.1.center/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881217089" />
-    <state width="1638" height="363" key="GridCell.Tab.1.left" timestamp="1589881217087">
+    <state width="1638" height="363" key="GridCell.Tab.1.center/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881760556" />
+    <state width="1638" height="363" key="GridCell.Tab.1.left" timestamp="1589881760554">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.1.left/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881217087" />
-    <state width="1638" height="363" key="GridCell.Tab.1.right" timestamp="1589881217090">
+    <state width="1638" height="363" key="GridCell.Tab.1.left/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881760554" />
+    <state width="1638" height="363" key="GridCell.Tab.1.right" timestamp="1589881760557">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.1.right/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881217090" />
+    <state width="1638" height="363" key="GridCell.Tab.1.right/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881760557" />
     <state x="452" y="226" key="NewModule_or_Project.wizard" timestamp="1589796935029">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -364,7 +353,7 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
-          <line>1046</line>
+          <line>1047</line>
           <option name="timeStamp" value="369" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
@@ -389,7 +378,7 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
-          <line>1150</line>
+          <line>1151</line>
           <option name="timeStamp" value="453" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
@@ -399,28 +388,18 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
-          <line>739</line>
+          <line>740</line>
           <option name="timeStamp" value="480" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
-          <line>748</line>
+          <line>749</line>
           <option name="timeStamp" value="481" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
-          <line>822</line>
+          <line>823</line>
           <option name="timeStamp" value="482" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
-          <line>681</line>
-          <option name="timeStamp" value="483" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/factory/SpiExtensionFactory.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="485" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
