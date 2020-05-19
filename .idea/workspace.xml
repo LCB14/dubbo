@@ -2,98 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="768deaee-b44c-4776-9944-0fd361d07562" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/resources/META-INF/dubbo/com.lcb.dubbo.spi.test.dubboSPI.Robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-cluster/target/classes/org/apache/dubbo/rpc/cluster/loadbalance/RoundRobinLoadBalance.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-cluster/target/classes/org/apache/dubbo/rpc/cluster/loadbalance/RoundRobinLoadBalance.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-cluster/target/classes/org/apache/dubbo/rpc/cluster/support/FailoverClusterInvoker.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-cluster/target/classes/org/apache/dubbo/rpc/cluster/support/FailoverClusterInvoker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-cluster/target/classes/org/apache/dubbo/rpc/cluster/support/ForkingClusterInvoker.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-cluster/target/classes/org/apache/dubbo/rpc/cluster/support/ForkingClusterInvoker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-cluster/target/test-classes/org/apache/dubbo/rpc/cluster/loadbalance/RoundRobinLoadBalanceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-cluster/target/test-classes/org/apache/dubbo/rpc/cluster/loadbalance/RoundRobinLoadBalanceTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/bytecode/Mixin.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/bytecode/Mixin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/bytecode/Proxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/bytecode/Proxy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/bytecode/Wrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/bytecode/Wrapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/compiler/support/ClassUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/compiler/support/ClassUtils.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/extension/ExtensionLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/extension/ExtensionLoader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/io/Bytes.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/io/Bytes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/json/JSON.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/json/JSON.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/threadlocal/InternalThreadLocal.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/threadlocal/InternalThreadLocal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/threadpool/support/AbortPolicyWithReport.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/threadpool/support/AbortPolicyWithReport.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/timer/HashedWheelTimer.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/timer/HashedWheelTimer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/utils/ConfigUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/utils/ConfigUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/utils/IOUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/utils/IOUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/utils/LRUCache.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/utils/LRUCache.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/utils/StringUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/utils/StringUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-common/target/test-classes/org/apache/dubbo/common/io/StreamUtilsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/target/test-classes/org/apache/dubbo/common/io/StreamUtilsTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-common/target/test-classes/org/apache/dubbo/common/utils/ClassUtilsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/target/test-classes/org/apache/dubbo/common/utils/ClassUtilsTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-common/target/test-classes/org/apache/dubbo/common/utils/ConfigUtilsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/target/test-classes/org/apache/dubbo/common/utils/ConfigUtilsTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/test-classes/org/apache/dubbo/config/AbstractConfigTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/test-classes/org/apache/dubbo/config/AbstractConfigTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/test-classes/org/apache/dubbo/config/AbstractInterfaceConfigTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/test-classes/org/apache/dubbo/config/AbstractInterfaceConfigTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/test-classes/org/apache/dubbo/config/ApplicationConfigTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/test-classes/org/apache/dubbo/config/ApplicationConfigTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/test-classes/org/apache/dubbo/config/ConsumerConfigTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/test-classes/org/apache/dubbo/config/ConsumerConfigTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/test-classes/org/apache/dubbo/config/ReferenceConfigTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/test-classes/org/apache/dubbo/config/ReferenceConfigTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/test-classes/org/apache/dubbo/config/RegistryConfigTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/test-classes/org/apache/dubbo/config/RegistryConfigTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/test-classes/org/apache/dubbo/config/ServiceConfigTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/test-classes/org/apache/dubbo/config/ServiceConfigTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/test-classes/org/apache/dubbo/config/cache/CacheTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/test-classes/org/apache/dubbo/config/cache/CacheTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-spring/target/test-classes/org/apache/dubbo/config/spring/ConfigTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-spring/target/test-classes/org/apache/dubbo/config/spring/ConfigTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-container/dubbo-container-api/target/classes/org/apache/dubbo/container/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-container/dubbo-container-api/target/classes/org/apache/dubbo/container/Main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-container/dubbo-container-api/target/classes/org/apache/dubbo/container/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-container/dubbo-container-api/target/classes/org/apache/dubbo/container/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-metadata-report/dubbo-metadata-report-api/target/classes/org/apache/dubbo/metadata/support/AbstractMetadataReport.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-metadata-report/dubbo-metadata-report-api/target/classes/org/apache/dubbo/metadata/support/AbstractMetadataReport.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-metadata-report/dubbo-metadata-report-api/target/classes/org/apache/dubbo/metadata/support/AbstractMetadataReportFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-metadata-report/dubbo-metadata-report-api/target/classes/org/apache/dubbo/metadata/support/AbstractMetadataReportFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-monitor/dubbo-monitor-api/target/classes/org/apache/dubbo/monitor/support/AbstractMonitorFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-monitor/dubbo-monitor-api/target/classes/org/apache/dubbo/monitor/support/AbstractMonitorFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/classes/org/apache/dubbo/registry/support/AbstractRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/classes/org/apache/dubbo/registry/support/AbstractRegistry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/classes/org/apache/dubbo/registry/support/AbstractRegistryFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/target/classes/org/apache/dubbo/registry/support/AbstractRegistryFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-multicast/target/test-classes/org/apache/dubbo/registry/multicast/MulticastRegistryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-multicast/target/test-classes/org/apache/dubbo/registry/multicast/MulticastRegistryTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-api/target/classes/org/apache/dubbo/remoting/exchange/codec/ExchangeCodec.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-api/target/classes/org/apache/dubbo/remoting/exchange/codec/ExchangeCodec.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-api/target/classes/org/apache/dubbo/remoting/exchange/support/DefaultFuture.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-api/target/classes/org/apache/dubbo/remoting/exchange/support/DefaultFuture.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-api/target/classes/org/apache/dubbo/remoting/exchange/support/header/HeaderExchangeHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-api/target/classes/org/apache/dubbo/remoting/exchange/support/header/HeaderExchangeHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-api/target/classes/org/apache/dubbo/remoting/transport/AbstractClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-api/target/classes/org/apache/dubbo/remoting/transport/AbstractClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-api/target/test-classes/org/apache/dubbo/remoting/PerformanceClientCloseTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-api/target/test-classes/org/apache/dubbo/remoting/PerformanceClientCloseTest$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-api/target/test-classes/org/apache/dubbo/remoting/PerformanceClientFixedTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-api/target/test-classes/org/apache/dubbo/remoting/PerformanceClientFixedTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-api/target/test-classes/org/apache/dubbo/remoting/PerformanceClientTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-api/target/test-classes/org/apache/dubbo/remoting/PerformanceClientTest$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-api/target/test-classes/org/apache/dubbo/remoting/transport/codec/DeprecatedExchangeCodec.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-api/target/test-classes/org/apache/dubbo/remoting/transport/codec/DeprecatedExchangeCodec.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-netty4/target/classes/org/apache/dubbo/remoting/transport/netty4/NettyClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-netty4/target/classes/org/apache/dubbo/remoting/transport/netty4/NettyClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-netty4/target/classes/org/apache/dubbo/remoting/transport/netty4/NettyClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-netty4/target/classes/org/apache/dubbo/remoting/transport/netty4/NettyClientHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-netty4/target/classes/org/apache/dubbo/remoting/transport/netty4/NettyCodecAdapter$InternalDecoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-netty4/target/classes/org/apache/dubbo/remoting/transport/netty4/NettyCodecAdapter$InternalDecoder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-netty4/target/classes/org/apache/dubbo/remoting/transport/netty4/NettyCodecAdapter$InternalEncoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-netty4/target/classes/org/apache/dubbo/remoting/transport/netty4/NettyCodecAdapter$InternalEncoder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-netty4/target/classes/org/apache/dubbo/remoting/transport/netty4/NettyServerHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-netty4/target/classes/org/apache/dubbo/remoting/transport/netty4/NettyServerHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-netty4/target/test-classes/org/apache/dubbo/remoting/transport/netty4/ClientToServerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-remoting/dubbo-remoting-netty4/target/test-classes/org/apache/dubbo/remoting/transport/netty4/ClientToServerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/target/classes/org/apache/dubbo/rpc/RpcContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/target/classes/org/apache/dubbo/rpc/RpcContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/target/classes/org/apache/dubbo/rpc/filter/ClassLoaderFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/target/classes/org/apache/dubbo/rpc/filter/ClassLoaderFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/target/classes/org/apache/dubbo/rpc/filter/ConsumerContextFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/target/classes/org/apache/dubbo/rpc/filter/ConsumerContextFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/target/classes/org/apache/dubbo/rpc/filter/ContextFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/target/classes/org/apache/dubbo/rpc/filter/ContextFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/target/classes/org/apache/dubbo/rpc/listener/ListenerExporterWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/target/classes/org/apache/dubbo/rpc/listener/ListenerExporterWrapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/target/classes/org/apache/dubbo/rpc/listener/ListenerInvokerWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/target/classes/org/apache/dubbo/rpc/listener/ListenerInvokerWrapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/target/classes/org/apache/dubbo/rpc/proxy/javassist/JavassistProxyFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/target/classes/org/apache/dubbo/rpc/proxy/javassist/JavassistProxyFactory$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/target/test-classes/org/apache/dubbo/rpc/filter/ActiveLimitFilterTest$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/target/test-classes/org/apache/dubbo/rpc/filter/ActiveLimitFilterTest$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/target/test-classes/org/apache/dubbo/rpc/filter/ActiveLimitFilterTest$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/target/test-classes/org/apache/dubbo/rpc/filter/ActiveLimitFilterTest$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/target/classes/org/apache/dubbo/rpc/protocol/dubbo/DecodeableRpcInvocation.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/target/classes/org/apache/dubbo/rpc/protocol/dubbo/DecodeableRpcInvocation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/target/classes/org/apache/dubbo/rpc/protocol/dubbo/DecodeableRpcResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/target/classes/org/apache/dubbo/rpc/protocol/dubbo/DecodeableRpcResult.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/target/classes/org/apache/dubbo/rpc/protocol/dubbo/DubboInvoker.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/target/classes/org/apache/dubbo/rpc/protocol/dubbo/DubboInvoker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/target/classes/org/apache/dubbo/rpc/protocol/dubbo/LazyConnectExchangeClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/target/classes/org/apache/dubbo/rpc/protocol/dubbo/LazyConnectExchangeClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/target/test-classes/org/apache/dubbo/rpc/protocol/dubbo/DubboInvokerAvilableTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/target/test-classes/org/apache/dubbo/rpc/protocol/dubbo/DubboInvokerAvilableTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/target/test-classes/org/apache/dubbo/rpc/protocol/dubbo/ExplicitCallbackTest$DemoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/target/test-classes/org/apache/dubbo/rpc/protocol/dubbo/ExplicitCallbackTest$DemoServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/target/test-classes/org/apache/dubbo/rpc/protocol/dubbo/ImplicitCallBackTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/target/test-classes/org/apache/dubbo/rpc/protocol/dubbo/ImplicitCallBackTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/target/test-classes/org/apache/dubbo/rpc/protocol/dubbo/decode/DubboTelnetDecodeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/target/test-classes/org/apache/dubbo/rpc/protocol/dubbo/decode/DubboTelnetDecodeTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/target/test-classes/org/apache/dubbo/rpc/service/GenericServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/target/test-classes/org/apache/dubbo/rpc/service/GenericServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/target/test-classes/org/apache/dubbo/rpc/validation/ValidationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/target/test-classes/org/apache/dubbo/rpc/validation/ValidationTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/beginner/Bumblebee.java" beforeDir="false" afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/dubboSPI/Bumblebee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/beginner/DubboSPITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/dubboSPI/DubboSPITest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/beginner/OptimusPrime.java" beforeDir="false" afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/dubboSPI/OptimusPrime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/beginner/Robot.java" beforeDir="false" afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/spi/test/dubboSPI/Robot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lcb-dubbo/src/main/resources/META-INF/dubbo/com.lcb.dubbo.spi.test.beginner.Robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lcb-dubbo/target/classes/META-INF/dubbo-lcb.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lcb-dubbo/target/classes/META-INF/dubbo/com.lcb.dubbo.spi.test.beginner.Robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lcb-dubbo/target/classes/META-INF/lcb-dubbo.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/lcb-dubbo/target/classes/META-INF/lcb-dubbo.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lcb-dubbo/target/classes/com/lcb/dubbo/proxy/test/MyInvocationHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/lcb-dubbo/target/classes/com/lcb/dubbo/proxy/test/MyInvocationHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lcb-dubbo/target/classes/com/lcb/dubbo/proxy/test/MyProxyTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/lcb-dubbo/target/classes/com/lcb/dubbo/proxy/test/MyProxyTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lcb-dubbo/target/classes/com/lcb/dubbo/spi/test/Bumblebee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lcb-dubbo/target/classes/com/lcb/dubbo/spi/test/DubboSPITest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lcb-dubbo/target/classes/com/lcb/dubbo/spi/test/OptimusPrime.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lcb-dubbo/target/classes/com/lcb/dubbo/spi/test/Robot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lcb-dubbo/target/classes/com/lcb/dubbo/spi/test/beginner/Bumblebee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lcb-dubbo/target/classes/com/lcb/dubbo/spi/test/beginner/DubboSPITest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lcb-dubbo/target/classes/com/lcb/dubbo/spi/test/beginner/OptimusPrime.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lcb-dubbo/target/classes/com/lcb/dubbo/spi/test/beginner/Robot.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -312,7 +223,7 @@
       <workItem from="1569314354798" duration="99000" />
       <workItem from="1589204735462" duration="767000" />
       <workItem from="1589354594018" duration="10920000" />
-      <workItem from="1589809531212" duration="1328000" />
+      <workItem from="1589809531212" duration="7068000" />
     </task>
     <servers />
   </component>
@@ -337,42 +248,42 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1638" height="363" key="GridCell.Tab.0.bottom" timestamp="1589815707370">
+    <state width="1638" height="363" key="GridCell.Tab.0.bottom" timestamp="1589857730228">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.0.bottom/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589815707370" />
+    <state width="1638" height="363" key="GridCell.Tab.0.bottom/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589857730228" />
     <state width="1638" height="545" key="GridCell.Tab.0.bottom/0.23.1680.1027/-184.-1057.2048.1057@0.23.1680.1027" timestamp="1589809432655" />
-    <state width="1638" height="363" key="GridCell.Tab.0.center" timestamp="1589815707368">
+    <state width="1638" height="363" key="GridCell.Tab.0.center" timestamp="1589857730225">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.0.center/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589815707368" />
+    <state width="1638" height="363" key="GridCell.Tab.0.center/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589857730225" />
     <state width="1638" height="545" key="GridCell.Tab.0.center/0.23.1680.1027/-184.-1057.2048.1057@0.23.1680.1027" timestamp="1589809432653" />
-    <state width="1638" height="363" key="GridCell.Tab.0.left" timestamp="1589815707367">
+    <state width="1638" height="363" key="GridCell.Tab.0.left" timestamp="1589857730224">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.0.left/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589815707367" />
+    <state width="1638" height="363" key="GridCell.Tab.0.left/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589857730224" />
     <state width="1638" height="545" key="GridCell.Tab.0.left/0.23.1680.1027/-184.-1057.2048.1057@0.23.1680.1027" timestamp="1589809432647" />
-    <state width="1638" height="363" key="GridCell.Tab.0.right" timestamp="1589815707369">
+    <state width="1638" height="363" key="GridCell.Tab.0.right" timestamp="1589857730227">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.0.right/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589815707369" />
+    <state width="1638" height="363" key="GridCell.Tab.0.right/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589857730227" />
     <state width="1638" height="545" key="GridCell.Tab.0.right/0.23.1680.1027/-184.-1057.2048.1057@0.23.1680.1027" timestamp="1589809432654" />
-    <state width="1638" height="363" key="GridCell.Tab.1.bottom" timestamp="1589815707198">
+    <state width="1638" height="363" key="GridCell.Tab.1.bottom" timestamp="1589857730233">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.1.bottom/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589815707198" />
-    <state width="1638" height="363" key="GridCell.Tab.1.center" timestamp="1589815707197">
+    <state width="1638" height="363" key="GridCell.Tab.1.bottom/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589857730233" />
+    <state width="1638" height="363" key="GridCell.Tab.1.center" timestamp="1589857730231">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.1.center/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589815707197" />
-    <state width="1638" height="363" key="GridCell.Tab.1.left" timestamp="1589815707196">
+    <state width="1638" height="363" key="GridCell.Tab.1.center/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589857730231" />
+    <state width="1638" height="363" key="GridCell.Tab.1.left" timestamp="1589857730229">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.1.left/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589815707196" />
-    <state width="1638" height="363" key="GridCell.Tab.1.right" timestamp="1589815707198">
+    <state width="1638" height="363" key="GridCell.Tab.1.left/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589857730229" />
+    <state width="1638" height="363" key="GridCell.Tab.1.right" timestamp="1589857730232">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.1.right/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589815707198" />
+    <state width="1638" height="363" key="GridCell.Tab.1.right/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589857730232" />
     <state x="452" y="226" key="NewModule_or_Project.wizard" timestamp="1589796935029">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -381,11 +292,11 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="498" y="282" width="683" height="486" key="find.popup/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589805489798" />
-    <state x="565" y="234" width="670" height="658" key="search.everywhere.popup" timestamp="1589805658449">
+    <state x="565" y="234" width="670" height="658" key="search.everywhere.popup" timestamp="1589858068325">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="505" y="-839" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589773987618" />
-    <state x="565" y="234" width="670" height="658" key="search.everywhere.popup/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589805658449" />
+    <state x="565" y="234" width="670" height="658" key="search.everywhere.popup/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589858068325" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -394,11 +305,6 @@
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/AdaptiveClassCodeGenerator.java</url>
           <line>170</line>
           <option name="timeStamp" value="259" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
-          <line>750</line>
-          <option name="timeStamp" value="261" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryProtocol.java</url>
@@ -432,13 +338,8 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
-          <line>1024</line>
+          <line>1033</line>
           <option name="timeStamp" value="369" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
-          <line>989</line>
-          <option name="timeStamp" value="370" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryProtocol.java</url>
@@ -462,8 +363,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/extension/ExtensionLoader.java</url>
-          <line>764</line>
-          <option name="timeStamp" value="448" />
+          <line>1137</line>
+          <option name="timeStamp" value="453" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

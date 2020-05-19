@@ -417,6 +417,7 @@ public class ExtensionLoader<T> {
      */
     public T getDefaultExtension() {
         getExtensionClasses();
+        // cachedDefaultName 该值来源与@SPI注解中指定
         if (StringUtils.isBlank(cachedDefaultName) || "true".equals(cachedDefaultName)) {
             return null;
         }
@@ -589,7 +590,11 @@ public class ExtensionLoader<T> {
 
     @SuppressWarnings("unchecked")
     private T createExtension(String name) {
-        // 从配置文件中加载所有的拓展类，可得到“配置项名称”到“配置类”的映射关系表
+        /**
+         * 从配置文件中加载所有的拓展类，可得到“配置项名称”到“配置类”的映射关系表
+         *
+         * Dubbo SPI一大特点，只有在真正获取指定拓展点时才进行真正的加载操作
+         */
         Class<?> clazz = getExtensionClasses().get(name);
         if (clazz == null) {
             throw findException(name);
@@ -609,6 +614,11 @@ public class ExtensionLoader<T> {
              */
             injectExtension(instance);
 
+            /**
+             * cachedWrapperClasses 变量的初始化位置
+             *
+             * @see ExtensionLoader#loadClass(java.util.Map, java.net.URL, java.lang.Class, java.lang.String)
+             */
             Set<Class<?>> wrapperClasses = cachedWrapperClasses;
             if (CollectionUtils.isNotEmpty(wrapperClasses)) {
                 for (Class<?> wrapperClass : wrapperClasses) {
@@ -635,6 +645,10 @@ public class ExtensionLoader<T> {
      */
     private T injectExtension(T instance) {
         try {
+            /**
+             * objectFactory 对应下面实例
+             * @see AdaptiveExtensionFactory
+             */
             if (objectFactory != null) {
                 // 遍历目标类的所有方法
                 for (Method method : instance.getClass().getMethods()) {
@@ -856,12 +870,10 @@ public class ExtensionLoader<T> {
         if (clazz.isAnnotationPresent(Adaptive.class)) {
             // 缓存自适应的拓展接口实现类
             cacheAdaptiveClass(clazz);
-            // 检测 clazz 是否是 Wrapper 类型
-        } else if (isWrapperClass(clazz)) {
+        } else if (isWrapperClass(clazz)) { // 检测 clazz 是否是 Wrapper 类型
             // 把扩展点自动包装类加入缓存
             cacheWrapperClass(clazz);
-            // 程序进入此分支，表明 clazz 是一个普通的拓展类
-        } else {
+        } else { // 程序进入此分支，表明 clazz 是一个普通的拓展类
             // 检测 clazz 是否有默认的构造方法，如果没有，则抛出异常
             clazz.getConstructor();
             if (StringUtils.isEmpty(name)) {
@@ -956,6 +968,7 @@ public class ExtensionLoader<T> {
      */
     private boolean isWrapperClass(Class<?> clazz) {
         try {
+            // 判断是否存在相关的拷贝构造函数
             clazz.getConstructor(type);
             return true;
         } catch (NoSuchMethodException e) {
