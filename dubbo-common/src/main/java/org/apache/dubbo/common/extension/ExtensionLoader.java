@@ -534,9 +534,6 @@ public class ExtensionLoader<T> {
     public T getAdaptiveExtension() {
         /**
          * 首先尝试从缓存中获取自适应拓展
-         *
-         * cachedAdaptiveInstance初始化的位置
-         * @see ExtensionLoader#injectExtension(java.lang.Object)
          */
         Object instance = cachedAdaptiveInstance.get();
         if (instance == null) {
@@ -627,6 +624,8 @@ public class ExtensionLoader<T> {
                      *
                      * 将当前 instance 作为参数传给 Wrapper 的构造方法，并通过反射创建 Wrapper 实例。
                      * 然后向 Wrapper 实例中注入依赖，最后将 Wrapper 实例再次赋值给 instance 变量
+                     *
+                     * 最后返回的是包装多层的拓展实例(套娃) -- 想想还挺有画面感^_^
                      */
                     instance = injectExtension((T) wrapperClass.getConstructor(type).newInstance(instance));
                 }
@@ -642,6 +641,9 @@ public class ExtensionLoader<T> {
      * Dubbo 中有两种类型的自适应拓展，一种是手工编码的，一种是自动生成的。
      * 手工编码的自适应拓展中可能存在着一些依赖，而自动生成的 Adaptive 拓展则不会依赖其他类。
      * 这里调用 injectExtension 方法的目的是为手工编码的自适应拓展注入依赖
+     *
+     *
+     * 思考：Dubbo是通过什么方式解决相互依赖的问题的？
      */
     private T injectExtension(T instance) {
         try {
@@ -652,13 +654,14 @@ public class ExtensionLoader<T> {
             if (objectFactory != null) {
                 // 遍历目标类的所有方法
                 for (Method method : instance.getClass().getMethods()) {
-                    // 检测方法是否以 set 开头，且方法仅有一个参数，且方法访问级别为 public
+                    // isSetter(method)用于检测方法是否以 set 开头，且方法仅有一个参数，且方法访问级别为 public
                     if (isSetter(method)) {
                         if (method.getAnnotation(DisableInject.class) != null) {
                             continue;
                         }
                         // 获取 setter 方法参数类型
                         Class<?> pt = method.getParameterTypes()[0];
+                        // 判断是否是基本类型
                         if (ReflectUtils.isPrimitives(pt)) {
                             continue;
                         }
@@ -678,6 +681,11 @@ public class ExtensionLoader<T> {
                              */
                             Object object = objectFactory.getExtension(pt, property);
                             if (object != null) {
+                                /**
+                                 *  为当前拓展点装配上依赖的拓展点
+                                 *
+                                 *  此时注入的依赖扩展点是一个 Adaptive 实例，直到扩展点方法执行时才决定调用是哪一个扩展点实现。
+                                 */
                                 method.invoke(instance, object);
                             }
                         } catch (Exception e) {
