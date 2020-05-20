@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="768deaee-b44c-4776-9944-0fd361d07562" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lcb-dubbo/src/main/java/com/lcb/dubbo/proxy/test/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/config/Environment.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/src/main/java/org/apache/dubbo/common/config/Environment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/config/Environment.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-common/target/classes/org/apache/dubbo/common/config/Environment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/AbstractInterfaceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/AbstractInterfaceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ServiceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ServiceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/classes/org/apache/dubbo/config/AbstractInterfaceConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/classes/org/apache/dubbo/config/AbstractInterfaceConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/classes/org/apache/dubbo/config/ServiceConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/target/classes/org/apache/dubbo/config/ServiceConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/main/java/org/apache/dubbo/config/spring/ServiceBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/main/java/org/apache/dubbo/config/spring/ServiceBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-spring/target/classes/org/apache/dubbo/config/spring/ServiceBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-spring/target/classes/org/apache/dubbo/config/spring/ServiceBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/src/main/java/org/apache/dubbo/rpc/proxy/javassist/JavassistProxyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/src/main/java/org/apache/dubbo/rpc/proxy/javassist/JavassistProxyFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +227,7 @@
       <workItem from="1569314354798" duration="99000" />
       <workItem from="1589204735462" duration="767000" />
       <workItem from="1589354594018" duration="10920000" />
-      <workItem from="1589809531212" duration="37377000" />
+      <workItem from="1589809531212" duration="51875000" />
     </task>
     <servers />
   </component>
@@ -252,55 +260,63 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="653" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589880881386" />
-    <state x="551" y="-838" width="914" height="579" key="#xdebugger.evaluate" timestamp="1589901172459">
+    <state x="551" y="-838" width="764" height="579" key="#xdebugger.evaluate" timestamp="1589972501430">
       <screen x="-184" y="-1080" width="2048" height="1080" />
     </state>
-    <state x="551" y="-838" key="#xdebugger.evaluate/0.0.1680.1050/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589901172459" />
+    <state x="551" y="-838" width="764" height="579" key="#xdebugger.evaluate/0.0.1680.1050/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589972501430" />
     <state x="603" y="235" width="914" height="579" key="#xdebugger.evaluate/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881740608" />
-    <state width="2006" height="374" key="GridCell.Tab.0.bottom" timestamp="1589901892527">
+    <state width="2006" height="293" key="GridCell.Tab.0.bottom" timestamp="1589972597700">
       <screen x="-184" y="-1080" width="2048" height="1080" />
     </state>
-    <state width="2006" height="374" key="GridCell.Tab.0.bottom/0.0.1680.1050/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589901892527" />
+    <state width="2006" height="293" key="GridCell.Tab.0.bottom/0.0.1680.1050/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589972597700" />
     <state width="1638" height="363" key="GridCell.Tab.0.bottom/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881760553" />
     <state width="1638" height="545" key="GridCell.Tab.0.bottom/0.23.1680.1027/-184.-1057.2048.1057@0.23.1680.1027" timestamp="1589809432655" />
-    <state width="2006" height="374" key="GridCell.Tab.0.center" timestamp="1589901892524">
+    <state width="2006" height="234" key="GridCell.Tab.0.bottom/0.23.1680.1027/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589966432469" />
+    <state width="2006" height="293" key="GridCell.Tab.0.center" timestamp="1589972597697">
       <screen x="-184" y="-1080" width="2048" height="1080" />
     </state>
-    <state width="2006" height="374" key="GridCell.Tab.0.center/0.0.1680.1050/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589901892524" />
+    <state width="2006" height="293" key="GridCell.Tab.0.center/0.0.1680.1050/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589972597697" />
     <state width="1638" height="363" key="GridCell.Tab.0.center/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881760550" />
     <state width="1638" height="545" key="GridCell.Tab.0.center/0.23.1680.1027/-184.-1057.2048.1057@0.23.1680.1027" timestamp="1589809432653" />
-    <state width="2006" height="374" key="GridCell.Tab.0.left" timestamp="1589901892523">
+    <state width="2006" height="234" key="GridCell.Tab.0.center/0.23.1680.1027/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589966432466" />
+    <state width="2006" height="293" key="GridCell.Tab.0.left" timestamp="1589972597695">
       <screen x="-184" y="-1080" width="2048" height="1080" />
     </state>
-    <state width="2006" height="374" key="GridCell.Tab.0.left/0.0.1680.1050/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589901892523" />
+    <state width="2006" height="293" key="GridCell.Tab.0.left/0.0.1680.1050/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589972597695" />
     <state width="1638" height="363" key="GridCell.Tab.0.left/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881760548" />
     <state width="1638" height="545" key="GridCell.Tab.0.left/0.23.1680.1027/-184.-1057.2048.1057@0.23.1680.1027" timestamp="1589809432647" />
-    <state width="2006" height="374" key="GridCell.Tab.0.right" timestamp="1589901892525">
+    <state width="2006" height="234" key="GridCell.Tab.0.left/0.23.1680.1027/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589966432465" />
+    <state width="2006" height="293" key="GridCell.Tab.0.right" timestamp="1589972597698">
       <screen x="-184" y="-1080" width="2048" height="1080" />
     </state>
-    <state width="2006" height="374" key="GridCell.Tab.0.right/0.0.1680.1050/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589901892525" />
+    <state width="2006" height="293" key="GridCell.Tab.0.right/0.0.1680.1050/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589972597698" />
     <state width="1638" height="363" key="GridCell.Tab.0.right/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881760552" />
     <state width="1638" height="545" key="GridCell.Tab.0.right/0.23.1680.1027/-184.-1057.2048.1057@0.23.1680.1027" timestamp="1589809432654" />
-    <state width="2006" height="374" key="GridCell.Tab.1.bottom" timestamp="1589901892531">
+    <state width="2006" height="234" key="GridCell.Tab.0.right/0.23.1680.1027/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589966432468" />
+    <state width="2006" height="293" key="GridCell.Tab.1.bottom" timestamp="1589972597705">
       <screen x="-184" y="-1080" width="2048" height="1080" />
     </state>
-    <state width="2006" height="374" key="GridCell.Tab.1.bottom/0.0.1680.1050/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589901892531" />
+    <state width="2006" height="293" key="GridCell.Tab.1.bottom/0.0.1680.1050/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589972597705" />
     <state width="1638" height="363" key="GridCell.Tab.1.bottom/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881760558" />
-    <state width="2006" height="374" key="GridCell.Tab.1.center" timestamp="1589901892529">
+    <state width="2006" height="234" key="GridCell.Tab.1.bottom/0.23.1680.1027/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589966433683" />
+    <state width="2006" height="293" key="GridCell.Tab.1.center" timestamp="1589972597703">
       <screen x="-184" y="-1080" width="2048" height="1080" />
     </state>
-    <state width="2006" height="374" key="GridCell.Tab.1.center/0.0.1680.1050/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589901892529" />
+    <state width="2006" height="293" key="GridCell.Tab.1.center/0.0.1680.1050/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589972597703" />
     <state width="1638" height="363" key="GridCell.Tab.1.center/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881760556" />
-    <state width="2006" height="374" key="GridCell.Tab.1.left" timestamp="1589901892528">
+    <state width="2006" height="234" key="GridCell.Tab.1.center/0.23.1680.1027/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589966433680" />
+    <state width="2006" height="293" key="GridCell.Tab.1.left" timestamp="1589972597701">
       <screen x="-184" y="-1080" width="2048" height="1080" />
     </state>
-    <state width="2006" height="374" key="GridCell.Tab.1.left/0.0.1680.1050/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589901892528" />
+    <state width="2006" height="293" key="GridCell.Tab.1.left/0.0.1680.1050/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589972597701" />
     <state width="1638" height="363" key="GridCell.Tab.1.left/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881760554" />
-    <state width="2006" height="374" key="GridCell.Tab.1.right" timestamp="1589901892530">
+    <state width="2006" height="234" key="GridCell.Tab.1.left/0.23.1680.1027/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589966433679" />
+    <state width="2006" height="293" key="GridCell.Tab.1.right" timestamp="1589972597704">
       <screen x="-184" y="-1080" width="2048" height="1080" />
     </state>
-    <state width="2006" height="374" key="GridCell.Tab.1.right/0.0.1680.1050/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589901892530" />
+    <state width="2006" height="293" key="GridCell.Tab.1.right/0.0.1680.1050/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589972597704" />
     <state width="1638" height="363" key="GridCell.Tab.1.right/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881760557" />
+    <state width="2006" height="234" key="GridCell.Tab.1.right/0.23.1680.1027/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589966433681" />
     <state x="452" y="226" key="NewModule_or_Project.wizard" timestamp="1589796935029">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -309,18 +325,26 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="683" y="254" key="RollbackChangesDialog/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589890778514" />
+    <state width="1024" height="540" key="XDebugger.FullValuePopup" timestamp="1589969006097">
+      <screen x="-184" y="-1080" width="2048" height="1080" />
+    </state>
+    <state width="1024" height="540" key="XDebugger.FullValuePopup/0.0.1680.1050/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589969006097" />
     <state x="359" y="268" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1589880495737">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="359" y="268" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589880495737" />
+    <state x="0" y="64" width="1595" height="748" key="dock-window-1" timestamp="1589973014464">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="0" y="64" width="1595" height="748" key="dock-window-1/0.23.1680.1027/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589973014464" />
     <state x="498" y="282" width="683" height="486" key="find.popup" timestamp="1589805489798">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="498" y="282" width="683" height="486" key="find.popup/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589805489798" />
-    <state x="505" y="-839" width="670" height="676" key="search.everywhere.popup" timestamp="1589901841745">
+    <state x="505" y="-839" width="670" height="676" key="search.everywhere.popup" timestamp="1589972756258">
       <screen x="-184" y="-1080" width="2048" height="1080" />
     </state>
-    <state x="505" y="-839" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589901841745" />
+    <state x="505" y="-839" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589972756258" />
     <state x="565" y="234" width="670" height="658" key="search.everywhere.popup/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589891182984" />
   </component>
   <component name="XDebuggerManager">
@@ -411,8 +435,28 @@
           <line>823</line>
           <option name="timeStamp" value="482" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ServiceConfig.java</url>
+          <line>831</line>
+          <option name="timeStamp" value="495" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/src/main/java/org/apache/dubbo/rpc/proxy/jdk/JdkProxyFactory.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="497" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/src/main/java/org/apache/dubbo/rpc/proxy/javassist/JavassistProxyFactory.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="499" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="c1" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/dubbo_parent$DubboSPITest_sayHello.ic" NAME="DubboSPITest.sayHello Coverage Results" MODIFIED="1565450817653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

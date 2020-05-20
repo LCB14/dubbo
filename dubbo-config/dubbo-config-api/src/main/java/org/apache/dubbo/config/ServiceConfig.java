@@ -543,18 +543,19 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
     @SuppressWarnings({"unchecked", "rawtypes"})
     private void doExportUrls() {
         /**
-         *  第一次组装URL
+         *  第一次组装URL -- 加载注册中心生成URL
          *
-         *  加载注册中心链接，因为Dubbo允许多注册中心，所以返回值这里为List
+         *  加载注册中心链接，因为Dubbo支持多注册中心，所以返回值这里用List集合进行接收
          *
-         *  registry://127.0.0.1:2181/org.apache.dubbo.registry.RegistryService?application=demo-provider&dubbo=2.0.2&pid=53271&qos.port=22222&registry=zookeeper&timestamp=1568808606403
+         *  registry://127.0.0.1:2181/org.apache.dubbo.registry.RegistryService?application=demo-provider
+         *  &dubbo=2.0.2&pid=53271&qos.port=22222&registry=zookeeper&timestamp=1568808606403
          */
         List<URL> registryURLs = loadRegistries(true);
 
-        // 遍历 protocols，并在每个协议下导出服务
+        // 多协议导出服务，向多注册中心注册服务
         for (ProtocolConfig protocolConfig : protocols) {
 
-            // pathKey示例：org.apache.dubbo.demo.DemoService
+            // pathKey示例：org.apache.dubbo.demo.DemoService，即要导出的服务接口的全路径名
             String pathKey = URL.buildKey(getContextPath(protocolConfig).map(p -> p + "/" + path).orElse(path), group, version);
 
             /**
@@ -593,7 +594,11 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
         // 添加 side、版本、时间戳以及进程号等信息到 map 中
         map.put(SIDE_KEY, PROVIDER_SIDE);
         appendRuntimeParameters(map);
-        // 通过反射将对象的字段信息添加到 map 中,除返回值是Object或@Parameter(excluded=true)的
+
+        /**
+         *  appendParameters方法的作用就是获取传入Object的get/is方法，将get/is后面的属性名跟返回的value值作为key-value放入map中，
+         *  此外该方法还兼容了Dubbo本身的配置项功能。
+         */
         appendParameters(map, metrics);
         appendParameters(map, application);
         appendParameters(map, module);

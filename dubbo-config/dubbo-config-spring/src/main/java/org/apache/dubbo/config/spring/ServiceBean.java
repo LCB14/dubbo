@@ -107,7 +107,9 @@ public class ServiceBean<T> extends ServiceConfig<T> implements InitializingBean
     /**
      * dubbo 服务导出
      *
-     * Spring 容器发布刷新事件，Dubbo 在接收到事件后，会立即执行服务导出逻辑。
+     * Spring框架在执行refresh方法完成容器初始化的时候，就会发布容器刷新事件，
+     * 调用ServiceBean的重写方法onApplicationEvent，触发服务导出。
+     *
      * @see ApplicationListener
      * 参考：https://cloud.tencent.com/developer/article/1395017
      *

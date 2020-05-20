@@ -332,7 +332,11 @@ public abstract class AbstractInterfaceConfig extends AbstractMethodConfig {
     protected List<URL> loadRegistries(boolean provider) {
         // check && override if necessary
         List<URL> registryList = new ArrayList<URL>();
-        // registries示例：<dubbo:registry address="zookeeper://127.0.0.1:2181" zookeeperProtocol="true" valid="true" id="org.apache.dubbo.config.RegistryConfig" prefix="dubbo.registries." />
+        /**
+         *  registries示例：
+         *  <dubbo:registry address="zookeeper://127.0.0.1:2181" zookeeperProtocol="true"
+         *  valid="true" id="org.apache.dubbo.config.RegistryConfig" prefix="dubbo.registries."/>
+         */
         if (CollectionUtils.isNotEmpty(registries)) {
             for (RegistryConfig config : registries) {
                 // 获取注册中心地址
@@ -359,10 +363,11 @@ public abstract class AbstractInterfaceConfig extends AbstractMethodConfig {
                     }
 
                     /**
-                     *  解析得到 URL 列表，address 可能包含多个注册中心 ip，
-                     *  因此解析得到的是一个 URL 列表
+                     *  拆分address，如果配置了多个注册中心地址，则每个地址对应一个URL，
+                     *  然后组装URL的七大基本参数 protocol, username, password, host, port, path, parameters，
+                     *  最后new一个URL并返回。
                      *
-                     *   <!-- 多注册中心配置，竖号分隔表示同时连接多个不同注册中心，同一注册中心的多个集群地址用逗号分隔 -->
+                     *  <!-- 多注册中心配置，竖号分隔表示同时连接多个不同注册中心，同一注册中心的多个集群地址用逗号分隔 -->
                      *   <dubbo:registry address="10.20.141.150:9090|10.20.154.177:9010" />
                      */
                     List<URL> urls = UrlUtils.parseURLs(address, map);
@@ -375,8 +380,8 @@ public abstract class AbstractInterfaceConfig extends AbstractMethodConfig {
 
                         /**
                          *  通过判断条件，决定是否添加 url 到 registryList 中，条件如下：
-                         *  (服务提供者 && register = true 或 null)
-                         *   || (非服务提供者 && subscribe = true 或 null)
+                         *  1、是提供者且有配置注册中心；
+                         *  2、不是提供者但是配置了订阅
                          */
                         if ((provider && url.getParameter(REGISTER_KEY, true))
                                 || (!provider && url.getParameter(SUBSCRIBE_KEY, true))) {
