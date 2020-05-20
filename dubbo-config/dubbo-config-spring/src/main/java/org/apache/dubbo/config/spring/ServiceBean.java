@@ -196,6 +196,7 @@ public class ServiceBean<T> extends ServiceConfig<T> implements InitializingBean
                 }
             }
         }
+
         // 初始化 application
         if (getApplication() == null
                 && (getProvider() == null || getProvider().getApplication() == null)) {
@@ -214,6 +215,7 @@ public class ServiceBean<T> extends ServiceConfig<T> implements InitializingBean
                 }
             }
         }
+
         if (getModule() == null
                 && (getProvider() == null || getProvider().getModule() == null)) {
             Map<String, ModuleConfig> moduleConfigMap = applicationContext == null ? null : BeanFactoryUtils.beansOfTypeIncludingAncestors(applicationContext, ModuleConfig.class, false, false);
@@ -268,6 +270,7 @@ public class ServiceBean<T> extends ServiceConfig<T> implements InitializingBean
                 }
             }
         }
+
         if (getMetadataReportConfig() == null) {
             Map<String, MetadataReportConfig> metadataReportConfigMap = applicationContext == null ? null : BeanFactoryUtils.beansOfTypeIncludingAncestors(applicationContext, MetadataReportConfig.class, false, false);
             if (metadataReportConfigMap != null && metadataReportConfigMap.size() == 1) {
