@@ -796,7 +796,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
                 if (!isOnlyInJvm() && logger.isInfoEnabled()) {
                     logger.info("Export dubbo service " + interfaceClass.getName() + " to url " + url);
                 }
-                if (CollectionUtils.isNotEmpty(registryURLs)) {
+                if (CollectionUtils.isNotEmpty(registryURLs)) {// 存在注册中心的情况
                     // registry://127.0.0.1:2181/org.apache.dubbo.registry.RegistryService?application=demo-provider&dubbo=2.0.2&pid=53790&qos.port=22222&registry=zookeeper&timestamp=1568811341844
                     for (URL registryURL : registryURLs) {
                         //if protocol is only injvm ,not register
@@ -846,6 +846,9 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
                     Invoker<?> invoker = PROXY_FACTORY.getInvoker(ref, (Class) interfaceClass, url);
                     DelegateProviderMetaDataInvoker wrapperInvoker = new DelegateProviderMetaDataInvoker(invoker, this);
 
+                    /**
+                     * @see org.apache.dubbo.rpc.protocol.dubbo.DubboProtocol#export(org.apache.dubbo.rpc.Invoker)
+                     */
                     Exporter<?> exporter = protocol.export(wrapperInvoker);
                     exporters.add(exporter);
                 }
