@@ -523,6 +523,9 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
 
     /**
      * export service
+     *
+     * Dubbo 允许我们使用不同的协议导出服务，也允许我们向多个注册中心注册服务。
+     *
      * <p>
      * 1、获取注册中心列表，由于支持多注册中心，因此注册中心list
      * 2、根据注册中心，创建rpc协议
@@ -544,7 +547,6 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
 
         // 多协议导出服务，向多注册中心注册服务
         for (ProtocolConfig protocolConfig : protocols) {
-
             // pathKey示例：org.apache.dubbo.demo.DemoService，即要导出的服务接口的全路径名
             String pathKey = URL.buildKey(getContextPath(protocolConfig).map(p -> p + "/" + path).orElse(path), group, version);
 

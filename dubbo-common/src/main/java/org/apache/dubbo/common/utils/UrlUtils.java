@@ -166,6 +166,7 @@ public class UrlUtils {
         }
         List<URL> registries = new ArrayList<URL>();
         for (String addr : addresses) {
+            // 每个addr代表一个注册中心（注：一个注册中心可能还会包含多个集群，集群地址之间用逗号进行分隔。）
             registries.add(parseURL(addr, defaults));
         }
         return registries;
