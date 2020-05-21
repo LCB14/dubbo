@@ -4,6 +4,8 @@
     <list default="true" id="768deaee-b44c-4776-9944-0fd361d07562" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryProtocol.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryProtocol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/src/main/java/org/apache/dubbo/rpc/proxy/javassist/JavassistProxyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/src/main/java/org/apache/dubbo/rpc/proxy/javassist/JavassistProxyFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/src/main/java/org/apache/dubbo/rpc/protocol/dubbo/DubboProtocol.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/src/main/java/org/apache/dubbo/rpc/protocol/dubbo/DubboProtocol.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +221,7 @@
       <workItem from="1569314354798" duration="99000" />
       <workItem from="1589204735462" duration="767000" />
       <workItem from="1589354594018" duration="10920000" />
-      <workItem from="1589809531212" duration="57220000" />
+      <workItem from="1589809531212" duration="58550000" />
     </task>
     <servers />
   </component>
@@ -350,17 +352,17 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryProtocol.java</url>
-          <line>246</line>
+          <line>253</line>
           <option name="timeStamp" value="296" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/src/main/java/org/apache/dubbo/rpc/protocol/dubbo/DubboProtocol.java</url>
-          <line>314</line>
+          <line>318</line>
           <option name="timeStamp" value="300" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryProtocol.java</url>
-          <line>264</line>
+          <line>275</line>
           <option name="timeStamp" value="350" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
@@ -370,12 +372,12 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryProtocol.java</url>
-          <line>465</line>
+          <line>476</line>
           <option name="timeStamp" value="357" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryProtocol.java</url>
-          <line>499</line>
+          <line>510</line>
           <option name="timeStamp" value="359" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
@@ -385,12 +387,12 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryProtocol.java</url>
-          <line>303</line>
+          <line>314</line>
           <option name="timeStamp" value="391" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/src/main/java/org/apache/dubbo/rpc/protocol/dubbo/DubboProtocol.java</url>
-          <line>291</line>
+          <line>295</line>
           <option name="timeStamp" value="392" />
         </line-breakpoint>
         <line-breakpoint type="java-line">

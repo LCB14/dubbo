@@ -50,10 +50,12 @@ public class JavassistProxyFactory extends AbstractProxyFactory {
          * 为目标类创建 Wrapper
          *
          * Wrapper 是一个抽象类，仅可通过 getWrapper(Class) 方法创建子类。
-         * 在创建 Wrapper 子类的过程中，子类代码生成逻辑会对 getWrapper 方法传入的 Class 对象进行解析，拿到诸如类方法，类成员变量等信息。
-         * 以及生成 invokeMethod 方法代码和其他一些方法代码。代码生成完毕后，通过 Javassist 生成 Class 对象，最后再通过反射创建 Wrapper 实例。
+         * getWrapper 方法会对传入的 Class 对象进行解析，拿到诸如类方法，类成员变量等信息。
+         * 然后自动生成 invokeMethod 方法代码和其它一些方法代码。代码生成完毕后，通过 Javassist 生成 Class 对象，最后再通过反射创建 Wrapper 实例。
          *
-         * URL -> injvm://127.0.0.1/org.apache.dubbo.demo.DemoService?anyhost=true&application=demo-provider&bean.name=org.apache.dubbo.demo.DemoService&bind.ip=192.168.1.101&bind.port=20880&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&interface=org.apache.dubbo.demo.DemoService&methods=sayHello&pid=2827&qos.port=22222&register=true&release=&side=provider&timestamp=1566371426556
+         * URL -> injvm://127.0.0.1/org.apache.dubbo.demo.DemoService?anyhost=true&application=demo-provider&bean.name=org.apache.dubbo.demo.DemoService&
+         * bind.ip=192.168.1.101&bind.port=20880&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&interface=org.apache.dubbo.demo.DemoService&
+         * methods=sayHello&pid=2827&qos.port=22222&register=true&release=&side=provider&timestamp=1566371426556
          *
          * 感悟：与其说Wrapper用于包裹目标类（服务实现类)，还不如说dubbo利用javassit对目标类进行代理，把目标类中的方法进行化整为零（泛化)。
          * 无论被代理实例之前有多少个方法，被代理后所有的方法调用统统通过invokeMethod()进行表示！！！

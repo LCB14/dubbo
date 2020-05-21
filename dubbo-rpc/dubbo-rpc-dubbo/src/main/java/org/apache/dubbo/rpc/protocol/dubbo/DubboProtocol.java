@@ -280,7 +280,11 @@ public class DubboProtocol extends AbstractProtocol {
 
     @Override
     public <T> Exporter<T> export(Invoker<T> invoker) throws RpcException {
-        //  dubbo://192.168.1.101:20880/org.apache.dubbo.demo.DemoService?anyhost=true&application=demo-provider&bean.name=org.apache.dubbo.demo.DemoService&bind.ip=192.168.1.101&bind.port=20880&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&interface=org.apache.dubbo.demo.DemoService&methods=sayHello&pid=34660&qos.port=22222&register=true&release=&side=provider&timestamp=1566046808988
+        /**
+         *  dubbo://192.168.1.101:20880/org.apache.dubbo.demo.DemoService?anyhost=true&application=demo-provider&bean.name=org.apache.dubbo.demo.DemoService&
+         *           bind.ip=192.168.1.101&bind.port=20880&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&interface=org.apache.dubbo.demo.DemoService&
+         *           methods=sayHello&pid=34660&qos.port=22222&register=true&release=&side=provider&timestamp=1566046808988
+         */
         URL url = invoker.getUrl();
 
         // export service.

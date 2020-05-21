@@ -244,8 +244,7 @@ public class RegistryProtocol implements Protocol {
          *          interface=org.apache.dubbo.demo.DemoService&methods=sayHello&pid=31571&qos.port=22222&register=true&release=&side=provider&timestamp=1565941821727
          */
         final URL overrideSubscribeUrl = getSubscribedOverrideUrl(providerUrl);
-
-        // 创建监听器
+                // 创建监听器
         final OverrideListener overrideSubscribeListener = new OverrideListener(overrideSubscribeUrl, originInvoker);
         overrideListeners.put(overrideSubscribeUrl, overrideSubscribeListener);
 
@@ -261,7 +260,8 @@ public class RegistryProtocol implements Protocol {
         /**
          * 获取已注册的服务提供者 URL，比如：
          * dubbo://192.168.1.101:20880/org.apache.dubbo.demo.DemoService?anyhost=true&application=demo-provider&bean.name=org.apache.dubbo.demo.DemoService&deprecated=false&
-         *          dubbo=2.0.2&dynamic=true&generic=false&interface=org.apache.dubbo.demo.DemoService&methods=sayHello&pid=31531&register=true&release=&side=provider&timestamp=1565941509828
+         *          dubbo=2.0.2&dynamic=true&generic=false&interface=org.apache.dubbo.demo.DemoService&methods=sayHello&pid=31531&register=true&
+         *          release=&side=provider&timestamp=1565941509828
          */
         final URL registeredProviderUrl = getRegisteredProviderUrl(providerUrl, registryUrl);
         // 向服务提供者与消费者注册表中注册服务提供者
