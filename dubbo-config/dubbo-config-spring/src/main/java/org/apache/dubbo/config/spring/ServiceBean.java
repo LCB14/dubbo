@@ -69,6 +69,13 @@ public class ServiceBean<T> extends ServiceConfig<T> implements InitializingBean
 
     private transient String beanName;
 
+    /**
+     * 该变量用于表示当前的 Spring 容器是否支持 ApplicationListener，这个值初始为 false。
+     *
+     * 在 Spring 容器将自己设置到 ServiceBean 中时，ServiceBean 的 setApplicationContext 方法会检测 Spring 容器是否支持 ApplicationListener。
+     * 若支持，则将 supportedApplicationListener 置为 true。ServiceBean 是 Dubbo 与 Spring 框架进行整合的关键，可以看做是两个框架之间的桥梁。
+     * 具有同样作用的类还有 ReferenceBean。
+     */
     private transient boolean supportedApplicationListener;
 
     private ApplicationEventPublisher applicationEventPublisher;

@@ -291,21 +291,11 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
         return unexported;
     }
 
-    /**
-     * 下面方法主要完成下功能：
-     * 1、检测 <dubbo:service> 标签的 interface 属性合法性，不合法则抛出异常
-     * 2、检测 ProviderConfig、ApplicationConfig 等核心配置类对象是否为空，若为空，则尝试从其他配置类对象中获取相应的实例。
-     * 3、检测并处理泛化服务和普通服务类
-     * 4、检测本地存根配置，并进行相应的处理
-     * 5、对 ApplicationConfig、RegistryConfig 等配置类进行检测，为空则尝试创建，若无法创建则抛出异常
-     */
     public void checkAndUpdateSubConfigs() {
         // Use default configs defined explicitly on global configs
         /**
-         * 彻底的构造完整的配置信息
-         *
-         * 用于检测 provider、application 等核心配置类对象是否为空，
-         * 若为空，则尝试从其他配置类对象中获取相应的实例。
+         *  dubbo初始版本的配置信息设置参考：
+         *  @see org.apache.dubbo.config.spring.schema.DubboNamespaceHandler#init()
          */
         completeCompoundConfigs();
 
@@ -313,13 +303,13 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
         // 启动配置中心，从dubbo2.7.0开始支持了配置中心动态修改配置
         startConfigCenter();
 
-        // 检测 provider 是否为空，为空则新建一个，并通过系统变量为其初始化
+        // 检测 provider 是否为空，为空则新建一个
         checkDefault();
 
-        // 检查ProtocolConfig配置，未配置使用provider.getProtocols()或创建一个默认的
+        // 检查ProtocolConfig是否设置值
         checkProtocol();
 
-        // 如果没有ApplicationConfig创建一个默认的
+        // 检查ApplicationConfig是否设置值
         checkApplication();
 
         // if protocol is not in jvm checkRegistry
@@ -328,7 +318,9 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
             checkRegistry();
         }
 
-        // 刷新ServiceConfig配置
+        /**
+         * 会解析用户通过各个渠道设置的配置信息，按照优先级生成一个混合多个渠道的最终版本的dubbo框架设置信息。
+         */
         this.refresh();
 
         // 检查MetadataReportConfig，没有创建一个默认的
@@ -423,15 +415,6 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
         return getProtocols().size() == 1 && LOCAL_PROTOCOL.equalsIgnoreCase(getProtocols().get(0).getName());
     }
 
-    /**
-     * export service
-     * <p>
-     * 1、获取注册中心列表，由于支持多注册中心，因此注册中心list
-     * 2、根据注册中心，创建rpc协议
-     * 3、进行本地暴露或者远程暴露
-     * <p>
-     * 参考 link https://www.jianshu.com/p/24c9f917aa97
-     */
     public synchronized void export() {
         /**
          * 该方法用来检测配置文件内容中的一些必要的属性和设置一些默认值
@@ -444,6 +427,8 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
          *  检查export 配置，这个配置决定了是否导出服务。如果 export 为 false，则不导出服务
          *  有时候我们只是想本地启动服务进行一些调试工作，我们并不希望把本地启动的服务暴露出去给别人调用。
          *  此时，我们可通过配置 export 禁止服务导出.
+         *
+         *  注意：这里之所以再次进行判断，是因为checkAndUpdateSubConfigs方法对之前的配置信息进行了更新！！
          */
         if (!shouldExport()) {
             return;
@@ -537,8 +522,13 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
     }
 
     /**
-     * 首先是通过 loadRegistries加载注册中心链接，然后再遍历 ProtocolConfig 集合导出每个服务。
-     * 并在导出服务的过程中，将服务注册到注册中心。
+     * export service
+     * <p>
+     * 1、获取注册中心列表，由于支持多注册中心，因此注册中心list
+     * 2、根据注册中心，创建rpc协议
+     * 3、进行本地暴露或者远程暴露
+     * <p>
+     * 参考 link https://www.jianshu.com/p/24c9f917aa97
      */
     @SuppressWarnings({"unchecked", "rawtypes"})
     private void doExportUrls() {
@@ -1084,6 +1074,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
                 setConfigCenter(provider.getConfigCenter());
             }
         }
+
         if (module != null) {
             if (registries == null) {
                 setRegistries(module.getRegistries());
@@ -1092,6 +1083,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
                 setMonitor(module.getMonitor());
             }
         }
+
         if (application != null) {
             if (registries == null) {
                 setRegistries(application.getRegistries());

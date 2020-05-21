@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="768deaee-b44c-4776-9944-0fd361d07562" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryProtocol.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-registry/dubbo-registry-api/src/main/java/org/apache/dubbo/registry/integration/RegistryProtocol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/src/main/java/org/apache/dubbo/rpc/proxy/javassist/JavassistProxyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-api/src/main/java/org/apache/dubbo/rpc/proxy/javassist/JavassistProxyFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/src/main/java/org/apache/dubbo/rpc/protocol/dubbo/DubboProtocol.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-rpc/dubbo-rpc-dubbo/src/main/java/org/apache/dubbo/rpc/protocol/dubbo/DubboProtocol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ServiceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-api/src/main/java/org/apache/dubbo/config/ServiceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/main/java/org/apache/dubbo/config/spring/ServiceBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-config/dubbo-config-spring/src/main/java/org/apache/dubbo/config/spring/ServiceBean.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +220,7 @@
       <workItem from="1569314354798" duration="99000" />
       <workItem from="1589204735462" duration="767000" />
       <workItem from="1589354594018" duration="10920000" />
-      <workItem from="1589809531212" duration="58550000" />
+      <workItem from="1589809531212" duration="62460000" />
     </task>
     <servers />
   </component>
@@ -259,6 +258,10 @@
     </state>
     <state x="551" y="-838" width="764" height="579" key="#xdebugger.evaluate/0.0.1680.1050/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589972501430" />
     <state x="603" y="235" width="914" height="579" key="#xdebugger.evaluate/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589881740608" />
+    <state x="-84" y="-980" width="1848" height="880" key="DiffContextDialog" timestamp="1590044594706">
+      <screen x="-184" y="-1080" width="2048" height="1080" />
+    </state>
+    <state x="-84" y="-980" width="1848" height="880" key="DiffContextDialog/0.0.1680.1050/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1590044594706" />
     <state width="2006" height="293" key="GridCell.Tab.0.bottom" timestamp="1589972597700">
       <screen x="-184" y="-1080" width="2048" height="1080" />
     </state>
@@ -336,10 +339,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="498" y="282" width="683" height="486" key="find.popup/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589805489798" />
-    <state x="505" y="-839" width="670" height="676" key="search.everywhere.popup" timestamp="1589976318638">
+    <state x="505" y="-839" width="670" height="676" key="search.everywhere.popup" timestamp="1590045105036">
       <screen x="-184" y="-1080" width="2048" height="1080" />
     </state>
-    <state x="505" y="-839" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1589976318638" />
+    <state x="505" y="-839" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050/-184.-1080.2048.1080@-184.-1080.2048.1080" timestamp="1590045105036" />
     <state x="565" y="234" width="670" height="658" key="search.everywhere.popup/0.0.1680.1050/-184.-1080.2048.1080@0.0.1680.1050" timestamp="1589891182984" />
   </component>
   <component name="XDebuggerManager">
