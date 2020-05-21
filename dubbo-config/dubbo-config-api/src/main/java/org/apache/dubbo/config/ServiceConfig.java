@@ -599,6 +599,7 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
         appendParameters(map, provider);
         appendParameters(map, protocolConfig);
         appendParameters(map, this);
+
         /**
          *  methods 为 MethodConfig 集合，MethodConfig 中存储了 <dubbo:method> 标签的配置信息
          *
@@ -752,6 +753,12 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
 
         String host = this.findConfigedHosts(protocolConfig, registryURLs, map);
         Integer port = this.findConfigedPorts(protocolConfig, name, map);
+        /**
+         * dubbo://192.168.0.100:20880/org.apache.dubbo.demo.DemoService?anyhost=true&application=demo-provider&
+         * bean.name=org.apache.dubbo.demo.DemoService&bind.ip=192.168.0.100&bind.port=20880&deprecated=false&
+         * dubbo=2.0.2&dynamic=true&generic=false&interface=org.apache.dubbo.demo.DemoService&methods=sayHello&pid=45534&
+         * qos.port=22222&register=true&release=&side=provider&timestamp=1590051245425
+         */
         URL url = new URL(name, host, port, getContextPath(protocolConfig).map(p -> p + "/" + path).orElse(path), map);
 
         if (ExtensionLoader.getExtensionLoader(ConfiguratorFactory.class)
@@ -777,7 +784,12 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
             // scope != remote
             // 导出到本地 -- 尼玛直接等于SCOPE_LOCAL能死吗，还非得取反一下。。。。。暴走中。。。。
             if (!SCOPE_REMOTE.equalsIgnoreCase(scope)) {
-                // url -> dubbo://192.168.1.101:20880/org.apache.dubbo.demo.DemoService?anyhost=true&application=demo-provider&bean.name=org.apache.dubbo.demo.DemoService&bind.ip=192.168.1.101&bind.port=20880&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&interface=org.apache.dubbo.demo.DemoService&methods=sayHello&pid=2527&qos.port=22222&register=true&release=&side=provider&timestamp=1566368855692
+                /**
+                 * dubbo://192.168.1.101:20880/org.apache.dubbo.demo.DemoService?anyhost=true&application=demo-provider&
+                 * bean.name=org.apache.dubbo.demo.DemoService&bind.ip=192.168.1.101&bind.port=20880&deprecated=false&dubbo=2.0.2&
+                 * dynamic=true&generic=false&interface=org.apache.dubbo.demo.DemoService&methods=sayHello&pid=2527&
+                 * qos.port=22222&register=true&release=&side=provider&timestamp=1566368855692
+                 */
                 exportLocal(url);
             }
 
